@@ -127,3 +127,45 @@ body {
 /**
  * App code
  */
+
+ .pageContainer {
+    margin: auto;
+
+    .paletteContainer {
+        display: flex;
+        height: 200px;
+
+        .swatch1 {
+            flex: 1;
+            border: 1px solid black;
+        }
+
+        .swatch2 {
+            @extend .swatch1;
+        }
+
+        .swatch3 {
+            @extend .swatch1;
+        }
+
+        .swatch4 {
+            @extend .swatch1;
+        }
+
+        .swatch5 {
+            @extend .swatch1;
+        }
+    }
+
+    .fontContainer {
+        height: 200px;
+        border: 1px solid black;
+        display: block;
+    }
+
+    .iconContainer {
+        height: 200px; 
+        border: 1px solid black;
+        display: block;
+    }
+ }

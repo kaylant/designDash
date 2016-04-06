@@ -37,9 +37,55 @@ import DOM from 'react-dom'
 import React, {Component} from 'react'
 
 function app() {
-    // start app
-    // new Router()
-    DOM.render(<p>test 2</p>, document.querySelector('.container'))
+
+	var AppView = React.createClass ({
+		render: function() {
+			return (
+				<div className="pageContainer">
+					<PaletteContainer/>
+					<FontContainer/>
+					<IconContainer/>
+				</div>
+				)
+		}
+	})
+
+	var PaletteContainer = React.createClass ({
+		render: function() {
+			return (
+				<div className="paletteContainer">
+					<div className="swatch1"></div>
+					<div className="swatch2"></div>
+					<div className="swatch3"></div>
+					<div className="swatch4"></div>
+					<div className="swatch5"></div>
+				</div>
+				)
+		}
+	})
+
+	var FontContainer = React.createClass ({
+		render: function() {
+			return (
+				<div className="fontsContainer">
+					<div className="font1"></div>
+					<div className="font2"></div>
+				</div>
+				)
+		}
+	})
+
+	var IconContainer = React.createClass ({
+		render: function() {
+			return (
+				<div className="iconContainer">
+					<div className="iconset"></div>
+				</div>
+				)
+		}
+	})
+
+    DOM.render(<AppView/>, document.querySelector('.container'))
 }
 
 app()
