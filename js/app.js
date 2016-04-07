@@ -54,11 +54,11 @@ function app() {
 		render: function() {
 			return (
 				<div className="paletteContainer">
-					<div className="swatch1"></div>
-					<div className="swatch2"></div>
-					<div className="swatch3"></div>
-					<div className="swatch4"></div>
-					<div className="swatch5"></div>
+					<div className="swatch1">swatch1</div>
+					<div className="swatch2">swatch2</div>
+					<div className="swatch3">swatch3</div>
+					<div className="swatch4">swatch4</div>
+					<div className="swatch5">swatch5</div>
 				</div>
 				)
 		}
@@ -67,9 +67,10 @@ function app() {
 	var FontContainer = React.createClass ({
 		render: function() {
 			return (
-				<div className="fontsContainer">
-					<div className="font1"></div>
-					<div className="font2"></div>
+				<div className="fontContainer">
+					<div className="font1">font1</div>
+					<div className="font2">font2</div>
+					<div className="font3">font3</div>
 				</div>
 				)
 		}
@@ -79,7 +80,7 @@ function app() {
 		render: function() {
 			return (
 				<div className="iconContainer">
-					<div className="iconset"></div>
+					<div className="iconset">icons</div>
 				</div>
 				)
 		}

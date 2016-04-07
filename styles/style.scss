@@ -130,12 +130,14 @@ body {
 
  .pageContainer {
     margin: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 
     .paletteContainer {
+        flex: 1;
         display: flex;
-        height: 200px;
         flex-direction: row;
-        flex-wrap: wrap;
 
         .swatch1 {
             flex: 1;
@@ -160,13 +162,13 @@ body {
     }
 
     .fontContainer {
-        height: 200px;
+        flex: 1;
         border: 1px solid black;
         display: inline-block;
     }
 
     .iconContainer {
-        height: 200px; 
+        flex: 1; 
         border: 1px solid black;
         display: inline-block;
     }
