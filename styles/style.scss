@@ -134,6 +134,8 @@ body {
     .paletteContainer {
         display: flex;
         height: 200px;
+        flex-direction: row;
+        flex-wrap: wrap;
 
         .swatch1 {
             flex: 1;
@@ -160,12 +162,12 @@ body {
     .fontContainer {
         height: 200px;
         border: 1px solid black;
-        display: block;
+        display: inline-block;
     }
 
     .iconContainer {
         height: 200px; 
         border: 1px solid black;
-        display: block;
+        display: inline-block;
     }
  }
