@@ -45,6 +45,7 @@ function app() {
 					<PaletteContainer/>
 					<FontContainer/>
 					<IconContainer/>
+					<NavBar/>
 				</div>
 				)
 		}
@@ -66,11 +67,38 @@ function app() {
 
 	var FontContainer = React.createClass ({
 		render: function() {
+			var font1 = "Arvo"
+			var font2 = "Lobster"
+			var font3 = "Inconsolata"
+			var head = document.head
+			  , link = document.createElement('link')
+
+			link.type = 'text/css'
+			link.rel = 'stylesheet'
+			link.href = `https://fonts.googleapis.com/css?family=${font1}|${font2}|${font3}`
+
+			head.appendChild(link)
+
+			var font1Style = {
+				color: "purple",
+				fontFamily: font1
+			}
+
+			var font2Style = {
+				color: "blue",
+				fontFamily: font2
+			}
+
+			var font3Style = {
+				color: "green",
+				fontFamily: font3
+			}
+
 			return (
 				<div className="fontContainer">
-					<div className="font1">font1</div>
-					<div className="font2">font2</div>
-					<div className="font3">font3</div>
+					<div style={font1Style} className="font1">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
+					<div style={font2Style} className="font2">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
+					<div style={font3Style} className="font3">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
 				</div>
 				)
 		}
@@ -81,6 +109,17 @@ function app() {
 			return (
 				<div className="iconContainer">
 					<div className="iconset">icons</div>
+				</div>
+				)
+		}
+	})
+
+	var NavBar = React.createClass ({
+		render: function() {
+			return (
+				<div className="navBarContainer">
+					<div className="exportProj">Export .zip</div>
+					<div className="saveToDropbox">Save to Dropbox</div>
 				</div>
 				)
 		}
