@@ -35,6 +35,7 @@ import fetch from "isomorphic-fetch"
 
 import DOM from 'react-dom'
 import React, {Component} from 'react'
+import FontContainer from './views/fonts'
 
 function app() {
 
@@ -60,45 +61,6 @@ function app() {
 					<div className="swatch3">swatch3</div>
 					<div className="swatch4">swatch4</div>
 					<div className="swatch5">swatch5</div>
-				</div>
-				)
-		}
-	})
-
-	var FontContainer = React.createClass ({
-		render: function() {
-			var font1 = "Arvo"
-			var font2 = "Lobster"
-			var font3 = "Inconsolata"
-			var head = document.head
-			  , link = document.createElement('link')
-
-			link.type = 'text/css'
-			link.rel = 'stylesheet'
-			link.href = `https://fonts.googleapis.com/css?family=${font1}|${font2}|${font3}`
-
-			head.appendChild(link)
-
-			var font1Style = {
-				color: "purple",
-				fontFamily: font1
-			}
-
-			var font2Style = {
-				color: "blue",
-				fontFamily: font2
-			}
-
-			var font3Style = {
-				color: "green",
-				fontFamily: font3
-			}
-
-			return (
-				<div className="fontContainer">
-					<div style={font1Style} className="font1">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
-					<div style={font2Style} className="font2">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
-					<div style={font3Style} className="font3">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
 				</div>
 				)
 		}

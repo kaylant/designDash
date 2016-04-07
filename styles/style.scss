@@ -7,7 +7,7 @@ p+p {
 }
 
 p {
-    max-width: 80ch;
+    max-width: 100ch;
     margin-left: 0;
     margin-right: auto;
 }
@@ -128,14 +128,16 @@ body {
  * App code
  */
 
- .pageContainer {
+$primaryColor: #7f8c8d;
+
+.pageContainer {
     margin: auto;
     height: 100vh;
     display: flex;
     flex-direction: column;
 
     .paletteContainer {
-        flex: 4;
+        flex: 2;
         display: flex;
         flex-direction: row;
 
@@ -162,13 +164,35 @@ body {
     }
 
     .fontContainer {
-        padding: 20px;
         flex: 4;
         border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+
+        .font1 {
+            padding-top: 15px;
+            padding-left: 20px;
+            flex: 1;
+            margin-bottom: 10px;
+
+            .fontName {
+                font-size: 11px;
+                margin: 0;
+                color: $primaryColor;
+            }
+        }
+
+        .font2 {
+            @extend .font1;
+        }
+
+        .font3 {
+            @extend .font1;
+        }
     }
 
     .iconContainer {
-        flex: 4; 
+        flex: 2; 
         border: 1px solid black;
     }
 
