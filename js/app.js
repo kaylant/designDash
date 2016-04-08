@@ -35,7 +35,38 @@ import fetch from "isomorphic-fetch"
 
 import DOM from 'react-dom'
 import React, {Component} from 'react'
+import HelloJS from 'hellojs'
+import $ from 'jquery'
+
 import FontContainer from './views/fonts'
+
+var cId = 'OJ4amGS2A2d5Pow5zLETwzjjTq0ccUSKSygfbo9sQOQB3lHf2gNFaap5cvyJmAAu'
+var cSecret = 'GBr1TLUVTvj8F0KBl6BBxsSPOsXLxjsxwsUZpZNLD3ymM08WYLeWLmiyRaK9ZNxI'
+
+var ifUrl = 'https://www.iconfinder.com/api/v2/oauth2/authorize'
+
+// $.ajax({
+// 	url: ifUrl,
+// 	data: {
+// 		response_type: 'code',
+// 		client_id: cId
+// 	}
+// }).then(function(resp){console.log(resp)})
+
+var auth_code = 'WtDfYAKAui3cNBClQp4PF5eiG8i5YnMC7UrBp6Dyl4VKcXXdYL5fdHjwnlPrOcAR'
+
+// console.log('doing ajax to get code')
+
+// $.ajax({
+// 	url: 'https://www.iconfinder.com/api/v2/oauth2/token',
+// 	type: 'post',
+// 	data: {
+// 		client_id: cId,
+// 		client_secret: cSecret,
+// 		code: auth_code,
+// 		grant_type: 'authorization_code'
+// 	}
+// }).then(function(resp){console.log(resp)})
 
 function app() {
 

@@ -2,11 +2,14 @@ import DOM from 'react-dom'
 import React, {Component} from 'react'
 import FontTable from './fontTable'
 
+window.ft = FontTable
 var FontContainer = React.createClass ({
 		render: function() {
 			var font1 = "Arvo"
 			var font2 = "Lobster"
 			var font3 = "Inconsolata"
+			// var font2 = FontTable[font1].subhead
+			// var font3 = FontTable[font1].content
 			var head = document.head
 			  , link = document.createElement('link')
 
