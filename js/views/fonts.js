@@ -9,6 +9,7 @@ var FontContainer = React.createClass ({
 			// var font1 = "Arvo"
 			// var font2 = "Lobster"
 			// var font3 = "Inconsolata"
+			console.log(FontTable)
 			var font1 = FontTable[0] 
 			console.log(font1)
 			var font2 = FontTable[1]
