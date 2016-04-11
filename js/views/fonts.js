@@ -1,16 +1,16 @@
 import DOM from 'react-dom'
 import React, {Component} from 'react'
+
+import DashView from './dash'
 import FontTable from './fontTable'
 
 // window.ft = FontTable
 
 var FontContainer = React.createClass ({
 		render: function() {
-			// var font1 = "Arvo"
-			// var font2 = "Lobster"
-			// var font3 = "Inconsolata"
 			var mainFonts = Object.keys(FontTable)
-			var font1 = mainFonts[0] 
+			console.log(mainFonts)
+			var font1 = mainFonts[1] 
 			var font2 = FontTable[font1].subhead
 			var font3 = FontTable[font1].content
 			var head = document.head

@@ -37,8 +37,13 @@ import DOM from 'react-dom'
 import React, {Component} from 'react'
 import HelloJS from 'hellojs'
 import $ from 'jquery'
+import Backbone from 'backbone'
 
+import DashView from './views/dash'
+import PaletteContainer from './views/palette'
 import FontContainer from './views/fonts'
+import IconContainer from './views/icons'
+import NavBar from './views/navBar'
 
 var cId = 'OJ4amGS2A2d5Pow5zLETwzjjTq0ccUSKSygfbo9sQOQB3lHf2gNFaap5cvyJmAAu'
 var cSecret = 'GBr1TLUVTvj8F0KBl6BBxsSPOsXLxjsxwsUZpZNLD3ymM08WYLeWLmiyRaK9ZNxI'
@@ -70,55 +75,30 @@ var auth_code = 'WtDfYAKAui3cNBClQp4PF5eiG8i5YnMC7UrBp6Dyl4VKcXXdYL5fdHjwnlPrOcA
 
 function app() {
 
-	var AppView = React.createClass ({
-		render: function() {
-			return (
-				<div className="pageContainer">
-					<PaletteContainer/>
-					<FontContainer/>
-					<IconContainer/>
-					<NavBar/>
-				</div>
-				)
+	// Router //
+
+	var AppRouter = Backbone.Router.extend ({
+		routes: {
+			"search/:cityName" : "searchForCity",
+			"dash" 	           : "toDash"
+		},
+
+		searchForCity: function() {
+			window.location.hash = "search"
+		},
+
+		toDash: function() {
+			window.location.hash = "dash"
+			DOM.render(<DashView/>, document.querySelector('.container'))
+		}, 
+
+		initialize: function() {
+			Backbone.history.start()
 		}
 	})
 
-	var PaletteContainer = React.createClass ({
-		render: function() {
-			return (
-				<div className="paletteContainer">
-					<div className="swatch1">swatch1</div>
-					<div className="swatch2">swatch2</div>
-					<div className="swatch3">swatch3</div>
-					<div className="swatch4">swatch4</div>
-					<div className="swatch5">swatch5</div>
-				</div>
-				)
-		}
-	})
+	var rtr = new AppRouter()
 
-	var IconContainer = React.createClass ({
-		render: function() {
-			return (
-				<div className="iconContainer">
-					<div className="iconset">icons</div>
-				</div>
-				)
-		}
-	})
-
-	var NavBar = React.createClass ({
-		render: function() {
-			return (
-				<div className="navBarContainer">
-					<div className="exportProj">Export .zip</div>
-					<div className="saveToDropbox">Save to Dropbox</div>
-				</div>
-				)
-		}
-	})
-
-    DOM.render(<AppView/>, document.querySelector('.container'))
 }
 
 app()
