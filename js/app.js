@@ -38,8 +38,10 @@ import React, {Component} from 'react'
 import HelloJS from 'hellojs'
 import $ from 'jquery'
 import Backbone from 'backbone'
+import Vibrant from 'node-vibrant'
 
 import DashView from './views/dash'
+import SearchView from './views/searchView'
 import PaletteContainer from './views/palette'
 import FontContainer from './views/fonts'
 import IconContainer from './views/icons'
@@ -75,16 +77,76 @@ var auth_code = 'WtDfYAKAui3cNBClQp4PF5eiG8i5YnMC7UrBp6Dyl4VKcXXdYL5fdHjwnlPrOcA
 
 function app() {
 
+	// Model //
+    var ImgModel = Backbone.Model.extend ({
+    	url: "https://www.googleapis.com/customsearch/v1",
+
+    	// key: "AIzaSyCJ8zb1jEVLaSvUnfalB2Nri5yCes1EKvw",
+    	key: "AIzaSyDr6T8gkhLh6ZhsEX9MjtW9fMYk5ehPaKw",
+
+    	//cx: "004196397515287344825:ve6rrdva0mi",
+    	cx: "008940921588152958013:h64uer7a344",
+
+    	defaults: {
+    		image: {
+    			link: './images/kaylan-smith-dubai-difc.png'
+    		},
+			palette: []
+    	},
+
+    	parse: function(rawData) {
+    		var objArr = rawData.items
+    		for (var i = 0; i < objArr.length; i++) {
+    			var singleObj = objArr[i]
+    			var imgHeight = singleObj.image.height
+    			if (imgHeight >= '700') {
+    				return {
+    					image: singleObj,
+    					palette: null
+    				}
+    			}
+    		}
+    	}
+    })
+
 	// Router //
 
 	var AppRouter = Backbone.Router.extend ({
 		routes: {
 			"search/:cityName" : "searchForCity",
-			"dash" 	           : "toDash"
+			"dash" 	           : "toDash",
+			"*default"         : "showDefaults"
 		},
 
-		searchForCity: function() {
-			window.location.hash = "search"
+		searchForCity: function(cityName) {
+			var setPalette = function(mod) {
+				console.log(mod)
+				console.log('setting palette')
+				var src = "/image?src=" + mod.get("image").link.replace('https','http')   
+				console.log(src)			
+				Vibrant.from(src).getPalette(
+					function(err, incomingPalette){
+						console.log("err",err)
+						console.log("palette",incomingPalette)
+						mod.set({palette:incomingPalette})
+					}
+				)
+				window.V = Vibrant
+				window.src = src
+			}
+			var mod = this.nm
+			this.nm.fetch({
+				data: {
+					key: this.nm.key,
+					cx: this.nm.cx,
+					searchType: "image",
+					q: cityName
+				}
+			}).then(function(){
+				console.log('invoking setPalette after fetch')
+				setPalette(mod)
+			})
+			DOM.render(<SearchView data={this.nm} />, document.querySelector('.container'))
 		},
 
 		toDash: function() {
@@ -92,7 +154,22 @@ function app() {
 			DOM.render(<DashView/>, document.querySelector('.container'))
 		}, 
 
+		showDefaults: function() {
+			window.location.hash = "home"
+			var setPalette = function(mod) {
+				Vibrant.from(mod.get('image').link).getPalette(
+					function(err, incomingPalette){    					
+						mod.set({palette:incomingPalette})
+					}
+				)
+			}
+
+			setPalette(this.nm)
+			DOM.render(<SearchView data={this.nm} />, document.querySelector('.container'))
+		},
+
 		initialize: function() {
+			this.nm = new ImgModel()
 			Backbone.history.start()
 		}
 	})
