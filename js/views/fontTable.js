@@ -1,23 +1,20 @@
 import Fonts from './fonts'
-import CreateFragment from 'react-addons-create-fragment'
 
 console.log("font table")
 
-// var createFragment = require('react-addons-create-fragment')
+var FontTable = {"Roboto":
+    {"subhead":"Open Sans",
+    "content":"Courier"
+	}
+}
 
-// var FontTable = createFragment({
-// 		head: 'Lobster',
-// 		subhead:'Open Sans',
-// 		content:'Courier'
-// 	})
+// var mainFonts = Object.keys(FontTable)
+// var font1 = mainFonts[0] 
+// FontTable[font1]
 
-// var FontTable = createFragment({Lobster: {subhead:'Open+Sans',
-// 						   content:'Courier'}
-// 				})
-
-var FontTable = {"Roboto":[
-    {"subhead":"Open Sans"},
-    {"content":"Courier"}
-]}
+// {
+// 	subhead: "Open Sans",
+// 	content: "Courier"
+// }
 
 export default FontTable

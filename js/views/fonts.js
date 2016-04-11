@@ -9,11 +9,10 @@ var FontContainer = React.createClass ({
 			// var font1 = "Arvo"
 			// var font2 = "Lobster"
 			// var font3 = "Inconsolata"
-			console.log(FontTable)
-			var font1 = FontTable[0] 
-			console.log(font1)
-			var font2 = FontTable[1]
-			var font3 = FontTable[2]
+			var mainFonts = Object.keys(FontTable)
+			var font1 = mainFonts[0] 
+			var font2 = FontTable[font1].subhead
+			var font3 = FontTable[font1].content
 			var head = document.head
 			  , link = document.createElement('link')
 
