@@ -41,6 +41,7 @@ import Backbone from 'backbone'
 import Vibrant from 'node-vibrant'
 import Scroll from 'react-scroll'
 
+import SuperDash from './views/superDash'
 import DashView from './views/dash'
 import SearchView from './views/searchView'
 import Preview from './views/preview'
@@ -128,7 +129,32 @@ function app() {
 			"search/:cityName" : "searchForCity",
 			"dash" 	           : "toDash",
 			"preview"		   : "toPreview",
+			"superdash"		   : "toSuperDash",
 			"*default"         : "showDefaults"
+		},
+
+		toSuperDash: function(cityName) {
+			var setPalette = function(mod) {
+				var src = "/image?src=" + mod.get("image").link.replace('https','http')   
+				Vibrant.from(src).getPalette(
+					function(err, incomingPalette){
+						mod.set({palette:incomingPalette})
+					}
+				)
+			}
+			var mod = this.nm
+			this.nm.fetch({
+				data: {
+					key: this.nm.key,
+					cx: this.nm.cx,
+					searchType: "image",
+					q: "paris"
+				}
+			}).then(function(){
+				setPalette(mod)
+			})
+			console.log("SUUUPPER!!")
+			DOM.render(<SuperDash paletteData={this.nm}/>, document.querySelector('.container'))
 		},
 
 		searchForCity: function(cityName) {
@@ -177,6 +203,7 @@ function app() {
 			}
 
 			setPalette(this.nm)
+
 			DOM.render(<SearchView data={this.nm} />, document.querySelector('.container'))
 		},
 
