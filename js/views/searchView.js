@@ -1,10 +1,10 @@
 import DOM from 'react-dom'
 import React, {Component} from 'react'
 
+import PaletteContainer from './palette'
+
 var SearchView = React.createClass({
 	_updateModel: function() {
-		console.log("this image on props")
-		console.log(this)
 		this.setState({
 			imageData: this.props.data.get('image'),
 			palette: this.props.data.get('palette')
@@ -24,8 +24,6 @@ var SearchView = React.createClass({
 	},
 
 	render: function() {
-		console.log('rendering app view') 
-		console.log(this)
 		return (
 			<div className="searchContainer">
 				<CityImg imageData={this.state.imageData}/>
@@ -44,8 +42,6 @@ var CityImg = React.createClass({
 	},
 
 	render: function() {
-		// console.log('city image component, never received link')
-		// console.log(this.props)
 		return (
 			<div className="cityImgContainer">
 				<input onKeyDown={this._setRoute} />
@@ -56,12 +52,9 @@ var CityImg = React.createClass({
 })
 
 var ColorPalette = React.createClass({
-
 	_renderColorComponents: function(paletteObj) {
 		var jsxArray = []
 		var timeout = 1
-		console.log('incoming palette object')
-		console.log(paletteObj)
 		for (var prop in paletteObj) {
 			var swatchObj = paletteObj[prop]
 			if (swatchObj) {
@@ -83,7 +76,6 @@ var ColorPalette = React.createClass({
 })
 
 var Color = React.createClass({
-
 	componentWillMount: function() {
 		setTimeout(function() {
 				this.setState({opacity:1})
@@ -97,8 +89,6 @@ var Color = React.createClass({
 	},
 
 	render: function() {
-		console.log('incoming Color props')
-		console.log(this.props)
 		var bgColor = `rgb(${Math.floor(this.props.rgbArr[0])},${Math.floor(this.props.rgbArr[1])},${Math.floor(this.props.rgbArr[2])})`
 		var styleObj = {background: bgColor, opacity: this.state.opacity}
 		return (

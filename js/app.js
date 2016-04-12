@@ -77,6 +77,18 @@ var auth_code = 'WtDfYAKAui3cNBClQp4PF5eiG8i5YnMC7UrBp6Dyl4VKcXXdYL5fdHjwnlPrOcA
 
 function app() {
 
+	// Scroll Event //
+	var searchView = document.querySelector('.searchContainer')
+	var dashView = document.querySelector('.pageContainer')
+	// var winH = window.innerHeight()
+
+	window.addEventListener('scroll',function(evt){
+		window.event = evt
+		console.log('scrolled it!')
+		searchView.toggleClass(dashView)
+	})
+
+
 	// Model //
     var ImgModel = Backbone.Model.extend ({
     	url: "https://www.googleapis.com/customsearch/v1",
@@ -89,7 +101,7 @@ function app() {
 
     	defaults: {
     		image: {
-    			link: './images/kaylan-smith-dubai-difc.png'
+    			link: './images/11824769035_a0193745af_k.png'
     		},
 			palette: []
     	},
@@ -120,19 +132,14 @@ function app() {
 
 		searchForCity: function(cityName) {
 			var setPalette = function(mod) {
-				console.log(mod)
-				console.log('setting palette')
 				var src = "/image?src=" + mod.get("image").link.replace('https','http')   
-				console.log(src)			
 				Vibrant.from(src).getPalette(
 					function(err, incomingPalette){
-						console.log("err",err)
-						console.log("palette",incomingPalette)
 						mod.set({palette:incomingPalette})
 					}
 				)
-				window.V = Vibrant
-				window.src = src
+				// window.V = Vibrant
+				// window.src = src
 			}
 			var mod = this.nm
 			this.nm.fetch({
@@ -143,7 +150,6 @@ function app() {
 					q: cityName
 				}
 			}).then(function(){
-				console.log('invoking setPalette after fetch')
 				setPalette(mod)
 			})
 			DOM.render(<SearchView data={this.nm} />, document.querySelector('.container'))

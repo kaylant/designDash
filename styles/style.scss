@@ -178,11 +178,9 @@ $font: 'Trebuchet MS';
 
     .colorPaletteContainer {
         flex: 1;
-        height: 100vh;
         display: flex;
         flex-direction: column;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 
         .color {
             flex: 1;
@@ -191,11 +189,8 @@ $font: 'Trebuchet MS';
             font-family: $font;
         }
 
-        .color:nth-child(0n+1) {
-            border-color: pink;
-        }
     }
- }
+}
 
 // Dash View
 
@@ -207,29 +202,18 @@ $font: 'Trebuchet MS';
 
     .paletteContainer {
         flex: 2;
+        border: 1px solid black;
         display: flex;
         flex-direction: row;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-        .swatch1 {
+        .color {
             flex: 1;
-            border: 1px solid black;
+            text-align: center;
+            color: white;
+            font-family: $font;
         }
 
-        .swatch2 {
-            @extend .swatch1;
-        }
-
-        .swatch3 {
-            @extend .swatch1;
-        }
-
-        .swatch4 {
-            @extend .swatch1;
-        }
-
-        .swatch5 {
-            @extend .swatch1;
-        }
     }
 
     .fontContainer {

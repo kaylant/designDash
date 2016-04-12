@@ -9,7 +9,6 @@ import FontTable from './fontTable'
 var FontContainer = React.createClass ({
 		render: function() {
 			var mainFonts = Object.keys(FontTable)
-			console.log(mainFonts)
 			var font1 = mainFonts[1] 
 			var font2 = FontTable[font1].subhead
 			var font3 = FontTable[font1].content
