@@ -39,6 +39,7 @@ import HelloJS from 'hellojs'
 import $ from 'jquery'
 import Backbone from 'backbone'
 import Vibrant from 'node-vibrant'
+import Scroll from 'react-scroll'
 
 import DashView from './views/dash'
 import SearchView from './views/searchView'
@@ -78,15 +79,15 @@ var auth_code = 'WtDfYAKAui3cNBClQp4PF5eiG8i5YnMC7UrBp6Dyl4VKcXXdYL5fdHjwnlPrOcA
 function app() {
 
 	// Scroll Event //
-	var searchView = document.querySelector('.searchContainer')
-	var dashView = document.querySelector('.pageContainer')
-	// var winH = window.innerHeight()
+	// var searchView = document.querySelector('.searchContainer')
+	// var dashView = document.querySelector('.pageContainer')
+	// // var winH = window.innerHeight()
 
-	window.addEventListener('scroll',function(evt){
-		window.event = evt
-		console.log('scrolled it!')
-		searchView.toggleClass(dashView)
-	})
+	// window.addEventListener('scroll',function(evt){
+	// 	window.event = evt
+	// 	console.log('scrolled it!')
+	// 	searchView.toggleClass(dashView)
+	// })
 
 	// Model //
     var ImgModel = Backbone.Model.extend ({

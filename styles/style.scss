@@ -134,132 +134,138 @@ $font: 'Trebuchet MS';
     outline: none;
 }
 
-.searchContainer {
-    width: 100%;
+.container {
     height: 100vh;
-    background: aliceblue;
-    display: block;
-    margin: auto;
-    display: flex;
 
-    .cityImgContainer {
-        flex: 1;
+    .searchContainer {
+        width: 100%;
+        height: 100vh;
+        background: aliceblue;
+        margin: auto;
+        display: flex;
         overflow: hidden;
-        position: relative;
 
-        input {
-            position: absolute;
-            opacity: .5;
-            top: 38%;
-            border: none;
-            height: 50px;
-            width: 300px;
-            border-radius: 3px;
-            padding-left: 10px;
-            font-family: sans-serif;
-            z-index: 2;
-            margin-left: 50%;
-            transform: translateX(-50%)
+        .cityImgContainer {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+
+            input {
+                position: absolute;
+                opacity: .5;
+                top: 38%;
+                border: none;
+                height: 50px;
+                width: 300px;
+                border-radius: 3px;
+                padding-left: 10px;
+                font-family: sans-serif;
+                z-index: 2;
+                margin-left: 50%;
+                transform: translateX(-50%)
+            }
+
+            input:focus {
+                box-shadow: 0 0 5px 1px #969696;
+                outline: none;
+            } 
+
+            img {
+                height: 100vh;
+                text-align: center;
+                margin-left: 50%;
+                transform: translateX(-50%)
+            } 
+
         }
 
-        input:focus {
-            box-shadow: 0 0 5px 1px #969696;
-            outline: none;
-        } 
+        .colorPaletteContainer {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-        img {
-            height: 100vh;
-            text-align: center;
-            margin-left: 50%;
-            transform: translateX(-50%)
-        } 
+            .color {
+                flex: 1;
+                text-align: center;
+                color: white;
+                font-family: $font;
+            }
 
+        }
     }
 
-    .colorPaletteContainer {
-        flex: 1;
+    // Dash View
+
+    .pageContainer {
+        margin: auto;
+        height: 100vh;
         display: flex;
         flex-direction: column;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        overflow: hidden;
 
-        .color {
-            flex: 1;
-            text-align: center;
-            color: white;
-            font-family: $font;
+        .paletteContainer {
+            flex: 2;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+            .color {
+                flex: 1;
+                text-align: center;
+                color: white;
+                font-family: $font;
+            }
+
         }
 
-    }
-}
+        .fontContainer {
+            flex: 4;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
 
-// Dash View
+            .font1 {
+                padding-top: 15px;
+                padding-left: 20px;
+                flex: 1;
+                margin-bottom: 10px;
 
-.pageContainer {
-    margin: auto;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+                .fontName {
+                    font-size: 11px;
+                    margin: 0;
+                    color: $primaryColor;
+                }
+            }
 
-    .paletteContainer {
-        flex: 2;
-        border: 1px solid black;
-        display: flex;
-        flex-direction: row;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            .font2 {
+                @extend .font1;
+            }
 
-        .color {
-            flex: 1;
-            text-align: center;
-            color: white;
-            font-family: $font;
-        }
-
-    }
-
-    .fontContainer {
-        flex: 4;
-        border: 1px solid black;
-        display: flex;
-        flex-direction: column;
-
-        .font1 {
-            padding-top: 15px;
-            padding-left: 20px;
-            flex: 1;
-            margin-bottom: 10px;
-
-            .fontName {
-                font-size: 11px;
-                margin: 0;
-                color: $primaryColor;
+            .font3 {
+                @extend .font1;
             }
         }
 
-        .font2 {
-            @extend .font1;
+        .navBarContainer {
+            flex: 1;
+            border: 1px solid black;
         }
+     }
 
-        .font3 {
-            @extend .font1;
-        }
-    }
+    // Preview
 
-    .navBarContainer {
-        flex: 1;
-        border: 1px solid black;
-    }
- }
-
-// Preview
-
-.previewContainer {
-    margin: auto;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-
-    img {
+    .previewContainer {
         margin: auto;
-        width: 20%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        img {
+            margin: auto;
+            width: 25%;
+        }
     }
 }
