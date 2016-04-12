@@ -42,9 +42,9 @@ import Vibrant from 'node-vibrant'
 
 import DashView from './views/dash'
 import SearchView from './views/searchView'
+import Preview from './views/preview'
 import PaletteContainer from './views/palette'
 import FontContainer from './views/fonts'
-import IconContainer from './views/icons'
 import NavBar from './views/navBar'
 
 var cId = 'OJ4amGS2A2d5Pow5zLETwzjjTq0ccUSKSygfbo9sQOQB3lHf2gNFaap5cvyJmAAu'
@@ -88,7 +88,6 @@ function app() {
 		searchView.toggleClass(dashView)
 	})
 
-
 	// Model //
     var ImgModel = Backbone.Model.extend ({
     	url: "https://www.googleapis.com/customsearch/v1",
@@ -127,6 +126,7 @@ function app() {
 		routes: {
 			"search/:cityName" : "searchForCity",
 			"dash" 	           : "toDash",
+			"preview"		   : "toPreview",
 			"*default"         : "showDefaults"
 		},
 
@@ -159,6 +159,11 @@ function app() {
 			window.location.hash = "dash"
 			DOM.render(<DashView/>, document.querySelector('.container'))
 		}, 
+
+		toPreview: function() {
+			window.location.hash = "preview"
+			DOM.render(<Preview/>, document.querySelector('.container'))
+		},
 
 		showDefaults: function() {
 			window.location.hash = "home"

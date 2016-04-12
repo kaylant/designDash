@@ -132,7 +132,7 @@ $font: 'Trebuchet MS';
 
 *:focus {
     outline: none;
-    }
+}
 
 .searchContainer {
     width: 100%;
@@ -244,13 +244,22 @@ $font: 'Trebuchet MS';
         }
     }
 
-    .iconContainer {
-        flex: 2; 
-        border: 1px solid black;
-    }
-
     .navBarContainer {
         flex: 1;
         border: 1px solid black;
     }
  }
+
+// Preview
+
+.previewContainer {
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    img {
+        margin: auto;
+        width: 20%;
+    }
+}

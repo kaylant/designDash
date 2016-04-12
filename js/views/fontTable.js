@@ -10,5 +10,4 @@ var FontTable = {"Roboto":
 	}	
 }
 
-
 export default FontTable

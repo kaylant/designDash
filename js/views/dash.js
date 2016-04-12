@@ -12,7 +12,6 @@ var DashView = React.createClass ({
 			<div className="pageContainer">
 				<PaletteContainer/>
 				<FontContainer/>
-				<IconContainer/>
 				<NavBar/>
 			</div>
 			)
