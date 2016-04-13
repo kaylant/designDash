@@ -8,12 +8,10 @@ import Preview from './preview'
 
 var SuperDash = React.createClass ({
 	render: function () {
+    console.log(this)
 		return (
 			<div className="superDashContainer">
-				<SearchView data={this.props.paletteData}/>
-				<DashView/>
-				<Preview/>
-				<Section/>
+				<SearchView data={this.props.paletteData} name="test1" className="element"/>
 			</div>
 			)
 	}
@@ -22,10 +20,10 @@ var SuperDash = React.createClass ({
 var Link    = Scroll.Link;
 var Element = Scroll.Element;
 var Events  = Scroll.Events;
-var scroll  = Scroll.animateScroll;
+var scroll  = Scroll.animateScroll
 
 
-var Section = React.createClass({
+var SuperDash = React.createClass({
   componentDidMount: function() {
 
     Events.scrollEvent.register('begin', function() {
@@ -46,7 +44,7 @@ var Section = React.createClass({
   },
   render: function () {
     return (
-      <div>
+      <div className="superDashContainer">
         <nav className="navbar navbar-default navbar-fixed-top">
           <div className="container-fluid">
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -54,23 +52,21 @@ var Section = React.createClass({
                 <li><Link activeClass="active" className="test1" to="test1" spy={true} smooth={true} duration={500} >Test 1</Link></li>
                 <li><Link activeClass="active" className="test2" to="test2" spy={true} smooth={true} duration={500}>Test 2</Link></li>
                 <li><Link activeClass="active" className="test3" to="test3" spy={true} smooth={true} duration={500} >Test 3</Link></li>
-                <li><Link activeClass="active" className="test4" to="test4" spy={true} smooth={true} duration={500}>Test 4</Link></li>
-                <li><Link activeClass="active" className="test5" to="test5" spy={true} smooth={true} duration={500}>Test 5</Link></li>
               </ul>
             </div>
           </div>
         </nav>
 
         <Element name="test1" className="element">
-          test 1
+          test1
         </Element>
 
         <Element name="test2" className="element">
-          test 2
+          <DashView />
         </Element>
 
         <Element name="test3" className="element">
-          test 3
+          <Preview />
         </Element>
 
         <a onClick={this.scrollToTop}>To the top!</a>
@@ -81,6 +77,6 @@ var Section = React.createClass({
 });
 
 
-DOM.render(<Section />, document.querySelector('.container'));
+DOM.render(<SuperDash />, document.querySelector('.container'));
 
 export default SuperDash

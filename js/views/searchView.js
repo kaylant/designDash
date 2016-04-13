@@ -1,6 +1,7 @@
 import DOM from 'react-dom'
 import React, {Component} from 'react'
 
+import SuperDash from './superDash'
 import PaletteContainer from './palette'
 
 var SearchView = React.createClass({
