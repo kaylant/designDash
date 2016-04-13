@@ -41,8 +41,8 @@ import Backbone from 'backbone'
 import Vibrant from 'node-vibrant'
 import Scroll from 'react-scroll'
 
-import DashView from './views/dash'
 import SearchView from './views/searchView'
+import DashView from './views/dashView'
 import Preview from './views/preview'
 import PaletteContainer from './views/palette'
 import FontContainer from './views/fonts'
@@ -153,12 +153,12 @@ function app() {
 			}).then(function(){
 				setPalette(mod)
 			})
-			DOM.render(<SearchView data={this.nm} />, document.querySelector('.container'))
+			DOM.render(<SearchView data={this.nm}/>, document.querySelector('.container'))
 		},
 
 		toDash: function() {
 			window.location.hash = "dash"
-			DOM.render(<DashView/>, document.querySelector('.container'))
+			DOM.render(<DashView />, document.querySelector('.container'))
 		}, 
 
 		toPreview: function() {

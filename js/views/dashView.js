@@ -8,9 +8,11 @@ import NavBar from './navBar'
 
 var DashView = React.createClass ({
 	render: function() {
+		console.log("palette from searchView")
+		console.log(this)	
 		return (
 			<div className="pageContainer">
-				<PaletteContainer/>
+				<PaletteContainer palette={this.props.palette}/>
 				<FontContainer/>
 				<NavBar/>
 			</div>

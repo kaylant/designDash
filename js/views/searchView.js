@@ -2,6 +2,7 @@ import DOM from 'react-dom'
 import React, {Component} from 'react'
 
 import PaletteContainer from './palette'
+import DashView from './dashView'
 
 var SearchView = React.createClass({
 	_updateModel: function() {
@@ -28,6 +29,7 @@ var SearchView = React.createClass({
 			<div className="searchContainer">
 				<CityImg imageData={this.state.imageData}/>
 				<ColorPalette palette={this.state.palette}/>
+				<DashView palette={this.props.data}/>
 			</div>
 			)
 	}

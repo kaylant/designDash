@@ -128,7 +128,7 @@ body {
 $primaryColor: #7f8c8d;
 $font: 'Trebuchet MS';
 
-// Search View
+
 
 *:focus {
     outline: none;
@@ -136,6 +136,8 @@ $font: 'Trebuchet MS';
 
 .container {
     height: 100vh;
+
+    // Search View
 
     .searchContainer {
         width: 100%;
@@ -202,7 +204,6 @@ $font: 'Trebuchet MS';
         height: 100vh;
         display: flex;
         flex-direction: column;
-        overflow: hidden;
 
         .paletteContainer {
             flex: 2;
@@ -261,7 +262,6 @@ $font: 'Trebuchet MS';
         height: 100vh;
         display: flex;
         flex-direction: column;
-        overflow: hidden;
 
         img {
             margin: auto;
