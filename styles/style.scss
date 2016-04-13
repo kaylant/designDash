@@ -137,6 +137,16 @@ $font: 'Trebuchet MS';
 .container {
     height: 100vh;
 
+    // Super Dash
+    .superDashContainer {
+        width: 100%;
+
+        .navbar .navbar-default .navbar-fixed-top {
+            width: 100%;
+            color: aliceblue;
+        }
+    }
+
     .searchContainer {
         width: 100%;
         height: 100vh;
