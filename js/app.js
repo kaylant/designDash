@@ -42,12 +42,11 @@ import Vibrant from 'node-vibrant'
 import Scroll from 'react-scroll'
 
 import SuperDash from './views/superDash'
-import DashView from './views/dash'
+import DashView from './views/dashView'
 import SearchView from './views/searchView'
 import Preview from './views/preview'
 import PaletteContainer from './views/palette'
 import FontContainer from './views/fonts'
-import NavBar from './views/navBar'
 
 var cId = 'OJ4amGS2A2d5Pow5zLETwzjjTq0ccUSKSygfbo9sQOQB3lHf2gNFaap5cvyJmAAu'
 var cSecret = 'GBr1TLUVTvj8F0KBl6BBxsSPOsXLxjsxwsUZpZNLD3ymM08WYLeWLmiyRaK9ZNxI'
@@ -127,37 +126,10 @@ function app() {
 	var AppRouter = Backbone.Router.extend ({
 		routes: {
 			"search/:cityName" : "searchForCity",
-			"dash" 	           : "toDash",
-			"preview"		   : "toPreview",
-			"superdash"		   : "toSuperDash",
 			"*default"         : "showDefaults"
 		},
 
-		toSuperDash: function(cityName) {
-			var setPalette = function(mod) {
-				var src = "/image?src=" + mod.get("image").link.replace('https','http')   
-				Vibrant.from(src).getPalette(
-					function(err, incomingPalette){
-						mod.set({palette:incomingPalette})
-					}
-				)
-			}
-			var mod = this.nm
-			this.nm.fetch({
-				data: {
-					key: this.nm.key,
-					cx: this.nm.cx,
-					searchType: "image",
-					q: "paris"
-				}
-			}).then(function(){
-				setPalette(mod)
-			})
-			console.log("SUUUPPER!!")
-			DOM.render(<SuperDash paletteData={this.nm}/>, document.querySelector('.container'))
-		},
-
-		searchForCity: function(cityName) {
+		searchForCity: function(searchTerm) {
 			var setPalette = function(mod) {
 				var src = "/image?src=" + mod.get("image").link.replace('https','http')   
 				Vibrant.from(src).getPalette(
@@ -174,22 +146,13 @@ function app() {
 					key: this.nm.key,
 					cx: this.nm.cx,
 					searchType: "image",
-					q: cityName
+					q: searchTerm
 				}
 			}).then(function(){
 				setPalette(mod)
 			})
-			DOM.render(<SearchView data={this.nm} />, document.querySelector('.container'))
-		},
-
-		toDash: function() {
-			window.location.hash = "dash"
-			DOM.render(<DashView/>, document.querySelector('.container'))
-		}, 
-
-		toPreview: function() {
-			window.location.hash = "preview"
-			DOM.render(<Preview/>, document.querySelector('.container'))
+			
+			DOM.render(<SuperDash paletteData={this.nm} />, document.querySelector('.container'))
 		},
 
 		showDefaults: function() {
@@ -204,10 +167,11 @@ function app() {
 
 			setPalette(this.nm)
 
-			DOM.render(<SearchView data={this.nm} />, document.querySelector('.container'))
+			DOM.render(<SuperDash paletteData={this.nm} />, document.querySelector('.container'))
 		},
 
 		initialize: function() {
+			console.log('app routing...')
 			this.nm = new ImgModel()
 			Backbone.history.start()
 		}

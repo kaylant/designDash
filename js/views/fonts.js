@@ -7,9 +7,19 @@ import FontTable from './fontTable'
 // window.ft = FontTable
 
 var FontContainer = React.createClass ({
+		_handleRightButton: function() {
+			console.log('clicked!')
+			// this.forceUpdate()
+		},
+
+		_handleLeftButton: function() {
+			console.log('clicked!')
+			// this.forceUpdate()
+		},
+
 		render: function() {
 			var mainFonts = Object.keys(FontTable)
-			var font1 = mainFonts[1] 
+			var font1 = mainFonts[0] 
 			var font2 = FontTable[font1].subhead
 			var font3 = FontTable[font1].content
 			var head = document.head
@@ -53,6 +63,8 @@ var FontContainer = React.createClass ({
 						<p className="fontName">Font Name: {font3}</p>
 						<p style={font3Style}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
+					<button id="leftButton" onClick={this._handleLeftButton}><i className="material-icons">keyboard_arrow_right</i></button>
+					<button id="rightButton" onClick={this._handleRightButton}><i className="material-icons">keyboard_arrow_right</i></button>
 				</div>
 				)
 		}

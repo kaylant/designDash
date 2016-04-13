@@ -2,27 +2,16 @@ import DOM from 'react-dom'
 import React, {Component} from 'react'
 import Scroll from 'react-scroll'
 
-import DashView from './dash'
+import DashView from './dashView'
 import SearchView from './searchView'
 import Preview from './preview'
-
-var SuperDash = React.createClass ({
-	render: function () {
-    console.log(this)
-		return (
-			<div className="superDashContainer">
-				<SearchView data={this.props.paletteData} name="test1" className="element"/>
-			</div>
-			)
-	}
-})
 
 var Link    = Scroll.Link;
 var Element = Scroll.Element;
 var Events  = Scroll.Events;
 var scroll  = Scroll.animateScroll
 
-
+// formerly <Section/>
 var SuperDash = React.createClass({
   componentDidMount: function() {
 
@@ -35,6 +24,7 @@ var SuperDash = React.createClass({
     });
 
   },
+
   scrollToTop: function() {
     scroll.scrollToTop();
   },
@@ -43,6 +33,7 @@ var SuperDash = React.createClass({
     Events.scrollEvent.remove('end');
   },
   render: function () {
+    console.log(this.props.data)
     return (
       <div className="superDashContainer">
         <nav className="navbar navbar-default navbar-fixed-top">
@@ -57,9 +48,10 @@ var SuperDash = React.createClass({
           </div>
         </nav>
 
-        <Element name="test1" className="element">
-          test1
+        <Element name="test1" className="element" data={this.props.data} >
+          <SearchView data={this.props.paletteData} name="test1" className="element"/>
         </Element>
+
 
         <Element name="test2" className="element">
           <DashView />
@@ -77,6 +69,5 @@ var SuperDash = React.createClass({
 });
 
 
-DOM.render(<SuperDash />, document.querySelector('.container'));
 
 export default SuperDash

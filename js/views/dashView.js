@@ -4,7 +4,6 @@ import React, {Component} from 'react'
 import PaletteContainer from './palette'
 import FontContainer from './fonts'
 import IconContainer from './icons'
-import NavBar from './navBar'
 
 var DashView = React.createClass ({
 	render: function() {
@@ -13,6 +12,17 @@ var DashView = React.createClass ({
 				<PaletteContainer/>
 				<FontContainer/>
 				<NavBar/>
+			</div>
+			)
+	}
+})
+
+var NavBar = React.createClass ({
+	render: function() {
+		return (
+			<div className="navBarContainer">
+				<div className="exportProj">Export .zip</div>
+				<div className="saveToDropbox">Save to Dropbox</div>
 			</div>
 			)
 	}
