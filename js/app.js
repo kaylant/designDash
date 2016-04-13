@@ -45,7 +45,6 @@ import SuperDash from './views/superDash'
 import DashView from './views/dashView'
 import SearchView from './views/searchView'
 import Preview from './views/preview'
-import PaletteContainer from './views/palette'
 import FontContainer from './views/fonts'
 
 var cId = 'OJ4amGS2A2d5Pow5zLETwzjjTq0ccUSKSygfbo9sQOQB3lHf2gNFaap5cvyJmAAu'
@@ -171,7 +170,6 @@ function app() {
 		},
 
 		initialize: function() {
-			console.log('app routing...')
 			this.nm = new ImgModel()
 			Backbone.history.start()
 		}

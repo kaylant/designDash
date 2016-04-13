@@ -33,7 +33,6 @@ var SuperDash = React.createClass({
     Events.scrollEvent.remove('end');
   },
   render: function () {
-    console.log(this.props.data)
     return (
       <div className="superDashContainer">
         <nav className="navbar navbar-default navbar-fixed-top">
@@ -54,7 +53,7 @@ var SuperDash = React.createClass({
 
 
         <Element name="test2" className="element">
-          <DashView />
+          <DashView data={this.props.paletteData}/>
         </Element>
 
         <Element name="test3" className="element">

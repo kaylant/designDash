@@ -234,26 +234,9 @@ $font: 'Trebuchet MS';
         flex-direction: column;
         overflow: hidden;
 
-        .paletteContainer {
-            flex: 2;
-            border: 1px solid black;
-            display: flex;
-            flex-direction: row;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-            .color {
-                flex: 1;
-                text-align: center;
-                color: white;
-                font-family: $font;
-            }
-
-        }
-
         .fontContainer {
             position: relative;
             flex: 4;
-            border: 1px solid black;
             display: flex;
             flex-direction: column;
             z-index: -1;
@@ -333,6 +316,20 @@ $font: 'Trebuchet MS';
                     color: white;
                     font-size: 54px;
                 }
+            }
+
+        }
+
+        .paletteContainer {
+            flex: 2;
+            display: flex;
+            flex-direction: row;
+
+            .color {
+                flex: 1;
+                text-align: center;
+                color: white;
+                font-family: $font;
             }
 
         }

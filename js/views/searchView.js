@@ -1,8 +1,6 @@
 import DOM from 'react-dom'
 import React, {Component} from 'react'
 
-import PaletteContainer from './palette'
-
 var SearchView = React.createClass({
 	_updateModel: function() {
 		this.setState({
