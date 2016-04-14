@@ -6,10 +6,11 @@ import IconContainer from './icons'
 
 var DashView = React.createClass ({
 	render: function() {
+		console.log(this)
 		return (
 			<div className="pageContainer">
-				<FontContainer/>
-				<PaletteContainer palette={this.props.data}/>
+				<FontContainer fontIndex={this.props.fontIndex} updateFunc={this.props.updateFont}/>
+				<PaletteContainer palette={this.props.data.get('palette')}/>
 				<NavBar/>
 			</div>
 			)
@@ -28,33 +29,11 @@ var NavBar = React.createClass ({
 })
 
 var PaletteContainer = React.createClass ({
-	_updateModel: function() {
-		this.setState({
-			imageData: this.props.palette.get('image'),
-			palette: this.props.palette.get('palette')
-		})
-	},
-
-	componentWillMount: function() {			
-		var self = this
-		this.props.palette.on('change', this._updateModel)
-	},
-
-	getInitialState: function() {
-		console.log("get initial state")
-		console.log(this)
-		return {
-			imageData: this.props.palette.get('image'),
-			palette: this.props.palette.get('palette')
-		}
-	},
 
 	render: function() {
-		console.log("palette data from dashview")
-		console.log(this)
 		return (
 			<div className="paletteContainer">
-				<ColorPalette palette={this.state.palette}/>
+				<ColorPalette palette={this.props.palette}/>
 			</div>				
 			)
 	}

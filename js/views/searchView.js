@@ -2,30 +2,11 @@ import DOM from 'react-dom'
 import React, {Component} from 'react'
 
 var SearchView = React.createClass({
-	_updateModel: function() {
-		this.setState({
-			imageData: this.props.data.get('image'),
-			palette: this.props.data.get('palette')
-		})
-	},
-
-	componentWillMount: function() {			
-		var self = this
-		this.props.data.on('change', this._updateModel)
-	},
-
-	getInitialState: function() {
-		return {
-			imageData: this.props.data.get('image'),
-			palette: this.props.data.get('palette')
-		}
-	},
-
 	render: function() {
 		return (
 			<div className="searchContainer">
-				<CityImg imageData={this.state.imageData}/>
-				<ColorPalette palette={this.state.palette}/>
+				<CityImg imageData={this.props.data.get('image')}/>
+				<ColorPalette palette={this.props.data.get('palette')}/>
 			</div>
 			)
 	}

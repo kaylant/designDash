@@ -7,19 +7,22 @@ import FontTable from './fontTable'
 // window.ft = FontTable
 
 var FontContainer = React.createClass ({
+
 		_handleRightButton: function() {
 			console.log('clicked!')
-			// this.forceUpdate()
+			console.log(this.props.fontIndex)
+			console.log(this)
+			this.props.updateFunc(1)			
 		},
 
 		_handleLeftButton: function() {
 			console.log('clicked!')
-			// this.forceUpdate()
+			//this.updateFont()
 		},
 
 		render: function() {
 			var mainFonts = Object.keys(FontTable)
-			var font1 = mainFonts[0] 
+			var font1 = mainFonts[this.props.fontIndex] 
 			var font2 = FontTable[font1].subhead
 			var font3 = FontTable[font1].content
 			var head = document.head
@@ -32,7 +35,7 @@ var FontContainer = React.createClass ({
 			head.appendChild(link)
 
 			var font1Style = {
-				fontSize: '20px',
+				fontSize: '40px',
 				fontFamily: font1,
 				margin: '5px 0px'
 			}
