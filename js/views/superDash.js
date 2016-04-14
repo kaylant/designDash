@@ -68,9 +68,9 @@ var SuperDash = React.createClass({
 					<div className="container-fluid">
 						<div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul className="nav navbar-nav">
-								<li><Link activeClass="active" className="test1" to="test1" spy={true} smooth={true} duration={500} >Test 1</Link></li>
-								<li><Link activeClass="active" className="test2" to="test2" spy={true} smooth={true} duration={500}>Test 2</Link></li>
-								<li><Link activeClass="active" className="test3" to="test3" spy={true} smooth={true} duration={500} >Test 3</Link></li>
+								<li><Link activeClass="active" className="test1" to="test1" spy={true} smooth={true} duration={500}>Palette</Link></li>
+								<li><Link activeClass="active" className="test2" to="test2" spy={true} smooth={true} duration={500}>Fonts</Link></li>
+								<li><Link activeClass="active" className="test3" to="test3" spy={true} smooth={true} duration={500}>Preview</Link></li>
 							</ul>
 						</div>
 					</div>

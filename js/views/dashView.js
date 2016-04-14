@@ -6,7 +6,6 @@ import IconContainer from './icons'
 
 var DashView = React.createClass ({
 	render: function() {
-		console.log(this)
 		return (
 			<div className="pageContainer">
 				<FontContainer fontIndex={this.props.fontIndex} updateFunc={this.props.updateFont}/>

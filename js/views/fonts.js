@@ -10,14 +10,19 @@ var FontContainer = React.createClass ({
 
 		_handleRightButton: function() {
 			console.log('clicked!')
+			console.log(typeof(this.props.fontIndex))
 			console.log(this.props.fontIndex)
-			console.log(this)
-			this.props.updateFunc(1)			
+			var currentFontIndex = [this.props.FontIndex]
+			console.log(typeof(currentFontIndex))
+			var newFontIndex = currentFontIndex + 1
+			this.props.updateFunc(newFontIndex)			
 		},
 
 		_handleLeftButton: function() {
 			console.log('clicked!')
-			//this.updateFont()
+			var currentFontIndex = [this.props.FontIndex]
+			var newFontIndex = currentFontIndex - 1
+			this.props.updateFunc(newFontIndex)	
 		},
 
 		render: function() {
