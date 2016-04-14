@@ -7,7 +7,15 @@ var FontTable = {"Roboto":
 	"Lobster":
 	{"subhead":"Arvo",
     "content":"Inconsolata"
-	}	
+	},
+	"Montserrat":
+	{"subhead":"Lora",
+	"content":"Hind"
+	},
+	"Anton":
+	{"subhead":"Poppins",
+	"content":"Quattrocento Sans"
+	},
 }
 
 export default FontTable
