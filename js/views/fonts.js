@@ -21,13 +21,13 @@ var FontContainer = React.createClass ({
 
 		_handleLeftButton: function() {
 			var currentFontIndex = this.props.fontIndex
-			console.log(currentFontIndex)
 			var tableLength = Object.keys(FontTable).length
-			if (currentFontIndex >= 1) {
-				var newFontIndex = currentFontIndex - 1
+			if (currentFontIndex === 0) {
+				var newFontIndex = tableLength -1
 				console.log(newFontIndex)	
 			} else {
-				newFontIndex = tableLength
+				newFontIndex = currentFontIndex - 1
+				console.log(newFontIndex)
 			}
 			this.props.updateFunc(newFontIndex)		
 		},
