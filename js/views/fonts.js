@@ -9,22 +9,26 @@ import FontTable from './fontTable'
 var FontContainer = React.createClass ({
 
 		_handleRightButton: function() {
-			console.log('clicked!')
-			console.log(typeof(this.props.fontIndex))
-			console.log(this.props.fontIndex)
 			var currentFontIndex = this.props.fontIndex
-			console.log(typeof(currentFontIndex))
-			console.log(currentFontIndex)
-			var newFontIndex = currentFontIndex + 1
+			var tableLength = Object.keys(FontTable).length
+			if (currentFontIndex < tableLength - 1) {
+				var newFontIndex = currentFontIndex + 1	
+			} else {
+				newFontIndex = 0
+			}
 			this.props.updateFunc(newFontIndex)			
 		},
 
 		_handleLeftButton: function() {
-			console.log('clicked!')
 			var currentFontIndex = this.props.fontIndex
-			console.log(typeof(currentFontIndex))
 			console.log(currentFontIndex)
-			var newFontIndex = currentFontIndex - 1
+			var tableLength = Object.keys(FontTable).length
+			if (currentFontIndex >= 1) {
+				var newFontIndex = currentFontIndex - 1
+				console.log(newFontIndex)	
+			} else {
+				newFontIndex = tableLength
+			}
 			this.props.updateFunc(newFontIndex)		
 		},
 
@@ -49,7 +53,7 @@ var FontContainer = React.createClass ({
 			}
 
 			var font2Style = {
-				fontSize: '16px',
+				fontSize: '26px',
 				fontFamily: font2,
 				margin: '5px 0px'
 			}

@@ -16,6 +16,9 @@ var FontTable = {"Roboto":
 	{"subhead":"Poppins",
 	"content":"Quattrocento Sans"
 	},
+	"Old Standard TT":
+	{"subhead":"Roboto Mono",
+	"content":"Open Sans"}
 }
 
 export default FontTable
