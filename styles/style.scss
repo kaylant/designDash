@@ -18,6 +18,18 @@ ul, ol {
     margin-right: auto;
 }
 
+/**
+ * BOX-SIZING
+ */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    transition-duration: 0.4s;
+    transition-property: all;//opacity, transform, color, background-color, border-color, z-index, background-image;
+    transition-timing-function: ease;
+}
 
 /**
  * GRIDS
@@ -131,8 +143,6 @@ $font: 'Trebuchet MS';
 
         .navbar {
             width: 100%;
-            background: $primaryColor;
-            opacity: .3;
             position: fixed;
             top: 0;
             height: 40px;
@@ -253,24 +263,31 @@ $font: 'Trebuchet MS';
                 @extend .font1;
             }
 
-            #leftButton {
+            button {
                 border: none;
                 width: 200px;
                 display: inline-block;
                 position: absolute;
-                left: -25px;
                 top: 50%;
                 height: 45px;
                 width: 90px;
-                transform: rotate(90deg);
-                -moz-transform: rotate(90deg);
-                -webkit-transform: rotate(90deg);
                 border-radius: 90px 90px 0 0;
                 -moz-border-radius: 90px 90px 0 0;
                 -webkit-border-radius: 90px 90px 0 0;
                 background: $primaryColor;
-                opacity: .3;
+                opacity: 0;
                 z-index: 2;
+            }
+
+            button:hover {
+                opacity: .3;
+            }
+
+            #leftButton {
+                left: -25px;
+                transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -webkit-transform: rotate(90deg);
 
                 i {
                     transform: rotate(90deg);
@@ -282,23 +299,10 @@ $font: 'Trebuchet MS';
             }
 
             #rightButton {
-                border: none;
-                width: 200px;
-                display: inline-block;
-                position: absolute;
                 right: -25px;
-                top: 50%;
-                height: 45px;
-                width: 90px;
                 transform: rotate(-90deg);
                 -moz-transform: rotate(-90deg);
                 -webkit-transform: rotate(-90deg);
-                border-radius: 90px 90px 0 0;
-                -moz-border-radius: 90px 90px 0 0;
-                -webkit-border-radius: 90px 90px 0 0;
-                background: $primaryColor;
-                opacity: .3;
-                z-index: 2;
 
                 i {
                     transform: rotate(90deg);
