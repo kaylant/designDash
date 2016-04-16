@@ -4,8 +4,10 @@ import React, {Component} from 'react'
 var Preview = React.createClass ({
 	render: function() {		
 		return (
-			<div className="previewContainer">
-				<img src="./images/phone_preview.png"/>
+			<div className="previewContainer">			
+				<div className="previewScreen">
+					<div className="mapToScreen"></div>
+				</div>
 			</div>				
 			)
 	}
