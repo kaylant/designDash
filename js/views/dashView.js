@@ -28,7 +28,6 @@ var NavBar = React.createClass ({
 })
 
 var PaletteContainer = React.createClass ({
-
 	render: function() {
 		return (
 			<div className="paletteContainer">

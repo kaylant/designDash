@@ -86,7 +86,7 @@ var SuperDash = React.createClass({
 				</Element>
 
 				<Element name="test3" className="element">
-					<Preview />
+					<Preview data={this.props.paletteData} />
 				</Element>
 
 				<a onClick={this.scrollToTop}>To the top!</a>

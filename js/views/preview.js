@@ -2,7 +2,6 @@ import DOM from 'react-dom'
 import React, {Component} from 'react'
 
 var Preview = React.createClass ({
-
 	_updateView: function(evt){
 		var phone = document.getElementById("phone_1")
 		var newView = evt.target.value
@@ -13,7 +12,8 @@ var Preview = React.createClass ({
 
 	getInitialState: function() {
 	   return {width: 400,
-			   height: 650}
+			   height: 650,
+			   src: "http://kaylansmith.com"}
 	},
 
 	_updateWidth: function(evt) {
@@ -31,24 +31,36 @@ var Preview = React.createClass ({
 	}, 
 
 	_updateIframe: function() {
+		var iframe = document.getElementById("frame_1")
 		iframe.src = document.getElementById("iframeURL").value
-	}, 
+	},
 
 	render: function() {
-		// var styleObj = {perspective: "1500px"}
+		var paletteObj = this.props.data.get('palette')
+		var bgColorsArray = []
+		var timeout = 1
+		for (var prop in paletteObj) {
+			var swatchObj = paletteObj[prop]
+			if (swatchObj) {
+				var rgbArr = swatchObj.rgb
+				var bgColor = `rgb(${Math.floor(rgbArr[0])},${Math.floor(rgbArr[1])},${Math.floor(rgbArr[2])})`
+				bgColorsArray.push(bgColor)
+				timeout += 1
+			}
+		}
+
+		var lightMutedSwatch = bgColorsArray[2]
+
+		var styleObj = {backgroundColor: lightMutedSwatch}
 		return (
-			<div className="previewContainer">	
+			<div className="previewContainer">
 				<div id="wrapper">
 				  <div className="phone view_1" id="phone_1">
-				    <iframe src="http://kaylansmith.com" id="frame_1"></iframe>
+				    <iframe style={styleObj} id="frame_1"></iframe>
 				  </div>
 				</div>
 
 				<div id="controls">
-				  <div>
-				    <label for="iframeURL">URL:</label>
-				    <input onChange={this._updateIframe} type="text" id="iframeURL" placeholder="http://kaylansmith.com" value="http://kaylansmith.com" />
-				  </div>
 				  <div>
 				    <label for="iframeWidth">Width:</label>
 				    <input onChange={this._updateWidth} type="number" id="iframeWidth" placeholder="400" value={this.state.width} />
@@ -68,4 +80,11 @@ var Preview = React.createClass ({
 	}
 })
 
+
 export default Preview
+
+		// iframe.src = document.getElementById("iframeURL").value
+				// <div>
+				//   <label for="iframeURL">URL:</label>
+				//   <input onChange={this._updateIframe} type="text" id="iframeURL" placeholder="http://kaylansmith.com" value="http://kaylansmith.com" />
+				// </div>
