@@ -14,8 +14,7 @@ var Preview = React.createClass ({
 
 	getInitialState: function() {
 	   return {width: 400,
-			   height: 650,
-			   src: "about:blank"}
+			   height: 650}
 	},
 
 	_updateWidth: function(evt) {
@@ -54,11 +53,27 @@ var Preview = React.createClass ({
 		var vibrantSwatch = bgColorsArray[5]
 
 		var styleObj = {backgroundColor: lightMutedSwatch}
+
+		var fontIndex = this.props.fontIndex
+		console.log(fontIndex)
+		var mainFonts = Object.keys(FontTable)
+		var font1 = mainFonts[fontIndex] 
+		var font2 = FontTable[font1].subhead
+		var font3 = FontTable[font1].content
+
+		var styleFont = {color:ligthVibrantSwatch, background:"white", fontFamily:font1}
+		var styleFont2 = {color:darkVibrantSwatch, background:"white", fontFamily:font2}
+		var styleFont3 = {color:mutedSwatch, background:"white", fontFamily:font3}
+
 		return (
 			<div className="previewContainer">
 				<div id="wrapper">
-				  <div className="phone view_1" id="phone_1">
-				    <iframe style={styleObj} id="frame_1" src="about:blank"></iframe>
+				  <div className="phone view_1" id="phone_1" style={styleObj}>
+				    <div id="frame_1">
+				    	<h1 style={styleFont}>Hello, world</h1>
+				    	<h2 style={styleFont2}>Subheader Font</h2>
+				    	<p style={styleFont3}>Lorem ipsum dolor sit amet</p>
+				    </div>
 				  </div>
 				</div>
 
@@ -80,83 +95,7 @@ var Preview = React.createClass ({
 				<NavBar/>
 			</div>				
 			)
-	},
-
-	// _updateStyle: function() {
-	// 	var textStyle = document.getElementById("iframeText")
-	// 	console.log(textStyle)
-	// }, 
-
-	componentDidUpdate: function() {
-		var paletteObj = this.props.data.get('palette')
-		var bgColorsArray = []
-		var timeout = 1
-		for (var prop in paletteObj) {
-			var swatchObj = paletteObj[prop]
-			if (swatchObj) {
-				var rgbArr = swatchObj.rgb
-				var bgColor = `rgb(${Math.floor(rgbArr[0])},${Math.floor(rgbArr[1])},${Math.floor(rgbArr[2])})`
-				bgColorsArray.push(bgColor)
-				timeout += 1
-			}
-		}
-
-		var darkMutedSwatch = bgColorsArray[0]
-		var darkVibrantSwatch = bgColorsArray[1]
-		var lightMutedSwatch = bgColorsArray[2]
-		var ligthVibrantSwatch = bgColorsArray[3]
-		var mutedSwatch = bgColorsArray[4]
-		var vibrantSwatch = bgColorsArray[5]
-
-		var fontIndex = this.props.fontIndex
-		var mainFonts = Object.keys(FontTable)
-		var font1 = mainFonts[fontIndex] 
-		var font2 = FontTable[font1].subhead
-		var font3 = FontTable[font1].content
-		console.log(font1)
-
-
-
-		var styleFont = `color:${ligthVibrantSwatch};background:white;font-family:${font1};`
-		var styleFont2 = `color:${darkVibrantSwatch};background:white;font-family:${font2};`
-		var styleFont3 = `color:${mutedSwatch};background:white;font-family:${font3};`
-		console.log(styleFont)
-	    var iframe = document.getElementById("frame_1")
-	    var html = `<body>
-	    				<h1 id="iframeText" style=${styleFont}>Hello, world</h1>
-	    				<h2 style=${styleFont2}>Subheader Font</h2>
-	    				<p style=${styleFont3}>Lorem ipsum dolor sit amet</p>
-	    			</body>`
-	    iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html)
-	    console.log(iframe.contentDocument)
-
-	    var head = iframe.contentDocument.head
-	      , link = iframe.contentDocument.createElement('link')
-	      // , body = iframe.contentDocument.body
-	      // console.log(body)
-
-	    link.type = 'text/css'
-	    link.rel = 'stylesheet'
-	    link.href = `https://fonts.googleapis.com/css?family=${font1}|${font2}|${font3}`
-
-	    head.appendChild(link)
-	    // body.appendChild(html)
-
-	    // body.open();
-	    // body.write('Test');
-	    // body.close()
-
-	    // iframe.contentDocument.body.style.fontFamily = "Lobster";
-
-
-	    // var cssLink = document.createElement("link") 
-	    // cssLink.href = "style.css"; 
-	    // cssLink.rel = "stylesheet"; 
-	    // cssLink.type = "text/css"; 
-	    // iframe.document.body.appendChild(cssLink)
-	    console.log(iframe.src)
 	}
-
 })
 
 var NavBar = React.createClass ({
@@ -171,9 +110,3 @@ var NavBar = React.createClass ({
 })
 
 export default Preview
-
-		// iframe.src = document.getElementById("iframeURL").value
-				// <div>
-				//   <label for="iframeURL">URL:</label>
-				//   <input onChange={this._updateIframe} type="text" id="iframeURL" placeholder="http://kaylansmith.com" value="http://kaylansmith.com" />
-				// </div>
