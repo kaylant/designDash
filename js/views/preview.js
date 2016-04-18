@@ -32,7 +32,11 @@ var Preview = React.createClass ({
 
 	_updateIframe: function() {
 		var iframe = document.getElementById("frame_1")
-		iframe.src = document.getElementById("iframeURL").value
+		console.log(iframe)
+		var html = "<html><head><title>Titolo</title></head><body><p>body</p></body></html>"
+		// iframe.open();
+		// iframe.write(html);
+		// iframe.close(); 
 	},
 
 	render: function() {
@@ -56,7 +60,8 @@ var Preview = React.createClass ({
 			<div className="previewContainer">
 				<div id="wrapper">
 				  <div className="phone view_1" id="phone_1">
-				    <iframe style={styleObj} id="frame_1"></iframe>
+				    <iframe style={styleObj} id="frame_1" src="about:blank"></iframe>
+				    {this._updateIframe()}
 				  </div>
 				</div>
 

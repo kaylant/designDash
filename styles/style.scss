@@ -142,15 +142,16 @@ $font: 'Trebuchet MS';
         width: 100%;
 
         .navbar {
-            width: 100%;
+            width: 50%;
             position: fixed;
-            top: 0;
-            height: 40px;
+            top: -30px;
+            height: 70px;
             z-index: 1;
 
             ul {
                 margin-top: 0;
                 padding: 0;
+                margin-left: 60px;
 
                 li {
                     position: relative;
@@ -158,13 +159,16 @@ $font: 'Trebuchet MS';
                     padding: 10px 0px;
                     font-size: 14px;
                     top: 0;
-                    margin-left: 60px;
+                    margin-right: 5px;
                     font-family: $font;
                     color: aliceblue;
                     opacity: 1;
-
                 }
             }
+        }
+
+        .navbar:hover{
+            top: 0px;
         }
 
     }
