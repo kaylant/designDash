@@ -24,10 +24,8 @@ var FontContainer = React.createClass ({
 			var tableLength = Object.keys(FontTable).length
 			if (currentFontIndex === 0) {
 				var newFontIndex = tableLength -1
-				console.log(newFontIndex)	
 			} else {
 				newFontIndex = currentFontIndex - 1
-				console.log(newFontIndex)
 			}
 			this.props.updateFunc(newFontIndex)		
 		},

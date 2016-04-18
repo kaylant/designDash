@@ -86,7 +86,7 @@ var SuperDash = React.createClass({
 				</Element>
 
 				<Element name="test3" className="element">
-					<Preview data={this.props.paletteData} />
+					<Preview data={this.props.paletteData} updateFont={this._updateMasterFontIndex} fontIndex={this.state.masterFontIndex}/>
 				</Element>
 
 				<a onClick={this.scrollToTop}>To the top!</a>

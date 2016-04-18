@@ -1,4 +1,5 @@
 import Fonts from './fonts'
+import Preview from './preview'
 
 var FontTable = {"Roboto":
     {"subhead":"Open Sans",
