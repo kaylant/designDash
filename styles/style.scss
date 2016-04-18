@@ -126,7 +126,7 @@ body {
  */
 
 $primaryColor: #7f8c8d;
-$font: 'Trebuchet MS';
+$font: 'Roboto';
 
 // Search View
 
@@ -257,6 +257,7 @@ $font: 'Trebuchet MS';
                     font-size: 11px;
                     margin: 0;
                     color: $primaryColor;
+                    font-family: $font;
                 }
             }
 
@@ -333,17 +334,6 @@ $font: 'Trebuchet MS';
             }
 
         }
-
-        .navBarContainer {
-            flex: 1;
-            border: 1px solid black;
-            text-align: center;
-
-            div {
-                display: inline-block;
-                margin: 20px;
-            }
-        }
      }
 
     // Preview
@@ -394,6 +384,7 @@ $font: 'Trebuchet MS';
             }
 
         }
+
         /*Controls*/
         
         #controls {
@@ -453,6 +444,18 @@ $font: 'Trebuchet MS';
             transform: scale(0.4, 0.4);
           }
         }
+
+    
+    .navBarContainer {
+        flex: 1;
+        border: 1px solid black;
+        text-align: center;
+
+        div {
+            display: inline-block;
+            margin: 20px;
+        }
+    }
         
     }
 }

@@ -58,6 +58,7 @@ var Preview = React.createClass ({
 		var styleObj = {backgroundColor: lightMutedSwatch}
 		return (
 			<div className="previewContainer">
+				<NavBar/>
 				<div id="wrapper">
 				  <div className="phone view_1" id="phone_1">
 				    <iframe style={styleObj} id="frame_1" src="about:blank"></iframe>
@@ -85,6 +86,16 @@ var Preview = React.createClass ({
 	}
 })
 
+var NavBar = React.createClass ({
+	render: function() {
+		return (
+			<div className="navBarContainer">
+				<div className="exportProj">Export .zip</div>
+				<div className="saveToDropbox">Save to Dropbox</div>
+			</div>
+			)
+	}
+})
 
 export default Preview
 

@@ -10,18 +10,6 @@ var DashView = React.createClass ({
 			<div className="pageContainer">
 				<FontContainer fontIndex={this.props.fontIndex} updateFunc={this.props.updateFont}/>
 				<PaletteContainer palette={this.props.data.get('palette')}/>
-				<NavBar/>
-			</div>
-			)
-	}
-})
-
-var NavBar = React.createClass ({
-	render: function() {
-		return (
-			<div className="navBarContainer">
-				<div className="exportProj">Export .zip</div>
-				<div className="saveToDropbox">Save to Dropbox</div>
 			</div>
 			)
 	}
