@@ -77,17 +77,6 @@ var auth_code = 'WtDfYAKAui3cNBClQp4PF5eiG8i5YnMC7UrBp6Dyl4VKcXXdYL5fdHjwnlPrOcA
 
 function app() {
 
-	// Scroll Event //
-	// var searchView = document.querySelector('.searchContainer')
-	// var dashView = document.querySelector('.pageContainer')
-	// // var winH = window.innerHeight()
-
-	// window.addEventListener('scroll',function(evt){
-	// 	window.event = evt
-	// 	console.log('scrolled it!')
-	// 	searchView.toggleClass(dashView)
-	// })
-
 	// Model //
     var ImgModel = Backbone.Model.extend ({
     	url: "https://www.googleapis.com/customsearch/v1",
