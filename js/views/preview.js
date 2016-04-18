@@ -30,14 +30,17 @@ var Preview = React.createClass ({
 		phone.style.height = document.getElementById("iframeHeight").value + "px"
 	}, 
 
-	_updateIframe: function() {
-		var iframe = document.getElementById("frame_1")
-		console.log(iframe)
-		var html = "<html><head><title>Titolo</title></head><body><p>body</p></body></html>"
-		// iframe.open();
-		// iframe.write(html);
-		// iframe.close(); 
-	},
+	// _updateIframe: function() {
+	// 	var iframe = document.getElementById("frame_1")
+	// 	// var z = document.createElement('div')
+	// 	// z.innerHTML = '<body>Sugar</body>'
+	// 	// iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html)
+	// 	// iframe.appendChild(z)
+	// 	// console.log(iframe.src)
+	// 	// iframe.open();
+	// 	// iframe.write(html);
+	// 	// iframe.close(); 
+	// },
 
 	render: function() {
 		var paletteObj = this.props.data.get('palette')
@@ -62,7 +65,6 @@ var Preview = React.createClass ({
 				<div id="wrapper">
 				  <div className="phone view_1" id="phone_1">
 				    <iframe style={styleObj} id="frame_1" src="about:blank"></iframe>
-				    {this._updateIframe()}
 				  </div>
 				</div>
 
@@ -83,7 +85,13 @@ var Preview = React.createClass ({
 				</div>
 			</div>				
 			)
-	}
+	}, 
+
+	componentDidUpdate: function() {
+	   var iframe = document.getElementById("frame_1")
+	   var html = '<body>Hello, world</body>'
+	   iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html)
+	 }
 })
 
 var NavBar = React.createClass ({
