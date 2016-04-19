@@ -144,31 +144,52 @@ $font: 'Roboto';
         .navbar {
             width: 50%;
             position: fixed;
-            top: -30px;
+            bottom: 0px;
+            right: 0px;
             height: 70px;
             z-index: 1;
+            box-shadow: 0 10px 0px 0px $primaryColor;
 
             ul {
+            	right: 0px;
                 margin-top: 0;
+                margin-right: 20px;
                 padding: 0;
-                margin-left: 60px;
+                text-align: right;
 
                 li {
                     position: relative;
                     display: inline-block;
-                    padding: 10px 0px;
+                    padding: 20px 0px;
                     font-size: 14px;
                     top: 0;
-                    margin-right: 5px;
+                    margin-left: 15px;
                     font-family: $font;
-                    color: aliceblue;
-                    opacity: 1;
+
+                    img {
+                    	height: 30px;
+                    	opacity: .5;
+                    	-webkit-transform: scale(1,1);
+                    	-webkit-transition-timing-function: ease-out;
+                    	-webkit-transition-duration: 250ms;
+                    	-moz-transform: scale(1,1);
+                    	-moz-transition-timing-function: ease-out;
+                    	-moz-transition-duration: 250ms; 
+                    }
+
+                    img:hover {
+                    	opacity: 1;
+                    	-webkit-transform: scale(1.05,1.07);
+                    	-webkit-transition-timing-function: ease-out;
+                    	-webkit-transition-duration: 250ms;
+                    	-moz-transform: scale(1.05,1.07);
+                    	-moz-transition-timing-function: ease-out;
+                    	-moz-transition-duration: 250ms;
+                    	background-color: #eee;
+                    }
+
                 }
             }
-        }
-
-        .navbar:hover{
-            top: 0px;
         }
 
     }
@@ -202,7 +223,7 @@ $font: 'Roboto';
             }
 
             input:focus {
-                box-shadow: 0 0 5px 1px #BBB;
+                box-shadow: 0 0 5px 1px $primaryColor 0.2;
                 outline: none;
                 opacity: .8;
             } 
@@ -220,7 +241,7 @@ $font: 'Roboto';
             flex: 1;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 4px 8px 0 $primaryColor 0.2, 0 6px 20px 0 $primaryColor 0.2;
 
             .color {
                 flex: 1;
@@ -243,18 +264,15 @@ $font: 'Roboto';
 
         .fontContainer {
             position: relative;
-            flex: 4;
-            display: flex;
-            flex-direction: column;
+            flex: 5;
+            margin-top: 25px;
 
             .font1 {
-                padding-top: 15px;
-                padding-left: 60px;
-                flex: 1;
+                padding: 15px 60px;
                 margin-bottom: 10px;
 
                 .fontName {
-                    font-size: 11px;
+                    font-size: 0.8em;
                     margin: 0;
                     color: $primaryColor;
                     font-family: $font;
@@ -345,20 +363,20 @@ $font: 'Roboto';
         /*Basic Phone styling*/
         
         .phone {
-          border: 40px solid #ddd;
-          border-width: 55px 7px;
-          border-radius: 40px;
-          margin: 50px auto;
-          overflow: hidden;
-          transition: all 0.5s ease;
-          width: 400px;
-          height: 650px;
+            border: 40px solid #ddd;
+            border-width: 55px 7px;
+            border-radius: 40px;
+            margin: 50px auto;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            width: 400px;
+            height: 650px;
         }
         
         .phone #iframe {
-          border: 0;
-          width: 100%;
-          height: 100%;
+            border: 0;
+            width: 100%;
+            height: 100%;
         }
         
         /*Different Perspectives*/
@@ -367,94 +385,133 @@ $font: 'Roboto';
             perspective: 1500px;
 
             .phone.view_1 {
-              transform: rotateX(50deg) rotateY(0deg) rotateZ(-50deg);
-              box-shadow: -3px 3px 0 #BBB, -6px 6px 0 #BBB, -9px 9px 0 #BBB, -12px 12px 0 #BBB, -14px 10px 20px #666;
+                transform: rotateX(50deg) rotateY(0deg) rotateZ(-50deg);
+                box-shadow: -3px 3px 0 #BBB, -6px 6px 0 #BBB, -9px 9px 0 #BBB, -12px 12px 0 #BBB, -14px 10px 20px #666;
             }
             
             .phone.view_2 {
-              transform: rotateX(0deg) rotateY(-60deg) rotateZ(0deg);
-              box-shadow: 5px 1px 0 #BBB, 9px 2px 0 #BBB, 12px 3px 0 #BBB, 15px 4px 0 #BBB, 0 7px 20px #999;
+                transform: rotateX(0deg) rotateY(-60deg) rotateZ(0deg);
+                box-shadow: 5px 1px 0 #BBB, 9px 2px 0 #BBB, 12px 3px 0 #BBB, 15px 4px 0 #BBB, 0 7px 20px #999;
             }
             
             .phone.view_3 {
-              transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-              box-shadow: 0px 3px 0 #BBB, 0px 4px 0 #BBB, 0px 5px 0 #BBB, 0px 7px 0 #BBB, 0px 10px 20px #666;
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+                box-shadow: 0px 3px 0 #BBB, 0px 4px 0 #BBB, 0px 5px 0 #BBB, 0px 7px 0 #BBB, 0px 10px 20px #666;
             }
 
         }
 
         .navBarContainer {
-            border: 1px solid black;
             text-align: center;
             position: absolute;
-            bottom: 0;
+            bottom: 40px;
             width: 100%;
 
             div {
                 display: inline-block;
                 margin: 20px;
+                font-family: $font;
+                color: $primaryColor;
             }
         }
 
         /*Controls*/
         
         #controls {
-          position: absolute;
-          top: 20px;
-          left: 20px;
-          font-size: 0.9em;
-          color: #333;
+            position: absolute;
+            top: 0px;
+            left: 20px;
+            font-size: 0.8em;
+            color: $primaryColor;
+            text-align: left;
         }
         
         #controls div {
-          margin: 10px;
+            margin-bottom: 5px;
         }
         
         #controls div label {
-          width: 120px;
-          display: block;
-          float: left;
+            width: 120px;
+            display: block;
+            text-align: left;
+            color: $primaryColor;
+        }
+
+        input {
+        	color: $primaryColor;
+        	height: 35px;
+        	padding-left: 5px;
+        	width: 90px;
+        	left: 0px;
         }
         
         #views {
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          width: 200px;
+            position: absolute;
+            top: 5px;
+            right: 20px;
         }
         
         #views button {
-          width: 198px;
-          border: 1px solid #bbb;
-          background-color: #fff;
-          height: 40px;
-          margin: 10px 0;
-          color: #666;
-          transition: all 0.2s;
+            width: 100px;
+            border: 1px solid #bbb;
+            background-color: #fff;
+            height: 45px;
+            width: 90px;
+            margin-bottom: 10px;
+            color: $primaryColor;
+            transition: all 0.2s;
+            font-family: $font;
+            font-size: 0.8em;
+            display: block;
+            border-radius: 500px;
+            -webkit-transform: scale(1,1);
+            -webkit-transition-timing-function: ease-out;
+            -webkit-transition-duration: 250ms;
+            -moz-transform: scale(1,1);
+            -moz-transition-timing-function: ease-out;
+            -moz-transition-duration: 250ms; 
         }
         
         #views button:hover {
-          color: #444;
-          background-color: #eee;
+            color: $primaryColor;
+            background-color: #eee;
+            -webkit-transform: scale(1.05,1.07);
+            -webkit-transition-timing-function: ease-out;
+            -webkit-transition-duration: 250ms;
+            -moz-transform: scale(1.05,1.07);
+            -moz-transition-timing-function: ease-out;
+            -moz-transition-duration: 250ms;
         }
         
         @media (max-width:900px) {
-          #wrapper {
-            transform: scale(0.8, 0.8);
-          }
+            #wrapper {
+                transform: scale(0.8, 0.8);
+            }
         }
         
         @media (max-width:700px) {
-          #wrapper {
-            transform: scale(0.6, 0.6);
-          }
+            #wrapper {
+                transform: scale(0.6, 0.6);
+            }
         }
         
         @media (max-width:500px) {
-          #wrapper {
-            transform: scale(0.4, 0.4);
-          }
-        }
+            #wrapper {
+                transform: scale(0.4, 0.4);
+            }
+        } 
         
     }
+    
+	#toTop {
+		height: 30px;
+		margin-left: 20px;
+		margin-bottom: 10px;
+		opacity: .5;
+	}
+
+	#toTop:hover {
+		opacity: 1;
+	}
+    
 }

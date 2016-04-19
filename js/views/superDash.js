@@ -68,9 +68,9 @@ var SuperDash = React.createClass({
 					<div className="container-fluid">
 						<div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul className="nav navbar-nav">
-								<li><Link activeClass="active" className="test1" to="test1" spy={true} smooth={true} duration={500}>Palette</Link></li>
-								<li><Link activeClass="active" className="test2" to="test2" spy={true} smooth={true} duration={500}>Fonts</Link></li>
-								<li><Link activeClass="active" className="test3" to="test3" spy={true} smooth={true} duration={500}>Preview</Link></li>
+								<li><Link activeClass="active" className="test1" to="test1" spy={true} smooth={true} duration={500}><img id="paletteIcon" src="../images/paletteIcon.svg"/></Link></li>
+								<li><Link activeClass="active" className="test2" to="test2" spy={true} smooth={true} duration={500}><img src="../images/fontIcon.svg"/></Link></li>
+								<li><Link activeClass="active" className="test3" to="test3" spy={true} smooth={true} duration={500}><img src="../images/previewIcon.svg"/></Link></li>
 							</ul>
 						</div>
 					</div>
@@ -88,9 +88,7 @@ var SuperDash = React.createClass({
 				<Element name="test3" className="element">
 					<Preview data={this.props.paletteData} updateFont={this._updateMasterFontIndex} fontIndex={this.state.masterFontIndex}/>
 				</Element>
-
-				<a onClick={this.scrollToTop}>To the top!</a>
-			
+				<a onClick={this.scrollToTop}><img id="toTop" src="../images/toTop.svg"/></a>			
 			</div>
 		)
 	}

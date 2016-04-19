@@ -55,7 +55,6 @@ var Preview = React.createClass ({
 		var styleObj = {backgroundColor: lightMutedSwatch}
 
 		var fontIndex = this.props.fontIndex
-		console.log(fontIndex)
 		var mainFonts = Object.keys(FontTable)
 		var font1 = mainFonts[fontIndex] 
 		var font2 = FontTable[font1].subhead
@@ -88,9 +87,9 @@ var Preview = React.createClass ({
 				  </div>
 				</div>
 				<div id="views">
-				  <button value="1" onClick={this._updateView}>View 1 - Laying</button>
-				  <button value="2" onClick={this._updateView}>View 2 - Side</button>
-				  <button value="3" onClick={this._updateView}>View 3 - Front</button>
+				  <button value="1" onClick={this._updateView}>Laying</button>
+				  <button value="2" onClick={this._updateView}>Side</button>
+				  <button value="3" onClick={this._updateView}>Front</button>
 				</div>
 				<NavBar/>
 			</div>				

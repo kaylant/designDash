@@ -89,7 +89,7 @@ function app() {
 
     	defaults: {
     		image: {
-    			link: './images/11824769035_a0193745af_k.png'
+    			link: './images/ocean.png'
     		},
 			palette: []
     	},
