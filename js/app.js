@@ -45,7 +45,6 @@ import SuperDash from './views/superDash'
 import DashView from './views/dashView'
 import SearchView from './views/searchView'
 import Preview from './views/preview'
-import FontContainer from './views/fonts'
 
 var cId = 'OJ4amGS2A2d5Pow5zLETwzjjTq0ccUSKSygfbo9sQOQB3lHf2gNFaap5cvyJmAAu'
 var cSecret = 'GBr1TLUVTvj8F0KBl6BBxsSPOsXLxjsxwsUZpZNLD3ymM08WYLeWLmiyRaK9ZNxI'

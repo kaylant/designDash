@@ -2,13 +2,14 @@ import DOM from 'react-dom'
 import React, {Component} from 'react'
 
 import FontContainer from './fonts'
-import IconContainer from './icons'
+import IconContainer from './iconContainer'
 
 var DashView = React.createClass ({
 	render: function() {
 		return (
 			<div className="pageContainer">
 				<FontContainer fontIndex={this.props.fontIndex} updateFunc={this.props.updateFont}/>
+				<IconContainer/>
 				<PaletteContainer palette={this.props.data.get('palette')}/>
 			</div>
 			)

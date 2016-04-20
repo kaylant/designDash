@@ -41,13 +41,14 @@ var Preview = React.createClass ({
 		document.getElementById("iframeHeight").value = 650
 	},
 
-	_makeTextFile: function() {
-		var typedArr = [1, 3, 6, "dogs"]
-		var blob = new Blob([typedArr], {type: 'text/html'})
-		var url = URL.createObjectURL(blob)
-		console.log(blob)
-		console.log(url)
-	}, 
+	// _makeTextFile: function() {
+	// 	var typedArr = [1, 3, 6, "dogs"]
+	// 	var blob = new Blob([typedArr], {type: 'text/html'})
+	// 	var url = URL.createObjectURL(blob)
+	// 	console.log(blob)
+	// 	console.log(url)
+	// 	return blob
+	// }, 
 
 	render: function() {
 		var paletteObj = this.props.data.get('palette')
@@ -104,30 +105,26 @@ var Preview = React.createClass ({
 				    <input onChange={this._updateHeight} type="number" id="iframeHeight" placeholder="650" value={this.state.height} />
 				  </div>
 				  	<button id="original" onClick={this._snapBackToOriginal}>Original</button>
-				  	<button id="exportProj" download="index.html" onClick={this._makeTextFile}>Export .zip</button> 
+				  	<button id="exportProj" download="index.html">Export .zip</button> 
 				</div>
 				<div id="views">
 				  <button value="1" onClick={this._updateView}>Laying</button>
 				  <button value="2" onClick={this._updateView}>Side</button>
 				  <button value="3" onClick={this._updateView}>Front</button>
 				</div>
-				<NavBar/>
 			</div>				
 			)
 	}
 })
 
-var NavBar = React.createClass ({
-	render: function() {
-
-
-
-		return (
-			<div className="navBarContainer">
-				<button id="exportProj" onClick>Export .zip</button>
-			</div>
-			)
-	}
-})
+// var NavBar = React.createClass ({
+// 	render: function() {
+// 		return (
+// 			<div className="navBarContainer">
+// 				<button id="exportProj" onClick>Export .zip</button>
+// 			</div>
+// 			)
+// 	}
+// })
 
 export default Preview
