@@ -42,16 +42,19 @@ var Preview = React.createClass ({
 	},
 
 	_makeTextFile: function() {
-		var typedArr = [1, 3, 6, "dogs"]
-		var blob = new Blob([typedArr], {type: 'text/html'})
+		var cssArr = []
+		var	cssString = `// Thanks for using my app. \n` 
+			cssString += `// Don't forget to uncomment and paste the following links into the <head> of your index.html file`
+			cssArr.push(cssString) 
+		var blob = new Blob([cssString], {type: 'text/css'})
 		var url = URL.createObjectURL(blob)
 		console.log(blob)
-		console.log(url)
 		return url
 	}, 
 
 	_showDownloadLink: function() {
 		var link = document.getElementById('downloadlink')
+		link.rel = 'stylesheet'
 		link.href = this._makeTextFile()
 		link.style.display = 'block'
 	},
@@ -96,7 +99,12 @@ var Preview = React.createClass ({
 				    <div id="frame_1">
 				    	<h1 style={styleFont}>Hello, world!</h1>
 				    	<h2 style={styleFont2}>Subheader Font</h2>
-				    	<p style={styleFont3}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				    	<p style={styleFont3}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.lor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt </p>
+				    	<div className="iconsRow">
+				    		<i class="material-icons">build</i>
+				    		<i class="material-icons">attach_file</i>
+				    		<i class="material-icons">reply</i>
+				    	</div>
 				    </div>
 				  </div>
 				</div>
@@ -112,7 +120,7 @@ var Preview = React.createClass ({
 				  </div>
 				  	<button id="original" onClick={this._snapBackToOriginal}>Original</button>
 				  	<button id="createProj" onClick={this._showDownloadLink}>Create</button>
-				  	<a download="index.html" id="downloadlink" style={{display: "none"}}>Download</a> 
+				  	<a download="style.sass" id="downloadlink" style={{display: "none"}}>Download</a> 
 				</div>
 				<div id="views">
 				  <button value="1" onClick={this._updateView}>Laying</button>
