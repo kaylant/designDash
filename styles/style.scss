@@ -293,7 +293,7 @@ $font: 'Roboto';
                 display: inline-block;
                 position: absolute;
                 top: 50%;
-                height: 45px;
+                height: 60px;
                 width: 90px;
                 border-radius: 90px 90px 0 0;
                 -moz-border-radius: 90px 90px 0 0;
@@ -424,11 +424,46 @@ $font: 'Roboto';
             font-size: 0.8em;
             color: $primaryColor;
             text-align: left;
+
+            #original {
+                width: 100px;
+                border: 1px solid #bbb;
+                background-color: #fff;
+                height: 45px;
+                width: 90px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                color: $primaryColor;
+                transition: all 0.2s;
+                font-family: $font;
+                font-size: 1em;
+                display: block;
+                border-radius: 500px;
+                -webkit-transform: scale(1,1);
+                -webkit-transition-timing-function: ease-out;
+                -webkit-transition-duration: 250ms;
+                -moz-transform: scale(1,1);
+                -moz-transition-timing-function: ease-out;
+                -moz-transition-duration: 250ms; 
+            }
+
+            #original:hover {
+                color: $primaryColor;
+                background-color: #eee;
+                -webkit-transform: scale(1.05,1.07);
+                -webkit-transition-timing-function: ease-out;
+                -webkit-transition-duration: 250ms;
+                -moz-transform: scale(1.05,1.07);
+                -moz-transition-timing-function: ease-out;
+                -moz-transition-duration: 250ms;
+            }
         }
         
         #controls div {
             margin-bottom: 5px;
         }
+
+
         
         #controls div label {
             width: 120px;

@@ -29,6 +29,16 @@ var Preview = React.createClass ({
 		var phone = document.getElementById("phone_1")
 		this.setState({height: evt.target.value})
 		phone.style.height = document.getElementById("iframeHeight").value + "px"
+	},
+
+	_snapBackToOriginal: function(evt) {
+		var iframe = document.getElementById("frame_1")
+		var phone = document.getElementById("phone_1")
+		console.log("clicked")
+		phone.style.width = "400px"
+		phone.style.height = "650px"
+		document.getElementById("iframeWidth").value = 400
+		document.getElementById("iframeHeight").value = 650
 	}, 
 
 	render: function() {
@@ -60,18 +70,18 @@ var Preview = React.createClass ({
 		var font2 = FontTable[font1].subhead
 		var font3 = FontTable[font1].content
 
-		var styleFont = {color:ligthVibrantSwatch, background:"white", fontFamily:font1}
-		var styleFont2 = {color:darkVibrantSwatch, background:"white", fontFamily:font2}
-		var styleFont3 = {color:mutedSwatch, background:"white", fontFamily:font3}
+		var styleFont = {color:ligthVibrantSwatch, fontFamily:font1}
+		var styleFont2 = {color:darkVibrantSwatch, fontFamily:font2}
+		var styleFont3 = {color:mutedSwatch, background:"white", fontFamily:font3, textAlign: "left", paddingLeft: "5px"}
 
 		return (
 			<div className="previewContainer">
 				<div id="wrapper">
 				  <div className="phone view_1" id="phone_1" style={styleObj}>
 				    <div id="frame_1">
-				    	<h1 style={styleFont}>Hello, world</h1>
+				    	<h1 style={styleFont}>Hello, world!</h1>
 				    	<h2 style={styleFont2}>Subheader Font</h2>
-				    	<p style={styleFont3}>Lorem ipsum dolor sit amet</p>
+				    	<p style={styleFont3}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				    </div>
 				  </div>
 				</div>
@@ -85,6 +95,7 @@ var Preview = React.createClass ({
 				    <label for="iframeHeight">Height:</label>
 				    <input onChange={this._updateHeight} type="number" id="iframeHeight" placeholder="650" value={this.state.height} />
 				  </div>
+				  	<button id="original" onClick={this._snapBackToOriginal}>Original</button>
 				</div>
 				<div id="views">
 				  <button value="1" onClick={this._updateView}>Laying</button>
