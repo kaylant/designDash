@@ -4,8 +4,6 @@ import React, {Component} from 'react'
 import DashView from './dash'
 import FontTable from './fontTable'
 
-// window.ft = FontTable
-
 var FontContainer = React.createClass ({
 
 		_handleRightButton: function() {

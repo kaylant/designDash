@@ -39,6 +39,14 @@ var Preview = React.createClass ({
 		phone.style.height = "650px"
 		document.getElementById("iframeWidth").value = 400
 		document.getElementById("iframeHeight").value = 650
+	},
+
+	_makeTextFile: function() {
+		var typedArr = [1, 3, 6, "dogs"]
+		var blob = new Blob([typedArr], {type: 'text/html'})
+		var url = URL.createObjectURL(blob)
+		console.log(blob)
+		console.log(url)
 	}, 
 
 	render: function() {
@@ -96,6 +104,7 @@ var Preview = React.createClass ({
 				    <input onChange={this._updateHeight} type="number" id="iframeHeight" placeholder="650" value={this.state.height} />
 				  </div>
 				  	<button id="original" onClick={this._snapBackToOriginal}>Original</button>
+				  	<button id="exportProj" download="index.html" onClick={this._makeTextFile}>Export .zip</button> 
 				</div>
 				<div id="views">
 				  <button value="1" onClick={this._updateView}>Laying</button>
@@ -110,10 +119,12 @@ var Preview = React.createClass ({
 
 var NavBar = React.createClass ({
 	render: function() {
+
+
+
 		return (
 			<div className="navBarContainer">
-				<div className="exportProj">Export .zip</div>
-				<div className="saveToDropbox">Save to Dropbox</div>
+				<button id="exportProj" onClick>Export .zip</button>
 			</div>
 			)
 	}

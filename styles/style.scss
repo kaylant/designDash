@@ -457,13 +457,19 @@ $font: 'Roboto';
                 -moz-transition-timing-function: ease-out;
                 -moz-transition-duration: 250ms;
             }
+
+            #exportProj {
+                @extend #original;
+            }
+
+            #exportProj:hover {
+                @extend #original:hover;
+            }
         }
         
         #controls div {
             margin-bottom: 5px;
         }
-
-
         
         #controls div label {
             width: 120px;
