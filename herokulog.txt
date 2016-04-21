@@ -1,0 +1,501 @@
+2016-04-21T15:13:58.562079+00:00 app[web.1]: 
+2016-04-21T15:13:58.562080+00:00 app[web.1]:                    https://keymetrics.io/
+2016-04-21T15:13:58.562081+00:00 app[web.1]: 
+2016-04-21T15:13:58.562082+00:00 app[web.1]:                         -------------
+2016-04-21T15:13:58.562080+00:00 app[web.1]: 
+2016-04-21T15:13:58.562082+00:00 app[web.1]: 
+2016-04-21T15:13:58.685023+00:00 app[web.1]: [PM2] Spawning PM2 daemon
+2016-04-21T15:13:59.491964+00:00 app[web.1]: [PM2] PM2 Successfully daemonized
+2016-04-21T15:13:59.514748+00:00 app[web.1]: [PM2] Stopping PM2...
+2016-04-21T15:13:59.552133+00:00 app[web.1]: [PM2][WARN] No process found
+2016-04-21T15:13:59.552428+00:00 app[web.1]: [PM2] All processes have been stopped and deleted
+2016-04-21T15:13:59.688914+00:00 app[web.1]: [PM2] PM2 stopped
+2016-04-21T15:14:00.741447+00:00 app[web.1]: [PM2] Spawning PM2 daemon
+2016-04-21T15:14:00.970727+00:00 app[web.1]: Error: Cannot find module './dash' from '/app/build/views'
+2016-04-21T15:14:00.919678+00:00 app[web.1]: Error: Cannot find module './dash' from '/app/build/views'
+2016-04-21T15:14:01.415242+00:00 app[web.1]: Therefore it was piped through as is and no external map file generated.
+2016-04-21T15:14:01.415196+00:00 app[web.1]: The code that you piped into exorcist contains no source map!
+2016-04-21T15:14:01.833669+00:00 app[web.1]: [PM2] Starting app.js in fork_mode (1 instance)
+2016-04-21T15:14:01.757310+00:00 app[web.1]: [PM2] PM2 Successfully daemonized
+2016-04-21T15:14:02.388907+00:00 app[web.1]: ├──────────┼────┼──────┼─────┼────────┼─────────┼────────┼─────────────┼──────────┤
+2016-04-21T15:14:02.388908+00:00 app[web.1]: └──────────┴────┴──────┴─────┴────────┴─────────┴────────┴─────────────┴──────────┘
+2016-04-21T15:14:02.388906+00:00 app[web.1]: │ App name │ id │ mode │ pid │ status │ restart │ uptime │ memory      │ watching │
+2016-04-21T15:14:02.388908+00:00 app[web.1]: │ app      │ 0  │ fork │ 143 │ online │ 0       │ 0s     │ 14.699 MB   │ disabled │
+2016-04-21T15:14:02.388895+00:00 app[web.1]: ┌──────────┬────┬──────┬─────┬────────┬─────────┬────────┬─────────────┬──────────┐
+2016-04-21T15:14:02.389425+00:00 app[web.1]:  Use `pm2 show <id|name>` to get more details about an app
+2016-04-21T15:14:02.169542+00:00 app[web.1]: [PM2] Done.
+2016-04-21T15:14:03.538059+00:00 app[web.1]: Watching:  /app/styles/**/*.scss,styles/**/*.css
+2016-04-21T15:14:04.890522+00:00 heroku[web.1]: State changed from starting to up
+2016-04-21T15:14:05.147275+00:00 app[web.1]: 
+2016-04-21T15:14:05.147259+00:00 app[web.1]: 
+2016-04-21T15:14:05.147272+00:00 app[web.1]: > universal-js-boilerplate@2.0.1 css /app
+2016-04-21T15:14:05.147274+00:00 app[web.1]: > node-sass styles/style.scss | postcss --use autoprefixer --autoprefixer.browsers '> 50%' --use csswring -o ./dist/style.css
+2016-04-21T15:14:06.602448+00:00 app[web.1]: Found missing npm module: isomorphic-fetch, installing
+2016-04-21T15:14:23.734040+00:00 app[web.1]: fs.js:1315
+2016-04-21T15:14:23.734051+00:00 app[web.1]:     throw error;
+2016-04-21T15:14:23.734052+00:00 app[web.1]:     ^
+2016-04-21T15:14:23.734052+00:00 app[web.1]: 
+2016-04-21T15:14:23.734053+00:00 app[web.1]: Error: watch /app/node_modules/.koa-bodyparser.DELETE ENOENT
+2016-04-21T15:14:23.734054+00:00 app[web.1]:     at exports._errnoException (util.js:890:11)
+2016-04-21T15:14:23.734055+00:00 app[web.1]:     at FSWatcher.start (fs.js:1313:19)
+2016-04-21T15:14:23.734055+00:00 app[web.1]:     at Object.fs.watch (fs.js:1341:11)
+2016-04-21T15:14:23.734056+00:00 app[web.1]:     at NodeWatcher.watchdir (/app/node_modules/sane/src/node_watcher.js:144:20)
+2016-04-21T15:14:23.772401+00:00 app[web.1]: 
+2016-04-21T15:14:23.801115+00:00 app[web.1]: Error: Cannot find module './dash' from '/app/build/views'
+2016-04-21T15:14:23.734058+00:00 app[web.1]:     at FSReqWrap.oncomplete (fs.js:82:15)
+2016-04-21T15:14:23.807614+00:00 app[web.1]: npm ERR! argv "/app/.heroku/node/bin/node" "/app/.heroku/node/bin/npm" "run-script" "--universal-js-boilerplate:squash_msg='squashing commits down to 1 commit'" "--universal-js-boilerplate:squash_reset=HEAD~1" "watch:styles"
+2016-04-21T15:14:23.807597+00:00 app[web.1]: npm ERR! Linux 3.13.0-79-generic
+2016-04-21T15:14:23.807616+00:00 app[web.1]: npm ERR! node v5.10.0
+2016-04-21T15:14:23.807616+00:00 app[web.1]: npm ERR! npm  v3.8.3
+2016-04-21T15:14:23.807617+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2016-04-21T15:14:23.807618+00:00 app[web.1]: npm ERR! universal-js-boilerplate@2.0.1 watch:styles: `sane 'npm-run-all css' --glob='styles/**/*.scss' --glob='styles/**/*.css'`
+2016-04-21T15:14:23.734057+00:00 app[web.1]:     at NodeWatcher.<anonymous> (/app/node_modules/sane/src/node_watcher.js:278:14)
+2016-04-21T15:14:23.807618+00:00 app[web.1]: npm ERR! Exit status 1
+2016-04-21T15:14:23.807621+00:00 app[web.1]: npm ERR! Failed at the universal-js-boilerplate@2.0.1 watch:styles script 'sane 'npm-run-all css' --glob='styles/**/*.scss' --glob='styles/**/*.css''.
+2016-04-21T15:14:23.807619+00:00 app[web.1]: npm ERR! 
+2016-04-21T15:14:23.807622+00:00 app[web.1]: npm ERR! Make sure you have the latest version of node.js and npm installed.
+2016-04-21T15:14:23.807623+00:00 app[web.1]: npm ERR! If you do, this is most likely a problem with the universal-js-boilerplate package,
+2016-04-21T15:14:23.807623+00:00 app[web.1]: npm ERR! not with npm itself.
+2016-04-21T15:14:23.808041+00:00 app[web.1]: npm ERR! Tell the author that this fails on your system:
+2016-04-21T15:14:23.808281+00:00 app[web.1]: npm ERR!     sane 'npm-run-all css' --glob='styles/**/*.scss' --glob='styles/**/*.css'
+2016-04-21T15:14:23.808423+00:00 app[web.1]: npm ERR! You can get information on how to open an issue for this project with:
+2016-04-21T15:14:23.808562+00:00 app[web.1]: npm ERR!     npm bugs universal-js-boilerplate
+2016-04-21T15:14:23.810555+00:00 app[web.1]: npm ERR! Or if that isn't available, you can get their info via:
+2016-04-21T15:14:23.810565+00:00 app[web.1]: npm ERR!     npm owner ls universal-js-boilerplate
+2016-04-21T15:14:23.810566+00:00 app[web.1]: npm ERR! There is likely additional logging output above.
+2016-04-21T15:14:23.825659+00:00 app[web.1]: 
+2016-04-21T15:14:23.913991+00:00 app[web.1]: ERROR: watch:styles: None-Zero Exit(1);
+2016-04-21T15:14:23.825882+00:00 app[web.1]: npm ERR! Please include the following file with any support request:
+2016-04-21T15:14:23.927582+00:00 app[web.1]: 
+2016-04-21T15:14:23.938995+00:00 app[web.1]: npm ERR! Linux 3.13.0-79-generic
+2016-04-21T15:14:23.825989+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
+2016-04-21T15:14:23.939538+00:00 app[web.1]: npm ERR! argv "/app/.heroku/node/bin/node" "/app/.heroku/node/bin/npm" "start"
+2016-04-21T15:14:23.940469+00:00 app[web.1]: npm ERR! npm  v3.8.3
+2016-04-21T15:14:23.939870+00:00 app[web.1]: npm ERR! node v5.10.0
+2016-04-21T15:14:23.941364+00:00 app[web.1]: npm ERR! universal-js-boilerplate@2.0.1 start: `npm-run-all --parallel transpile js watch:styles server`
+2016-04-21T15:14:23.941663+00:00 app[web.1]: npm ERR! Exit status 1
+2016-04-21T15:14:23.941979+00:00 app[web.1]: npm ERR! 
+2016-04-21T15:14:23.942591+00:00 app[web.1]: npm ERR! Make sure you have the latest version of node.js and npm installed.
+2016-04-21T15:14:23.942266+00:00 app[web.1]: npm ERR! Failed at the universal-js-boilerplate@2.0.1 start script 'npm-run-all --parallel transpile js watch:styles server'.
+2016-04-21T15:14:23.941045+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2016-04-21T15:14:23.943162+00:00 app[web.1]: npm ERR! not with npm itself.
+2016-04-21T15:14:23.942868+00:00 app[web.1]: npm ERR! If you do, this is most likely a problem with the universal-js-boilerplate package,
+2016-04-21T15:14:23.943468+00:00 app[web.1]: npm ERR! Tell the author that this fails on your system:
+2016-04-21T15:14:23.943768+00:00 app[web.1]: npm ERR!     npm-run-all --parallel transpile js watch:styles server
+2016-04-21T15:14:23.944066+00:00 app[web.1]: npm ERR! You can get information on how to open an issue for this project with:
+2016-04-21T15:14:23.944370+00:00 app[web.1]: npm ERR!     npm bugs universal-js-boilerplate
+2016-04-21T15:14:23.944711+00:00 app[web.1]: npm ERR! Or if that isn't available, you can get their info via:
+2016-04-21T15:14:23.952689+00:00 app[web.1]: npm ERR! There is likely additional logging output above.
+2016-04-21T15:14:23.952351+00:00 app[web.1]: npm ERR!     npm owner ls universal-js-boilerplate
+2016-04-21T15:14:23.962505+00:00 app[web.1]: npm ERR! Please include the following file with any support request:
+2016-04-21T15:14:23.962171+00:00 app[web.1]: 
+2016-04-21T15:14:23.962722+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
+2016-04-21T15:14:24.908729+00:00 heroku[web.1]: State changed from up to crashed
+2016-04-21T15:14:24.897890+00:00 heroku[web.1]: Process exited with status 1
+2016-04-21T15:29:55.845085+00:00 heroku[web.1]: State changed from crashed to starting
+2016-04-21T15:29:59.688708+00:00 heroku[web.1]: Starting process with command `npm start`
+2016-04-21T15:30:00.623756+00:00 app[web.1]: > universal-js-boilerplate@2.0.1 start /app
+2016-04-21T15:30:00.623715+00:00 app[web.1]: 
+2016-04-21T15:30:00.623758+00:00 app[web.1]: > npm-run-all --parallel transpile js watch:styles server
+2016-04-21T15:30:00.623759+00:00 app[web.1]: 
+2016-04-21T15:30:01.192424+00:00 app[web.1]: 
+2016-04-21T15:30:01.192423+00:00 app[web.1]: > babel js --watch --out-dir ./build
+2016-04-21T15:30:01.192411+00:00 app[web.1]: 
+2016-04-21T15:30:01.192422+00:00 app[web.1]: > universal-js-boilerplate@2.0.1 transpile /app
+2016-04-21T15:30:01.200462+00:00 app[web.1]: > pm2 kill; pm2 start app.js;
+2016-04-21T15:30:01.426330+00:00 app[web.1]: 
+2016-04-21T15:30:01.200446+00:00 app[web.1]: 
+2016-04-21T15:30:01.200463+00:00 app[web.1]: 
+2016-04-21T15:30:01.200461+00:00 app[web.1]: > universal-js-boilerplate@2.0.1 server /app
+2016-04-21T15:30:01.426408+00:00 app[web.1]: > universal-js-boilerplate@2.0.1 js /app
+2016-04-21T15:30:01.426407+00:00 app[web.1]: 
+2016-04-21T15:30:01.426355+00:00 app[web.1]: > universal-js-boilerplate@2.0.1 watch:styles /app
+2016-04-21T15:30:01.426357+00:00 app[web.1]: > sane 'npm-run-all css' --glob='styles/**/*.scss' --glob='styles/**/*.css'
+2016-04-21T15:30:01.426358+00:00 app[web.1]: 
+2016-04-21T15:30:01.426409+00:00 app[web.1]: > watchify -e build/app.js -v -d --delay 16 -o 'exorcist dist/app.js.map > dist/app.js'
+2016-04-21T15:30:01.426410+00:00 app[web.1]: 
+2016-04-21T15:30:01.471638+00:00 app[web.1]:                         -------------
+2016-04-21T15:30:01.471626+00:00 app[web.1]: 
+2016-04-21T15:30:01.471643+00:00 app[web.1]:    | | _____ _   _ _ __ ___   ___| |_ _ __(_) ___ ___  (_) ___
+2016-04-21T15:30:01.471695+00:00 app[web.1]: 
+2016-04-21T15:30:01.471697+00:00 app[web.1]: 
+2016-04-21T15:30:01.471697+00:00 app[web.1]:                    - Real Time Dashboard
+2016-04-21T15:30:01.471698+00:00 app[web.1]:                    - CPU/Memory monitoring
+2016-04-21T15:30:01.471699+00:00 app[web.1]:                    - HTTP monitoring
+2016-04-21T15:30:01.471699+00:00 app[web.1]:                    - Event notification
+2016-04-21T15:30:01.471700+00:00 app[web.1]:                    - Custom value monitoring
+2016-04-21T15:30:01.471640+00:00 app[web.1]: 
+2016-04-21T15:30:01.471641+00:00 app[web.1]:    Looking for a complete monitoring and management tool for PM2?
+2016-04-21T15:30:01.471642+00:00 app[web.1]:     _                             _        _            _
+2016-04-21T15:30:01.471643+00:00 app[web.1]:    | |/ / _ \ | | | '_ ` _ \ / _ \ __| '__| |/ __/ __| | |/ _ \
+2016-04-21T15:30:01.471694+00:00 app[web.1]:              |___/
+2016-04-21T15:30:01.471645+00:00 app[web.1]:    |_|\_\___|\__, |_| |_| |_|\___|\__|_|  |_|\___|___(_)_|\___/
+2016-04-21T15:30:01.471701+00:00 app[web.1]: 
+2016-04-21T15:30:01.471700+00:00 app[web.1]:                    - Real Time log display
+2016-04-21T15:30:01.471702+00:00 app[web.1]:                           Checkout
+2016-04-21T15:30:01.471702+00:00 app[web.1]: 
+2016-04-21T15:30:01.471703+00:00 app[web.1]:                    https://keymetrics.io/
+2016-04-21T15:30:01.471704+00:00 app[web.1]:                         -------------
+2016-04-21T15:30:01.471705+00:00 app[web.1]: 
+2016-04-21T15:30:01.471703+00:00 app[web.1]: 
+2016-04-21T15:30:01.582175+00:00 app[web.1]: [PM2] Spawning PM2 daemon
+2016-04-21T15:30:01.471644+00:00 app[web.1]:    |   <  __/ |_| | | | | | |  __/ |_| |  | | (__\__ \_| | (_) |
+2016-04-21T15:30:01.471696+00:00 app[web.1]:                           Features
+2016-04-21T15:30:02.592817+00:00 app[web.1]: [PM2] Spawning PM2 daemon
+2016-04-21T15:30:03.014301+00:00 app[web.1]:  Use `pm2 show <id|name>` to get more details about an app
+2016-04-21T15:30:02.979944+00:00 app[web.1]: [PM2] Done.
+2016-04-21T15:30:03.014229+00:00 app[web.1]: ┌──────────┬────┬──────┬─────┬────────┬─────────┬────────┬─────────────┬──────────┐
+2016-04-21T15:30:02.909756+00:00 app[web.1]: [PM2] PM2 Successfully daemonized
+2016-04-21T15:30:02.939356+00:00 app[web.1]: [PM2] Starting app.js in fork_mode (1 instance)
+2016-04-21T15:30:03.014240+00:00 app[web.1]: │ App name │ id │ mode │ pid │ status │ restart │ uptime │ memory      │ watching │
+2016-04-21T15:30:03.014241+00:00 app[web.1]: ├──────────┼────┼──────┼─────┼────────┼─────────┼────────┼─────────────┼──────────┤
+2016-04-21T15:30:03.014243+00:00 app[web.1]: └──────────┴────┴──────┴─────┴────────┴─────────┴────────┴─────────────┴──────────┘
+2016-04-21T15:30:03.014242+00:00 app[web.1]: │ app      │ 0  │ fork │ 137 │ online │ 0       │ 0s     │ 13.109 MB   │ disabled │
+2016-04-21T15:30:02.100473+00:00 app[web.1]: [PM2][WARN] No process found
+2016-04-21T15:30:02.079143+00:00 app[web.1]: [PM2] Stopping PM2...
+2016-04-21T15:30:02.062837+00:00 app[web.1]: [PM2] PM2 Successfully daemonized
+2016-04-21T15:30:02.100614+00:00 app[web.1]: [PM2] All processes have been stopped and deleted
+2016-04-21T15:30:02.211237+00:00 app[web.1]: [PM2] PM2 stopped
+2016-04-21T15:30:03.392316+00:00 app[web.1]: Error: Cannot find module './dash' from '/app/build/views'
+2016-04-21T15:30:03.594923+00:00 app[web.1]: The code that you piped into exorcist contains no source map!
+2016-04-21T15:30:03.594934+00:00 app[web.1]: Therefore it was piped through as is and no external map file generated.
+2016-04-21T15:30:03.377724+00:00 app[web.1]: Error: Cannot find module './dash' from '/app/build/views'
+2016-04-21T15:30:03.992057+00:00 app[web.1]: Watching:  /app/styles/**/*.scss,styles/**/*.css
+2016-04-21T15:30:04.449184+00:00 heroku[web.1]: State changed from starting to up
+2016-04-21T15:30:04.697526+00:00 app[web.1]: 
+2016-04-21T15:30:04.697547+00:00 app[web.1]: > node-sass styles/style.scss | postcss --use autoprefixer --autoprefixer.browsers '> 50%' --use csswring -o ./dist/style.css
+2016-04-21T15:30:04.697548+00:00 app[web.1]: 
+2016-04-21T15:30:04.697545+00:00 app[web.1]: > universal-js-boilerplate@2.0.1 css /app
+2016-04-21T15:30:05.265679+00:00 app[web.1]: Found missing npm module: isomorphic-fetch, installing
+2016-04-21T15:30:14.425541+00:00 app[web.1]:     at NodeWatcher.watchdir (/app/node_modules/sane/src/node_watcher.js:144:20)
+2016-04-21T15:30:14.425538+00:00 app[web.1]: Error: watch /app/node_modules/.koa-bodyparser.DELETE ENOENT
+2016-04-21T15:30:14.425536+00:00 app[web.1]:     throw error;
+2016-04-21T15:30:14.425537+00:00 app[web.1]:     ^
+2016-04-21T15:30:14.425539+00:00 app[web.1]:     at exports._errnoException (util.js:890:11)
+2016-04-21T15:30:14.425538+00:00 app[web.1]: 
+2016-04-21T15:30:14.471920+00:00 app[web.1]: npm ERR! Linux 3.13.0-79-generic
+2016-04-21T15:30:14.425540+00:00 app[web.1]:     at FSWatcher.start (fs.js:1313:19)
+2016-04-21T15:30:14.425542+00:00 app[web.1]:     at FSReqWrap.oncomplete (fs.js:82:15)
+2016-04-21T15:30:14.462215+00:00 app[web.1]: 
+2016-04-21T15:30:14.425541+00:00 app[web.1]:     at NodeWatcher.<anonymous> (/app/node_modules/sane/src/node_watcher.js:278:14)
+2016-04-21T15:30:14.473213+00:00 app[web.1]: npm ERR! universal-js-boilerplate@2.0.1 watch:styles: `sane 'npm-run-all css' --glob='styles/**/*.scss' --glob='styles/**/*.css'`
+2016-04-21T15:30:14.472378+00:00 app[web.1]: npm ERR! argv "/app/.heroku/node/bin/node" "/app/.heroku/node/bin/npm" "run-script" "--universal-js-boilerplate:squash_msg='squashing commits down to 1 commit'" "--universal-js-boilerplate:squash_reset=HEAD~1" "watch:styles"
+2016-04-21T15:30:14.474128+00:00 app[web.1]: npm ERR! Failed at the universal-js-boilerplate@2.0.1 watch:styles script 'sane 'npm-run-all css' --glob='styles/**/*.scss' --glob='styles/**/*.css''.
+2016-04-21T15:30:14.472797+00:00 app[web.1]: npm ERR! node v5.10.0
+2016-04-21T15:30:14.472805+00:00 app[web.1]: npm ERR! npm  v3.8.3
+2016-04-21T15:30:14.473095+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2016-04-21T15:30:14.425540+00:00 app[web.1]:     at Object.fs.watch (fs.js:1341:11)
+2016-04-21T15:30:14.473563+00:00 app[web.1]: npm ERR! Exit status 1
+2016-04-21T15:30:14.473859+00:00 app[web.1]: npm ERR! 
+2016-04-21T15:30:14.474374+00:00 app[web.1]: npm ERR! Make sure you have the latest version of node.js and npm installed.
+2016-04-21T15:30:14.475007+00:00 app[web.1]: npm ERR! Tell the author that this fails on your system:
+2016-04-21T15:30:14.474569+00:00 app[web.1]: npm ERR! If you do, this is most likely a problem with the universal-js-boilerplate package,
+2016-04-21T15:30:14.474687+00:00 app[web.1]: npm ERR! not with npm itself.
+2016-04-21T15:30:14.481799+00:00 app[web.1]: npm ERR!     sane 'npm-run-all css' --glob='styles/**/*.scss' --glob='styles/**/*.css'
+2016-04-21T15:30:14.481808+00:00 app[web.1]: npm ERR!     npm bugs universal-js-boilerplate
+2016-04-21T15:30:14.425499+00:00 app[web.1]: fs.js:1315
+2016-04-21T15:30:14.481808+00:00 app[web.1]: npm ERR! You can get information on how to open an issue for this project with:
+2016-04-21T15:30:14.481809+00:00 app[web.1]: npm ERR!     npm owner ls universal-js-boilerplate
+2016-04-21T15:30:14.481810+00:00 app[web.1]: npm ERR! There is likely additional logging output above.
+2016-04-21T15:30:14.481809+00:00 app[web.1]: npm ERR! Or if that isn't available, you can get their info via:
+2016-04-21T15:30:14.481811+00:00 app[web.1]: npm ERR! Please include the following file with any support request:
+2016-04-21T15:30:14.537369+00:00 app[web.1]: ERROR: watch:styles: None-Zero Exit(1);
+2016-04-21T15:30:14.481812+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
+2016-04-21T15:30:14.505014+00:00 app[web.1]: Error: Cannot find module './dash' from '/app/build/views'
+2016-04-21T15:30:14.666845+00:00 app[web.1]: npm ERR! Linux 3.13.0-79-generic
+2016-04-21T15:30:14.481811+00:00 app[web.1]: 
+2016-04-21T15:30:14.667145+00:00 app[web.1]: npm ERR! argv "/app/.heroku/node/bin/node" "/app/.heroku/node/bin/npm" "start"
+2016-04-21T15:30:14.678606+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
+2016-04-21T15:30:14.667310+00:00 app[web.1]: npm ERR! node v5.10.0
+2016-04-21T15:30:14.641742+00:00 app[web.1]: 
+2016-04-21T15:30:14.678323+00:00 app[web.1]: 
+2016-04-21T15:30:14.678494+00:00 app[web.1]: npm ERR! Please include the following file with any support request:
+2016-04-21T15:30:14.670661+00:00 app[web.1]: npm ERR! Tell the author that this fails on your system:
+2016-04-21T15:30:14.670768+00:00 app[web.1]: npm ERR!     npm-run-all --parallel transpile js watch:styles server
+2016-04-21T15:30:14.670859+00:00 app[web.1]: npm ERR! You can get information on how to open an issue for this project with:
+2016-04-21T15:30:14.670967+00:00 app[web.1]: npm ERR!     npm bugs universal-js-boilerplate
+2016-04-21T15:30:14.668178+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2016-04-21T15:30:14.668324+00:00 app[web.1]: npm ERR! universal-js-boilerplate@2.0.1 start: `npm-run-all --parallel transpile js watch:styles server`
+2016-04-21T15:30:14.668446+00:00 app[web.1]: npm ERR! Exit status 1
+2016-04-21T15:30:14.668556+00:00 app[web.1]: npm ERR! 
+2016-04-21T15:30:14.667733+00:00 app[web.1]: npm ERR! npm  v3.8.3
+2016-04-21T15:30:14.670051+00:00 app[web.1]: npm ERR! Make sure you have the latest version of node.js and npm installed.
+2016-04-21T15:30:14.670444+00:00 app[web.1]: npm ERR! If you do, this is most likely a problem with the universal-js-boilerplate package,
+2016-04-21T15:30:14.670553+00:00 app[web.1]: npm ERR! not with npm itself.
+2016-04-21T15:30:14.669923+00:00 app[web.1]: npm ERR! Failed at the universal-js-boilerplate@2.0.1 start script 'npm-run-all --parallel transpile js watch:styles server'.
+2016-04-21T15:30:14.671068+00:00 app[web.1]: npm ERR! Or if that isn't available, you can get their info via:
+2016-04-21T15:30:14.671468+00:00 app[web.1]: npm ERR!     npm owner ls universal-js-boilerplate
+2016-04-21T15:30:14.671562+00:00 app[web.1]: npm ERR! There is likely additional logging output above.
+2016-04-21T15:30:15.252519+00:00 heroku[web.1]: Process exited with status 1
+2016-04-21T15:30:15.244562+00:00 heroku[web.1]: State changed from up to crashed
+2016-04-21T15:41:06.814279+00:00 heroku[web.1]: State changed from crashed to starting
+2016-04-21T15:41:11.078806+00:00 heroku[web.1]: Starting process with command `npm start`
+2016-04-21T15:41:13.147932+00:00 app[web.1]: 
+2016-04-21T15:41:13.147946+00:00 app[web.1]: > universal-js-boilerplate@2.0.1 start /app
+2016-04-21T15:41:13.147947+00:00 app[web.1]: > npm-run-all --parallel transpile js watch:styles server
+2016-04-21T15:41:13.147948+00:00 app[web.1]: 
+2016-04-21T15:41:13.964383+00:00 app[web.1]: 
+2016-04-21T15:41:13.964394+00:00 app[web.1]: > universal-js-boilerplate@2.0.1 transpile /app
+2016-04-21T15:41:14.053793+00:00 app[web.1]: > universal-js-boilerplate@2.0.1 server /app
+2016-04-21T15:41:13.964396+00:00 app[web.1]: 
+2016-04-21T15:41:14.053794+00:00 app[web.1]: > pm2 kill; pm2 start app.js;
+2016-04-21T15:41:14.054161+00:00 app[web.1]: 
+2016-04-21T15:41:14.053782+00:00 app[web.1]: 
+2016-04-21T15:41:14.101960+00:00 app[web.1]: > sane 'npm-run-all css' --glob='styles/**/*.scss' --glob='styles/**/*.css'
+2016-04-21T15:41:14.101959+00:00 app[web.1]: > universal-js-boilerplate@2.0.1 watch:styles /app
+2016-04-21T15:41:14.054168+00:00 app[web.1]: > universal-js-boilerplate@2.0.1 js /app
+2016-04-21T15:41:13.964395+00:00 app[web.1]: > babel js --watch --out-dir ./build
+2016-04-21T15:41:14.054170+00:00 app[web.1]: > watchify -e build/app.js -v -d --delay 16 -o 'exorcist dist/app.js.map > dist/app.js'
+2016-04-21T15:41:14.054170+00:00 app[web.1]: 
+2016-04-21T15:41:14.101948+00:00 app[web.1]: 
+2016-04-21T15:41:14.053795+00:00 app[web.1]: 
+2016-04-21T15:41:14.101961+00:00 app[web.1]: 
+2016-04-21T15:41:14.500336+00:00 app[web.1]:                         -------------
+2016-04-21T15:41:14.500328+00:00 app[web.1]: 
+2016-04-21T15:41:14.500337+00:00 app[web.1]: 
+2016-04-21T15:41:14.500338+00:00 app[web.1]:    Looking for a complete monitoring and management tool for PM2?
+2016-04-21T15:41:14.500339+00:00 app[web.1]:     _                             _        _            _
+2016-04-21T15:41:14.500344+00:00 app[web.1]:                    - Real Time Dashboard
+2016-04-21T15:41:14.500343+00:00 app[web.1]:                           Features
+2016-04-21T15:41:14.500341+00:00 app[web.1]:    |_|\_\___|\__, |_| |_| |_|\___|\__|_|  |_|\___|___(_)_|\___/
+2016-04-21T15:41:14.500343+00:00 app[web.1]: 
+2016-04-21T15:41:14.500344+00:00 app[web.1]: 
+2016-04-21T15:41:14.500340+00:00 app[web.1]:    | | _____ _   _ _ __ ___   ___| |_ _ __(_) ___ ___  (_) ___
+2016-04-21T15:41:14.500340+00:00 app[web.1]:    | |/ / _ \ | | | '_ ` _ \ / _ \ __| '__| |/ __/ __| | |/ _ \
+2016-04-21T15:41:14.500341+00:00 app[web.1]:    |   <  __/ |_| | | | | | |  __/ |_| |  | | (__\__ \_| | (_) |
+2016-04-21T15:41:14.500345+00:00 app[web.1]:                    - CPU/Memory monitoring
+2016-04-21T15:41:14.500348+00:00 app[web.1]:                           Checkout
+2016-04-21T15:41:14.500349+00:00 app[web.1]: 
+2016-04-21T15:41:14.500350+00:00 app[web.1]:                    https://keymetrics.io/
+2016-04-21T15:41:14.500350+00:00 app[web.1]: 
+2016-04-21T15:41:14.500351+00:00 app[web.1]:                         -------------
+2016-04-21T15:41:14.619909+00:00 app[web.1]: [PM2] Spawning PM2 daemon
+2016-04-21T15:41:14.500345+00:00 app[web.1]:                    - HTTP monitoring
+2016-04-21T15:41:14.500346+00:00 app[web.1]:                    - Event notification
+2016-04-21T15:41:14.500347+00:00 app[web.1]:                    - Custom value monitoring
+2016-04-21T15:41:14.500347+00:00 app[web.1]:                    - Real Time log display
+2016-04-21T15:41:14.500348+00:00 app[web.1]: 
+2016-04-21T15:41:14.500351+00:00 app[web.1]: 
+2016-04-21T15:41:14.500342+00:00 app[web.1]:              |___/
+2016-04-21T15:41:15.292568+00:00 app[web.1]: [PM2] PM2 Successfully daemonized
+2016-04-21T15:41:15.321136+00:00 app[web.1]: [PM2] Stopping PM2...
+2016-04-21T15:41:15.355994+00:00 app[web.1]: [PM2] All processes have been stopped and deleted
+2016-04-21T15:41:15.468012+00:00 app[web.1]: [PM2] PM2 stopped
+2016-04-21T15:41:15.355836+00:00 app[web.1]: [PM2][WARN] No process found
+2016-04-21T15:41:16.197393+00:00 app[web.1]: [PM2] Spawning PM2 daemon
+2016-04-21T15:41:17.109293+00:00 app[web.1]: Error: Cannot find module './dash' from '/app/build/views'
+2016-04-21T15:41:17.074190+00:00 app[web.1]: Error: Cannot find module './dash' from '/app/build/views'
+2016-04-21T15:41:17.153370+00:00 app[web.1]: [PM2] PM2 Successfully daemonized
+2016-04-21T15:41:17.224079+00:00 app[web.1]: [PM2] Starting app.js in fork_mode (1 instance)
+2016-04-21T15:41:17.653621+00:00 app[web.1]: │ App name │ id │ mode │ pid │ status │ restart │ uptime │ memory      │ watching │
+2016-04-21T15:41:17.653623+00:00 app[web.1]: │ app      │ 0  │ fork │ 143 │ online │ 0       │ 0s     │ 15.895 MB   │ disabled │
+2016-04-21T15:41:17.653609+00:00 app[web.1]: ┌──────────┬────┬──────┬─────┬────────┬─────────┬────────┬─────────────┬──────────┐
+2016-04-21T15:41:17.653622+00:00 app[web.1]: ├──────────┼────┼──────┼─────┼────────┼─────────┼────────┼─────────────┼──────────┤
+2016-04-21T15:41:17.653839+00:00 app[web.1]:  Use `pm2 show <id|name>` to get more details about an app
+2016-04-21T15:41:17.653624+00:00 app[web.1]: └──────────┴────┴──────┴─────┴────────┴─────────┴────────┴─────────────┴──────────┘
+2016-04-21T15:41:17.451909+00:00 app[web.1]: [PM2] Done.
+2016-04-21T15:41:18.093645+00:00 app[web.1]: Therefore it was piped through as is and no external map file generated.
+2016-04-21T15:41:18.093633+00:00 app[web.1]: The code that you piped into exorcist contains no source map!
+2016-04-21T15:41:18.320125+00:00 app[web.1]: Watching:  /app/styles/**/*.scss,styles/**/*.css
+2016-04-21T15:41:19.711050+00:00 app[web.1]: 
+2016-04-21T15:41:19.711049+00:00 app[web.1]: > node-sass styles/style.scss | postcss --use autoprefixer --autoprefixer.browsers '> 50%' --use csswring -o ./dist/style.css
+2016-04-21T15:41:19.711037+00:00 app[web.1]: 
+2016-04-21T15:41:19.711047+00:00 app[web.1]: > universal-js-boilerplate@2.0.1 css /app
+2016-04-21T15:41:20.362156+00:00 heroku[web.1]: State changed from starting to up
+2016-04-21T15:41:22.208828+00:00 app[web.1]: Found missing npm module: isomorphic-fetch, installing
+2016-04-21T15:41:34.507711+00:00 app[web.1]: fs.js:1315
+2016-04-21T15:41:34.507791+00:00 app[web.1]:     ^
+2016-04-21T15:41:34.507792+00:00 app[web.1]: 
+2016-04-21T15:41:34.507794+00:00 app[web.1]:     at exports._errnoException (util.js:890:11)
+2016-04-21T15:41:34.507797+00:00 app[web.1]:     at NodeWatcher.<anonymous> (/app/node_modules/sane/src/node_watcher.js:278:14)
+2016-04-21T15:41:34.507797+00:00 app[web.1]:     at FSReqWrap.oncomplete (fs.js:82:15)
+2016-04-21T15:41:34.507793+00:00 app[web.1]: Error: watch /app/node_modules/.koa-response-time.DELETE ENOENT
+2016-04-21T15:41:34.507795+00:00 app[web.1]:     at Object.fs.watch (fs.js:1341:11)
+2016-04-21T15:41:34.565259+00:00 app[web.1]: npm ERR! Linux 3.13.0-79-generic
+2016-04-21T15:41:34.567498+00:00 app[web.1]: npm ERR! argv "/app/.heroku/node/bin/node" "/app/.heroku/node/bin/npm" "run-script" "--universal-js-boilerplate:squash_msg='squashing commits down to 1 commit'" "--universal-js-boilerplate:squash_reset=HEAD~1" "watch:styles"
+2016-04-21T15:41:34.507794+00:00 app[web.1]:     at FSWatcher.start (fs.js:1313:19)
+2016-04-21T15:41:34.567756+00:00 app[web.1]: Error: Cannot find module './dash' from '/app/build/views'
+2016-04-21T15:41:34.507796+00:00 app[web.1]:     at NodeWatcher.watchdir (/app/node_modules/sane/src/node_watcher.js:144:20)
+2016-04-21T15:41:34.568612+00:00 app[web.1]: npm ERR! node v5.10.0
+2016-04-21T15:41:34.507766+00:00 app[web.1]:     throw error;
+2016-04-21T15:41:34.539613+00:00 app[web.1]: 
+2016-04-21T15:41:34.568851+00:00 app[web.1]: npm ERR! npm  v3.8.3
+2016-04-21T15:41:34.569061+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2016-04-21T15:41:34.569177+00:00 app[web.1]: npm ERR! universal-js-boilerplate@2.0.1 watch:styles: `sane 'npm-run-all css' --glob='styles/**/*.scss' --glob='styles/**/*.css'`
+2016-04-21T15:41:34.569511+00:00 app[web.1]: npm ERR! 
+2016-04-21T15:41:34.569377+00:00 app[web.1]: npm ERR! Exit status 1
+2016-04-21T15:41:34.569649+00:00 app[web.1]: npm ERR! Failed at the universal-js-boilerplate@2.0.1 watch:styles script 'sane 'npm-run-all css' --glob='styles/**/*.scss' --glob='styles/**/*.css''.
+2016-04-21T15:41:34.572859+00:00 app[web.1]: npm ERR! Make sure you have the latest version of node.js and npm installed.
+2016-04-21T15:41:34.572878+00:00 app[web.1]: npm ERR!     sane 'npm-run-all css' --glob='styles/**/*.scss' --glob='styles/**/*.css'
+2016-04-21T15:41:34.572877+00:00 app[web.1]: npm ERR! Tell the author that this fails on your system:
+2016-04-21T15:41:34.572876+00:00 app[web.1]: npm ERR! not with npm itself.
+2016-04-21T15:41:34.572875+00:00 app[web.1]: npm ERR! If you do, this is most likely a problem with the universal-js-boilerplate package,
+2016-04-21T15:41:34.572878+00:00 app[web.1]: npm ERR! You can get information on how to open an issue for this project with:
+2016-04-21T15:41:34.572880+00:00 app[web.1]: npm ERR! Or if that isn't available, you can get their info via:
+2016-04-21T15:41:34.577662+00:00 app[web.1]: 
+2016-04-21T15:41:34.577828+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
+2016-04-21T15:41:34.572881+00:00 app[web.1]: npm ERR! There is likely additional logging output above.
+2016-04-21T15:41:34.577747+00:00 app[web.1]: npm ERR! Please include the following file with any support request:
+2016-04-21T15:41:34.751289+00:00 app[web.1]: 
+2016-04-21T15:41:34.572879+00:00 app[web.1]: npm ERR!     npm bugs universal-js-boilerplate
+2016-04-21T15:41:34.649924+00:00 app[web.1]: ERROR: watch:styles: None-Zero Exit(1);
+2016-04-21T15:41:34.572880+00:00 app[web.1]: npm ERR!     npm owner ls universal-js-boilerplate
+2016-04-21T15:41:34.773329+00:00 app[web.1]: npm ERR! Linux 3.13.0-79-generic
+2016-04-21T15:41:34.773728+00:00 app[web.1]: npm ERR! argv "/app/.heroku/node/bin/node" "/app/.heroku/node/bin/npm" "start"
+2016-04-21T15:41:34.773968+00:00 app[web.1]: npm ERR! node v5.10.0
+2016-04-21T15:41:34.775133+00:00 app[web.1]: npm ERR! universal-js-boilerplate@2.0.1 start: `npm-run-all --parallel transpile js watch:styles server`
+2016-04-21T15:41:34.774614+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2016-04-21T15:41:34.776340+00:00 app[web.1]: npm ERR! Failed at the universal-js-boilerplate@2.0.1 start script 'npm-run-all --parallel transpile js watch:styles server'.
+2016-04-21T15:41:34.774393+00:00 app[web.1]: npm ERR! npm  v3.8.3
+2016-04-21T15:41:34.775306+00:00 app[web.1]: npm ERR! Exit status 1
+2016-04-21T15:41:34.776174+00:00 app[web.1]: npm ERR! 
+2016-04-21T15:41:34.776509+00:00 app[web.1]: npm ERR! Make sure you have the latest version of node.js and npm installed.
+2016-04-21T15:41:34.776670+00:00 app[web.1]: npm ERR! If you do, this is most likely a problem with the universal-js-boilerplate package,
+2016-04-21T15:41:34.776824+00:00 app[web.1]: npm ERR! not with npm itself.
+2016-04-21T15:41:34.777634+00:00 app[web.1]: npm ERR! Tell the author that this fails on your system:
+2016-04-21T15:41:34.777812+00:00 app[web.1]: npm ERR!     npm-run-all --parallel transpile js watch:styles server
+2016-04-21T15:41:34.778151+00:00 app[web.1]: npm ERR! Or if that isn't available, you can get their info via:
+2016-04-21T15:41:34.777835+00:00 app[web.1]: npm ERR! You can get information on how to open an issue for this project with:
+2016-04-21T15:41:34.785353+00:00 app[web.1]: 
+2016-04-21T15:41:34.778314+00:00 app[web.1]: npm ERR!     npm owner ls universal-js-boilerplate
+2016-04-21T15:41:34.778405+00:00 app[web.1]: npm ERR! There is likely additional logging output above.
+2016-04-21T15:41:34.785766+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
+2016-04-21T15:41:34.785549+00:00 app[web.1]: npm ERR! Please include the following file with any support request:
+2016-04-21T15:41:34.777990+00:00 app[web.1]: npm ERR!     npm bugs universal-js-boilerplate
+2016-04-21T15:41:35.475196+00:00 heroku[web.1]: Process exited with status 1
+2016-04-21T15:41:35.492180+00:00 heroku[web.1]: State changed from up to crashed
+2016-04-21T15:53:12.422200+00:00 heroku[web.1]: State changed from crashed to starting
+2016-04-21T15:53:18.415333+00:00 heroku[web.1]: Starting process with command `npm start`
+2016-04-21T15:53:20.852418+00:00 app[web.1]: 
+2016-04-21T15:53:20.852417+00:00 app[web.1]: > npm-run-all --parallel transpile js watch:styles server
+2016-04-21T15:53:20.852402+00:00 app[web.1]: 
+2016-04-21T15:53:20.852416+00:00 app[web.1]: > universal-js-boilerplate@2.0.1 start /app
+2016-04-21T15:53:21.761623+00:00 app[web.1]: > universal-js-boilerplate@2.0.1 watch:styles /app
+2016-04-21T15:53:21.761625+00:00 app[web.1]: 
+2016-04-21T15:53:21.909880+00:00 app[web.1]: > watchify -e build/app.js -v -d --delay 16 -o 'exorcist dist/app.js.map > dist/app.js'
+2016-04-21T15:53:21.761604+00:00 app[web.1]: 
+2016-04-21T15:53:21.909860+00:00 app[web.1]: 
+2016-04-21T15:53:21.909879+00:00 app[web.1]: > universal-js-boilerplate@2.0.1 js /app
+2016-04-21T15:53:21.761625+00:00 app[web.1]: > sane 'npm-run-all css' --glob='styles/**/*.scss' --glob='styles/**/*.css'
+2016-04-21T15:53:21.909881+00:00 app[web.1]: 
+2016-04-21T15:53:22.222900+00:00 app[web.1]: 
+2016-04-21T15:53:22.222911+00:00 app[web.1]: > pm2 kill; pm2 start app.js;
+2016-04-21T15:53:22.245116+00:00 app[web.1]: > universal-js-boilerplate@2.0.1 transpile /app
+2016-04-21T15:53:22.222912+00:00 app[web.1]: 
+2016-04-21T15:53:22.222910+00:00 app[web.1]: > universal-js-boilerplate@2.0.1 server /app
+2016-04-21T15:53:22.245117+00:00 app[web.1]: 
+2016-04-21T15:53:22.245106+00:00 app[web.1]: 
+2016-04-21T15:53:22.245117+00:00 app[web.1]: > babel js --watch --out-dir ./build
+2016-04-21T15:53:23.122277+00:00 app[web.1]:                         -------------
+2016-04-21T15:53:23.122278+00:00 app[web.1]: 
+2016-04-21T15:53:23.122267+00:00 app[web.1]: 
+2016-04-21T15:53:23.122280+00:00 app[web.1]:     _                             _        _            _
+2016-04-21T15:53:23.122280+00:00 app[web.1]:    | | _____ _   _ _ __ ___   ___| |_ _ __(_) ___ ___  (_) ___
+2016-04-21T15:53:23.122279+00:00 app[web.1]:    Looking for a complete monitoring and management tool for PM2?
+2016-04-21T15:53:23.122286+00:00 app[web.1]:                    - Real Time Dashboard
+2016-04-21T15:53:23.122285+00:00 app[web.1]: 
+2016-04-21T15:53:23.122282+00:00 app[web.1]:    |   <  __/ |_| | | | | | |  __/ |_| |  | | (__\__ \_| | (_) |
+2016-04-21T15:53:23.122287+00:00 app[web.1]:                    - CPU/Memory monitoring
+2016-04-21T15:53:23.122285+00:00 app[web.1]:                           Features
+2016-04-21T15:53:23.122283+00:00 app[web.1]:              |___/
+2016-04-21T15:53:23.122281+00:00 app[web.1]:    | |/ / _ \ | | | '_ ` _ \ / _ \ __| '__| |/ __/ __| | |/ _ \
+2016-04-21T15:53:23.122304+00:00 app[web.1]:                    - Real Time log display
+2016-04-21T15:53:23.122289+00:00 app[web.1]:                    - Custom value monitoring
+2016-04-21T15:53:23.122282+00:00 app[web.1]:    |_|\_\___|\__, |_| |_| |_|\___|\__|_|  |_|\___|___(_)_|\___/
+2016-04-21T15:53:23.122305+00:00 app[web.1]: 
+2016-04-21T15:53:23.122288+00:00 app[web.1]:                    - Event notification
+2016-04-21T15:53:23.122287+00:00 app[web.1]:                    - HTTP monitoring
+2016-04-21T15:53:23.122284+00:00 app[web.1]: 
+2016-04-21T15:53:23.122306+00:00 app[web.1]: 
+2016-04-21T15:53:23.122307+00:00 app[web.1]: 
+2016-04-21T15:53:23.122305+00:00 app[web.1]:                           Checkout
+2016-04-21T15:53:23.122307+00:00 app[web.1]:                    https://keymetrics.io/
+2016-04-21T15:53:23.122308+00:00 app[web.1]:                         -------------
+2016-04-21T15:53:23.122309+00:00 app[web.1]: 
+2016-04-21T15:53:23.245823+00:00 app[web.1]: [PM2] Spawning PM2 daemon
+2016-04-21T15:53:24.615663+00:00 app[web.1]: [PM2] PM2 Successfully daemonized
+2016-04-21T15:53:24.695716+00:00 app[web.1]: [PM2] Stopping PM2...
+2016-04-21T15:53:24.849172+00:00 app[web.1]: [PM2][WARN] No process found
+2016-04-21T15:53:24.849658+00:00 app[web.1]: [PM2] All processes have been stopped and deleted
+2016-04-21T15:53:24.986761+00:00 app[web.1]: [PM2] PM2 stopped
+2016-04-21T15:53:25.925594+00:00 app[web.1]: [PM2] Spawning PM2 daemon
+2016-04-21T15:53:26.001207+00:00 app[web.1]: Error: Cannot find module './dash' from '/app/build/views'
+2016-04-21T15:53:26.026608+00:00 app[web.1]: Error: Cannot find module './dash' from '/app/build/views'
+2016-04-21T15:53:26.660828+00:00 app[web.1]: [PM2] PM2 Successfully daemonized
+2016-04-21T15:53:26.663621+00:00 app[web.1]: The code that you piped into exorcist contains no source map!
+2016-04-21T15:53:26.663629+00:00 app[web.1]: Therefore it was piped through as is and no external map file generated.
+2016-04-21T15:53:26.713804+00:00 app[web.1]: [PM2] Starting app.js in fork_mode (1 instance)
+2016-04-21T15:53:27.057764+00:00 app[web.1]: [PM2] Done.
+2016-04-21T15:53:27.161651+00:00 app[web.1]: Watching:  /app/styles/**/*.scss,styles/**/*.css
+2016-04-21T15:53:27.251617+00:00 app[web.1]: ┌──────────┬────┬──────┬─────┬────────┬─────────┬────────┬─────────────┬──────────┐
+2016-04-21T15:53:27.251633+00:00 app[web.1]: └──────────┴────┴──────┴─────┴────────┴─────────┴────────┴─────────────┴──────────┘
+2016-04-21T15:53:27.251630+00:00 app[web.1]: │ App name │ id │ mode │ pid │ status │ restart │ uptime │ memory      │ watching │
+2016-04-21T15:53:27.251631+00:00 app[web.1]: ├──────────┼────┼──────┼─────┼────────┼─────────┼────────┼─────────────┼──────────┤
+2016-04-21T15:53:27.251632+00:00 app[web.1]: │ app      │ 0  │ fork │ 143 │ online │ 0       │ 0s     │ 15.383 MB   │ disabled │
+2016-04-21T15:53:27.251634+00:00 app[web.1]:  Use `pm2 show <id|name>` to get more details about an app
+2016-04-21T15:53:28.568146+00:00 app[web.1]: 
+2016-04-21T15:53:28.568156+00:00 app[web.1]: > universal-js-boilerplate@2.0.1 css /app
+2016-04-21T15:53:28.568157+00:00 app[web.1]: > node-sass styles/style.scss | postcss --use autoprefixer --autoprefixer.browsers '> 50%' --use csswring -o ./dist/style.css
+2016-04-21T15:53:28.568158+00:00 app[web.1]: 
+2016-04-21T15:53:29.574133+00:00 heroku[web.1]: State changed from starting to up
+2016-04-21T15:53:30.609787+00:00 app[web.1]: Found missing npm module: isomorphic-fetch, installing
+2016-04-21T15:53:43.134323+00:00 app[web.1]: fs.js:1315
+2016-04-21T15:53:43.134337+00:00 app[web.1]: Error: watch /app/node_modules/.koa-convert.DELETE ENOENT
+2016-04-21T15:53:43.134338+00:00 app[web.1]:     at exports._errnoException (util.js:890:11)
+2016-04-21T15:53:43.134341+00:00 app[web.1]:     at NodeWatcher.<anonymous> (/app/node_modules/sane/src/node_watcher.js:278:14)
+2016-04-21T15:53:43.134338+00:00 app[web.1]:     at FSWatcher.start (fs.js:1313:19)
+2016-04-21T15:53:43.134341+00:00 app[web.1]:     at FSReqWrap.oncomplete (fs.js:82:15)
+2016-04-21T15:53:43.134339+00:00 app[web.1]:     at Object.fs.watch (fs.js:1341:11)
+2016-04-21T15:53:43.134334+00:00 app[web.1]:     throw error;
+2016-04-21T15:53:43.134335+00:00 app[web.1]:     ^
+2016-04-21T15:53:43.134336+00:00 app[web.1]: 
+2016-04-21T15:53:43.218130+00:00 app[web.1]: npm ERR! npm  v3.8.3
+2016-04-21T15:53:43.182091+00:00 app[web.1]: 
+2016-04-21T15:53:43.216711+00:00 app[web.1]: npm ERR! Linux 3.13.0-79-generic
+2016-04-21T15:53:43.217216+00:00 app[web.1]: npm ERR! argv "/app/.heroku/node/bin/node" "/app/.heroku/node/bin/npm" "run-script" "--universal-js-boilerplate:squash_msg='squashing commits down to 1 commit'" "--universal-js-boilerplate:squash_reset=HEAD~1" "watch:styles"
+2016-04-21T15:53:43.217762+00:00 app[web.1]: npm ERR! node v5.10.0
+2016-04-21T15:53:43.218816+00:00 app[web.1]: npm ERR! Exit status 1
+2016-04-21T15:53:43.218815+00:00 app[web.1]: npm ERR! universal-js-boilerplate@2.0.1 watch:styles: `sane 'npm-run-all css' --glob='styles/**/*.scss' --glob='styles/**/*.css'`
+2016-04-21T15:53:43.134340+00:00 app[web.1]:     at NodeWatcher.watchdir (/app/node_modules/sane/src/node_watcher.js:144:20)
+2016-04-21T15:53:43.218807+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2016-04-21T15:53:43.218936+00:00 app[web.1]: npm ERR! 
+2016-04-21T15:53:43.219350+00:00 app[web.1]: npm ERR! Make sure you have the latest version of node.js and npm installed.
+2016-04-21T15:53:43.227804+00:00 app[web.1]: npm ERR! not with npm itself.
+2016-04-21T15:53:43.219168+00:00 app[web.1]: npm ERR! Failed at the universal-js-boilerplate@2.0.1 watch:styles script 'sane 'npm-run-all css' --glob='styles/**/*.scss' --glob='styles/**/*.css''.
+2016-04-21T15:53:43.227789+00:00 app[web.1]: npm ERR! If you do, this is most likely a problem with the universal-js-boilerplate package,
+2016-04-21T15:53:43.227806+00:00 app[web.1]: npm ERR!     sane 'npm-run-all css' --glob='styles/**/*.scss' --glob='styles/**/*.css'
+2016-04-21T15:53:43.227807+00:00 app[web.1]: npm ERR! You can get information on how to open an issue for this project with:
+2016-04-21T15:53:43.227805+00:00 app[web.1]: npm ERR! Tell the author that this fails on your system:
+2016-04-21T15:53:43.236961+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
+2016-04-21T15:53:43.227808+00:00 app[web.1]: npm ERR! Or if that isn't available, you can get their info via:
+2016-04-21T15:53:43.227809+00:00 app[web.1]: npm ERR! There is likely additional logging output above.
+2016-04-21T15:53:43.227808+00:00 app[web.1]: npm ERR!     npm owner ls universal-js-boilerplate
+2016-04-21T15:53:43.227807+00:00 app[web.1]: npm ERR!     npm bugs universal-js-boilerplate
+2016-04-21T15:53:43.236960+00:00 app[web.1]: npm ERR! Please include the following file with any support request:
+2016-04-21T15:53:43.236946+00:00 app[web.1]: 
+2016-04-21T15:53:43.386088+00:00 app[web.1]: ERROR: watch:styles: None-Zero Exit(1);
+2016-04-21T15:53:43.552187+00:00 app[web.1]: npm ERR! Linux 3.13.0-79-generic
+2016-04-21T15:53:43.515390+00:00 app[web.1]: 
+2016-04-21T15:53:43.554999+00:00 app[web.1]: npm ERR! 
+2016-04-21T15:53:43.552560+00:00 app[web.1]: npm ERR! argv "/app/.heroku/node/bin/node" "/app/.heroku/node/bin/npm" "start"
+2016-04-21T15:53:43.553100+00:00 app[web.1]: npm ERR! npm  v3.8.3
+2016-04-21T15:53:43.552729+00:00 app[web.1]: npm ERR! node v5.10.0
+2016-04-21T15:53:43.553501+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2016-04-21T15:53:43.554817+00:00 app[web.1]: npm ERR! Exit status 1
+2016-04-21T15:53:43.556173+00:00 app[web.1]: npm ERR! not with npm itself.
+2016-04-21T15:53:43.556821+00:00 app[web.1]: npm ERR! Or if that isn't available, you can get their info via:
+2016-04-21T15:53:43.556329+00:00 app[web.1]: npm ERR! Tell the author that this fails on your system:
+2016-04-21T15:53:43.555338+00:00 app[web.1]: npm ERR! Make sure you have the latest version of node.js and npm installed.
+2016-04-21T15:53:43.556602+00:00 app[web.1]: npm ERR! You can get information on how to open an issue for this project with:
+2016-04-21T15:53:43.556033+00:00 app[web.1]: npm ERR! If you do, this is most likely a problem with the universal-js-boilerplate package,
+2016-04-21T15:53:43.556446+00:00 app[web.1]: npm ERR!     npm-run-all --parallel transpile js watch:styles server
+2016-04-21T15:53:43.554647+00:00 app[web.1]: npm ERR! universal-js-boilerplate@2.0.1 start: `npm-run-all --parallel transpile js watch:styles server`
+2016-04-21T15:53:43.564957+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
+2016-04-21T15:53:43.564772+00:00 app[web.1]: npm ERR! Please include the following file with any support request:
+2016-04-21T15:53:43.557296+00:00 app[web.1]: npm ERR!     npm owner ls universal-js-boilerplate
+2016-04-21T15:53:43.557401+00:00 app[web.1]: npm ERR! There is likely additional logging output above.
+2016-04-21T15:53:43.564473+00:00 app[web.1]: 
+2016-04-21T15:53:43.555167+00:00 app[web.1]: npm ERR! Failed at the universal-js-boilerplate@2.0.1 start script 'npm-run-all --parallel transpile js watch:styles server'.
+2016-04-21T15:53:43.556719+00:00 app[web.1]: npm ERR!     npm bugs universal-js-boilerplate
+2016-04-21T15:53:44.419225+00:00 heroku[web.1]: Process exited with status 1
+2016-04-21T15:53:44.436440+00:00 heroku[web.1]: State changed from up to crashed

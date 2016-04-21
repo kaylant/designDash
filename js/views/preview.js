@@ -116,10 +116,28 @@ var Preview = React.createClass ({
 	},
 
 	_showDropboxLink: function() {
-		var link = document.querySelector('.dropbox-saver')
-		console.log(null)
-		link.href = this._makeTextFile()
-		link.style.display = 'block'
+		var options = {
+			files: [
+				{'url': this._makeTextFile(), 'filename': "style.sass"}
+			],
+			success: function () {
+			//         // Indicate to the user that the files have been saved.
+			        alert("Success! File saved to your Dropbox.")
+			},
+			progress: function (progress) {},
+
+			    // Cancel is called if the user presses the Cancel button or closes the Saver.
+			cancel: function () {},
+
+			    // Error is called in the event of an unexpected response from the server
+			    // hosting the files, such as not being able to find a file. This callback is
+			    // also called if there is an error on Dropbox or if the user is over quota.
+			error: function (errorMessage) {
+				console.log(errorMessage)
+			},
+		}
+		var button = Dropbox.createSaveButton(options)
+		document.getElementById("views").appendChild(button)
 	},
 
 	render: function() {
@@ -182,9 +200,9 @@ var Preview = React.createClass ({
 				    <input onChange={this._updateHeight} type="number" id="iframeHeight" placeholder="650" value={this.state.height} />
 				  </div>
 				  	<button id="original" onClick={this._snapBackToOriginal}>Original</button>
-				  	<button id="createProj" onClick={this._showDownloadLink} onClick={this._showDropboxLink}>Create</button>
+				  	<button id="createProj" onClick={this._showDownloadLink}>Create</button>
 				  	<a download="style.sass" id="downloadlink" style={{display: "none"}}>Download</a>
-				  	<a class="dropbox-saver" style={{display: "none"}}>Save to Dropbox</a> 
+				  	<button id="dropBoxBtn" onClick={this._showDropboxLink}>Save to Dropbox</button> 
 				</div>
 				<div id="views">
 				  <button value="1" onClick={this._updateView}>Laying</button>
