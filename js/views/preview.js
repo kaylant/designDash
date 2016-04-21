@@ -42,9 +42,67 @@ var Preview = React.createClass ({
 	},
 
 	_makeTextFile: function() {
+		var paletteObj = this.props.data.get('palette')
+		var bgColorsArray = []
+		var timeout = 1
+		for (var prop in paletteObj) {
+			var swatchObj = paletteObj[prop]
+			if (swatchObj) {
+				var rgbArr = swatchObj.rgb
+				var bgColor = `rgb(${Math.floor(rgbArr[0])},${Math.floor(rgbArr[1])},${Math.floor(rgbArr[2])})`
+				bgColorsArray.push(bgColor)
+				timeout += 1
+			}
+		}
+
+		var darkMutedSwatch = bgColorsArray[0]
+		var darkVibrantSwatch = bgColorsArray[1]
+		var lightMutedSwatch = bgColorsArray[2]
+		var ligthVibrantSwatch = bgColorsArray[3]
+		var mutedSwatch = bgColorsArray[4]
+		var vibrantSwatch = bgColorsArray[5]
+		var fontIndex = this.props.fontIndex
+		var mainFonts = Object.keys(FontTable)
+		var font1 = mainFonts[fontIndex] 
+		var font2 = FontTable[font1].subhead
+		var font3 = FontTable[font1].content
+		var fontLink = `<link type="text/css" rel="stylesheet href="https://fonts.googleapis.com/css?family=${font1}|${font2}|${font3}>"`
+
 		var cssArr = []
-		var	cssString = `// Thanks for using my app. \n` 
-			cssString += `// Don't forget to uncomment and paste the following links into the <head> of your index.html file`
+		var	cssString = `// Thanks for using Design Dash.\n` 
+			cssString += `// Don't forget to uncomment and paste the following links into the <head> of your index.html file.\n`
+			cssString += `// ${fontLink}\n`
+			cssString += `// <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">\n`
+			cssString += `\n`
+			cssString += `// COLORS\n`
+			cssString += `$darkMuted:       ${darkMutedSwatch};\n`
+			cssString += `$darkVibrant:     ${darkVibrantSwatch};\n`
+			cssString += `$lightMuted:      ${lightMutedSwatch};\n`
+			cssString += `$lightVibrant:    ${ligthVibrantSwatch};\n`
+			cssString += `$muted:           ${mutedSwatch};\n`
+			cssString += `$vibrant:         ${vibrantSwatch};\n`
+			cssString += `\n`
+			cssString += `// FONTS \n`
+			cssString += `\n`
+			cssString += `h1 {\n`
+			cssString += `\tfont-family: "${font1}";\n`
+			cssString += `}\n`
+			cssString += `\n`
+			cssString += `h2 {\n`
+			cssString += `\tfont-family: "${font2}";\n`
+			cssString += `}\n`
+			cssString += `\n`
+			cssString += `p {\n`
+			cssString += `\tfont-family: "${font3}";\n`
+			cssString += `}\n`
+			cssString += `\n`
+			cssString += `i {\n`
+			cssString += `\tfont-family: 'Material Icons';\n`
+			cssString += `}\n`
+			cssString += `\n`
+			cssString += `// Delete the lines below or your code will break!\n`
+			cssString += `© 2016, Kaylan Smith 🍕\n`
+			cssString += `kaylansmith.com`
 			cssArr.push(cssString) 
 		var blob = new Blob([cssString], {type: 'text/css'})
 		var url = URL.createObjectURL(blob)

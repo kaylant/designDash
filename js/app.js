@@ -35,7 +35,6 @@ import fetch from "isomorphic-fetch"
 
 import DOM from 'react-dom'
 import React, {Component} from 'react'
-import HelloJS from 'hellojs'
 import $ from 'jquery'
 import Backbone from 'backbone'
 import Vibrant from 'node-vibrant'
