@@ -34,7 +34,6 @@ var Preview = React.createClass ({
 	_snapBackToOriginal: function(evt) {
 		var iframe = document.getElementById("frame_1")
 		var phone = document.getElementById("phone_1")
-		console.log("clicked")
 		phone.style.width = "400px"
 		phone.style.height = "650px"
 		document.getElementById("iframeWidth").value = 400
@@ -106,13 +105,19 @@ var Preview = React.createClass ({
 			cssArr.push(cssString) 
 		var blob = new Blob([cssString], {type: 'text/css'})
 		var url = URL.createObjectURL(blob)
-		console.log(blob)
 		return url
 	}, 
 
 	_showDownloadLink: function() {
 		var link = document.getElementById('downloadlink')
 		link.rel = 'stylesheet'
+		link.href = this._makeTextFile()
+		link.style.display = 'block'
+	},
+
+	_showDropboxLink: function() {
+		var link = document.querySelector('.dropbox-saver')
+		console.log(null)
 		link.href = this._makeTextFile()
 		link.style.display = 'block'
 	},
@@ -177,8 +182,9 @@ var Preview = React.createClass ({
 				    <input onChange={this._updateHeight} type="number" id="iframeHeight" placeholder="650" value={this.state.height} />
 				  </div>
 				  	<button id="original" onClick={this._snapBackToOriginal}>Original</button>
-				  	<button id="createProj" onClick={this._showDownloadLink}>Create</button>
-				  	<a download="style.sass" id="downloadlink" style={{display: "none"}}>Download</a> 
+				  	<button id="createProj" onClick={this._showDownloadLink} onClick={this._showDropboxLink}>Create</button>
+				  	<a download="style.sass" id="downloadlink" style={{display: "none"}}>Download</a>
+				  	<a class="dropbox-saver" style={{display: "none"}}>Save to Dropbox</a> 
 				</div>
 				<div id="views">
 				  <button value="1" onClick={this._updateView}>Laying</button>
