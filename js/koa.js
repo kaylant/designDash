@@ -130,6 +130,17 @@ router.get('/image', async (ctx, next) => {
     ctx.body = data
 })
 
+router.get('/blob', async (ctx, next) => {
+    try {
+        let blob = querify(ctx.req._parsedUrl.search).url
+        var data = request(blob)
+    } catch(e) {
+        ctx.body = e
+        return
+    }
+    ctx.body = blob
+})
+
 const guid = (function() {
     const s4 = () => Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1)
     return () => s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4()

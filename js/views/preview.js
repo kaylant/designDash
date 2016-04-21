@@ -1,7 +1,9 @@
 import DOM from 'react-dom'
 import React, {Component} from 'react'
-
+// import Dropbox from 'dropbox'
 import FontTable from './fontTable'
+
+console.log('got here')
 
 var Preview = React.createClass ({
 	_updateView: function(evt){
@@ -116,10 +118,37 @@ var Preview = React.createClass ({
 	},
 
 	_showDropboxLink: function() {
-		var link = document.querySelector('.dropbox-saver')
-		console.log(null)
-		link.href = this._makeTextFile()
-		link.style.display = 'block'
+		var options = {
+		    files: [
+		        // You can specify up to 100 files.
+		        {'url': `http://localhost:3000/blob?url=${this._makeTextFile()}`, 'filename': 'style.scss'}
+		    ],
+
+		    // Success is called once all files have been successfully added to the user's
+		    // Dropbox, although they may not have synced to the user's devices yet.
+		    success: function () {
+		        // Indicate to the user that the files have been saved.
+		        alert("Success! Files saved to your Dropbox.");
+		    },
+
+		    // Progress is called periodically to update the application on the progress
+		    // of the user's downloads. The value passed to this callback is a float
+		    // between 0 and 1. The progress callback is guaranteed to be called at least
+		    // once with the value 1.
+		    progress: function (progress) {},
+
+		    // Cancel is called if the user presses the Cancel button or closes the Saver.
+		    cancel: function () {},
+
+		    // Error is called in the event of an unexpected response from the server
+		    // hosting the files, such as not being able to find a file. This callback is
+		    // also called if there is an error on Dropbox or if the user is over quota.
+		    error: function (errorMessage) {
+		    	console.log(errorMessage)
+		    }
+		};
+		var button = Dropbox.createSaveButton(options);
+		document.getElementById("controls").appendChild(button);
 	},
 
 	render: function() {
@@ -182,9 +211,9 @@ var Preview = React.createClass ({
 				    <input onChange={this._updateHeight} type="number" id="iframeHeight" placeholder="650" value={this.state.height} />
 				  </div>
 				  	<button id="original" onClick={this._snapBackToOriginal}>Original</button>
-				  	<button id="createProj" onClick={this._showDownloadLink} onClick={this._showDropboxLink}>Create</button>
+				  	<button id="createProj" onClick={this._showDownloadLink}>Create</button>
 				  	<a download="style.sass" id="downloadlink" style={{display: "none"}}>Download</a>
-				  	<a class="dropbox-saver" style={{display: "none"}}>Save to Dropbox</a> 
+				  	<button onClick={this._showDropboxLink}><a class="dropbox-saver">Save to Dropbox</a></button> 
 				</div>
 				<div id="views">
 				  <button value="1" onClick={this._updateView}>Laying</button>
