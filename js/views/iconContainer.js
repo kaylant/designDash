@@ -1,7 +1,7 @@
 import DOM from 'react-dom'
 import React, {Component} from 'react'
 
-import DashView from './dash'
+import DashView from './dashView'
 
 var Icons = React.createClass ({
 	render: function() {
