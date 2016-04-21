@@ -138,7 +138,7 @@ router.get('/blob', async (ctx, next) => {
         ctx.body = e
         return
     }
-    ctx.body = blob
+    ctx.body = data
 })
 
 const guid = (function() {
