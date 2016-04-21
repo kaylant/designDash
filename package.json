@@ -36,7 +36,7 @@
     "server": "pm2 kill; pm2 start app.js;",
     "restart": "pm2 restart all",
     "s": "npm-run-all --parallel transpile js watch:styles server",
-    "start": "npm-run-all server",
+    "start": "node app.js",
     "start:n": "npm-run-all --parallel transpile js watch:js watch:styles server",
     "logs": "pm2 logs",
     "stop": "pm2 kill",
