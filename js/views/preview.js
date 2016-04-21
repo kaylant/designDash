@@ -118,7 +118,7 @@ var Preview = React.createClass ({
 	_showDropboxLink: function() {
 		var options = {
 			files: [
-				{'url': this._makeTextFile(), 'filename': "style.sass"}
+				{'url': 'http://lorempixel.com/200/200', 'filename': "style.sass"}
 			],
 			success: function () {
 			//         // Indicate to the user that the files have been saved.
