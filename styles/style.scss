@@ -342,10 +342,9 @@ $font: 'Roboto';
         .iconContainer {
             flex: 2;
             width: 100%;
-            box-shadow: 0 4px 8px 0 $primaryColor, 0 6px 20px 0 $primaryColor;
 
             p {
-                margin-top: 40px;
+                margin-top: 10px;
                 font-size: 0.8em;
                 margin-left: 60px;
                 margin-bottom: 10px;
@@ -362,6 +361,7 @@ $font: 'Roboto';
                     font-family: 'Material Icons';
                     font-style: normal;
                     white-space: nowrap;
+                    text-align: justify;
                     color: $primaryColor;
                     padding-right: 30px;
                     margin: 10px 0;
