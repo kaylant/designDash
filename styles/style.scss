@@ -439,6 +439,15 @@ $font: 'Roboto';
                 box-shadow: 0px 3px 0 #BBB, 0px 4px 0 #BBB, 0px 5px 0 #BBB, 0px 7px 0 #BBB, 0px 10px 20px #666;
             }
 
+            i {
+                font-size: 25px;
+                font-family: 'Material Icons';
+                font-style: normal;
+                white-space: nowrap;
+                color: white;
+                margin: 0 20px;
+            }
+
         }
 
         .navBarContainer {
@@ -498,12 +507,18 @@ $font: 'Roboto';
                 -moz-transition-duration: 250ms;
             }
 
-            #createProj {
-                @extend #original;
-            }
+            .saveLink {
+                border-top: 1px solid #bbb;
+                margin-top: 10px;
+                width: 90px;
 
-            #createProj:hover {
-                @extend #original:hover;
+                #createProj {
+                    @extend #original;
+                }
+
+                #createProj:hover {
+                    @extend #original:hover;
+                }
             }
         }
         

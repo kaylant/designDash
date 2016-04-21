@@ -3,8 +3,6 @@ import React, {Component} from 'react'
 // import Dropbox from 'dropbox'
 import FontTable from './fontTable'
 
-console.log('got here')
-
 var Preview = React.createClass ({
 	_updateView: function(evt){
 		var phone = document.getElementById("phone_1")
@@ -115,41 +113,45 @@ var Preview = React.createClass ({
 		link.rel = 'stylesheet'
 		link.href = this._makeTextFile()
 		link.style.display = 'block'
+		link.style.textDecoration = 'underline'
+		link.style.color = '#7f8c8d'
+		link.style.textAlign= 'center'
+		link.style.fontSize = '0.8em'
 	},
 
-	_showDropboxLink: function() {
-		var options = {
-		    files: [
-		        // You can specify up to 100 files.
-		        {'url': `http://localhost:3000/blob?url=${this._makeTextFile()}`, 'filename': 'style.scss'}
-		    ],
+	// _showDropboxLink: function() {
+	// 	var options = {
+	// 	    files: [
+	// 	        // You can specify up to 100 files.
+	// 	        {'url': `http://localhost:3000/blob?url=${this._makeTextFile()}`, 'filename': 'style.scss'}
+	// 	    ],
 
-		    // Success is called once all files have been successfully added to the user's
-		    // Dropbox, although they may not have synced to the user's devices yet.
-		    success: function () {
-		        // Indicate to the user that the files have been saved.
-		        alert("Success! Files saved to your Dropbox.");
-		    },
+	// 	    // Success is called once all files have been successfully added to the user's
+	// 	    // Dropbox, although they may not have synced to the user's devices yet.
+	// 	    success: function () {
+	// 	        // Indicate to the user that the files have been saved.
+	// 	        alert("Success! Files saved to your Dropbox.");
+	// 	    },
 
-		    // Progress is called periodically to update the application on the progress
-		    // of the user's downloads. The value passed to this callback is a float
-		    // between 0 and 1. The progress callback is guaranteed to be called at least
-		    // once with the value 1.
-		    progress: function (progress) {},
+	// 	    // Progress is called periodically to update the application on the progress
+	// 	    // of the user's downloads. The value passed to this callback is a float
+	// 	    // between 0 and 1. The progress callback is guaranteed to be called at least
+	// 	    // once with the value 1.
+	// 	    progress: function (progress) {},
 
-		    // Cancel is called if the user presses the Cancel button or closes the Saver.
-		    cancel: function () {},
+	// 	    // Cancel is called if the user presses the Cancel button or closes the Saver.
+	// 	    cancel: function () {},
 
-		    // Error is called in the event of an unexpected response from the server
-		    // hosting the files, such as not being able to find a file. This callback is
-		    // also called if there is an error on Dropbox or if the user is over quota.
-		    error: function (errorMessage) {
-		    	console.log(errorMessage)
-		    }
-		};
-		var button = Dropbox.createSaveButton(options);
-		document.getElementById("controls").appendChild(button);
-	},
+	// 	    // Error is called in the event of an unexpected response from the server
+	// 	    // hosting the files, such as not being able to find a file. This callback is
+	// 	    // also called if there is an error on Dropbox or if the user is over quota.
+	// 	    error: function (errorMessage) {
+	// 	    	console.log(errorMessage)
+	// 	    }
+	// 	};
+	// 	var button = Dropbox.createSaveButton(options);
+	// 	document.getElementById("controls").appendChild(button);
+	// },
 
 	render: function() {
 		var paletteObj = this.props.data.get('palette')
@@ -189,13 +191,15 @@ var Preview = React.createClass ({
 				<div id="wrapper">
 				  <div className="phone view_1" id="phone_1" style={styleObj}>
 				    <div id="frame_1">
-				    	<h1 style={styleFont}>Hello, world!</h1>
+				    	<h1 style={styleFont}>Header Font</h1>
 				    	<h2 style={styleFont2}>Subheader Font</h2>
-				    	<p style={styleFont3}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.lor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt </p>
-				    	<div className="iconsRow">
-				    		<i class="material-icons">build</i>
-				    		<i class="material-icons">attach_file</i>
+				    	<p style={styleFont3}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				    	<div className="iconsPhone">
 				    		<i class="material-icons">reply</i>
+				    		<i class="material-icons">attach_file</i>
+				    		<i class="material-icons">home</i>
+				    		<i class="material-icons">done</i>
+							<i class="material-icons">clear</i>
 				    	</div>
 				    </div>
 				  </div>
@@ -211,9 +215,10 @@ var Preview = React.createClass ({
 				    <input onChange={this._updateHeight} type="number" id="iframeHeight" placeholder="650" value={this.state.height} />
 				  </div>
 				  	<button id="original" onClick={this._snapBackToOriginal}>Original</button>
-				  	<button id="createProj" onClick={this._showDownloadLink}>Create</button>
-				  	<a download="style.sass" id="downloadlink" style={{display: "none"}}>Download</a>
-				  	<button onClick={this._showDropboxLink}><a class="dropbox-saver">Save to Dropbox</a></button> 
+				  	<div className="saveLink">
+					  	<button id="createProj" onClick={this._showDownloadLink}>Save</button>
+					  	<a download="style.sass" id="downloadlink" style={{display: "none"}}>Download SASS!</a>
+					</div>
 				</div>
 				<div id="views">
 				  <button value="1" onClick={this._updateView}>Laying</button>
