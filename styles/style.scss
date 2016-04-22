@@ -275,6 +275,7 @@ $font: 'Roboto';
         @media (min-width:1824px) {
             .fontContainer {
                 margin: 60px 30px;
+                flex: 3;
             }
         }
 
@@ -360,7 +361,7 @@ $font: 'Roboto';
 
             @media (min-width:1824px) {
                 #leftButton {
-                    left: -50px;
+                    left: -85px;
                 }
             }
 
@@ -387,7 +388,7 @@ $font: 'Roboto';
 
             @media (min-width:1824px) {
                 #rightButton {
-                    left: -50px;
+                    right: -85px;
                 }
             }
 
@@ -405,6 +406,12 @@ $font: 'Roboto';
                     }
                 }
 
+        }
+
+        @media (min-width:1824px) {
+            .iconContainer {
+                margin: 0 35px;
+            }
         }
 
         .iconContainer {
@@ -455,6 +462,12 @@ $font: 'Roboto';
                         font-size: 2em;
                     }
                 }
+            }
+        }
+
+        @media (min-width:1824px) {
+            .paletteContainer {
+                flex: 2;
             }
         }
 
