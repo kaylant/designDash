@@ -147,7 +147,12 @@ $font: 'Roboto';
             right: 0px;
             height: 70px;
             z-index: 1;
-            box-shadow: 0 10px 0px 0px $primaryColor;
+
+        @media (max-width:1824px) {
+            .navbar {
+                bottom: 30px;
+            }
+        }
 
             ul {
             	right: 0px;
@@ -189,7 +194,7 @@ $font: 'Roboto';
 
                     @media (min-width:1824px) {
                         img {
-                            height: 50px;
+                            height: 60px;
                         }
                     }
 
