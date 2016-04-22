@@ -286,10 +286,12 @@ $font: 'Roboto';
             @media (min-width:1824px) {
                 .font1 {
                     margin-bottom: 30px;
+                    font-size: 5em;
                 }
 
                 .font2 {
                     margin-bottom: 30px;
+                    font-size: 3.5em;
                 }
 
                 .font3 {
@@ -339,7 +341,7 @@ $font: 'Roboto';
             }
 
             @media (min-width:1824px) {
-                .button {
+                button {
                     height: 100px;
                     width: 200px;
                 }
