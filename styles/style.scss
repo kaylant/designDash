@@ -140,6 +140,12 @@ $font: 'Roboto';
     .superDashContainer {
         width: 100%;
 
+        @media (min-width:1824px) {
+            nav.navbar.navbar-defualt.navbar-fixed-top {
+                margin-bottom: 30px;
+            }
+        }
+
         .navbar {
             width: 50%;
             position: fixed;
@@ -147,12 +153,6 @@ $font: 'Roboto';
             right: 0px;
             height: 70px;
             z-index: 1;
-
-        @media (min-width:1824px) {
-            .navbar {
-                margin-bottom: 30px;
-            }
-        }
 
             ul {
             	right: 0px;
@@ -370,7 +370,7 @@ $font: 'Roboto';
             }
 
             @media (min-width:1824px) {
-                .fontName {
+                p {
                     font-size: 1em;
                 }
             }
