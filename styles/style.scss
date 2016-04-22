@@ -148,7 +148,7 @@ $font: 'Roboto';
             height: 70px;
             z-index: 1;
 
-        @media (max-width:1824px) {
+        @media (min-width:1824px) {
             .navbar {
                 bottom: 30px;
             }
@@ -287,6 +287,12 @@ $font: 'Roboto';
                     color: $primaryColor;
                     font-family: $font;
                 }
+
+                @media (min-width:1824px) {
+                    .fontName {
+                        font-size: 1em;
+                    }
+                }
             }
 
             .font2 {
@@ -363,11 +369,17 @@ $font: 'Roboto';
                 display: block;
             }
 
+            @media (min-width:1824px) {
+                .fontName {
+                    font-size: 1em;
+                }
+            }
+
             .iconsRow {
                 margin-left: 60px;
 
                 i {
-                    font-size: 25px;
+                    font-size: 1.5em;
                     font-family: 'Material Icons';
                     font-style: normal;
                     white-space: nowrap;

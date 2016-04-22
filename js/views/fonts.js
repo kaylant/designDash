@@ -43,19 +43,19 @@ var FontContainer = React.createClass ({
 			head.appendChild(link)
 
 			var font1Style = {
-				fontSize: '40px',
+				fontSize: '3em',
 				fontFamily: font1,
 				margin: '5px 0px'
 			}
 
 			var font2Style = {
-				fontSize: '26px',
+				fontSize: '2em',
 				fontFamily: font2,
 				margin: '5px 0px'
 			}
 
 			var font3Style = {
-				fontSize: '14px',
+				fontSize: '1em',
 				fontFamily: font3,
 				margin: '5px 0px'
 			}
