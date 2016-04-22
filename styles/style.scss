@@ -141,7 +141,7 @@ $font: 'Roboto';
         width: 100%;
 
         @media (min-width:1824px) {
-            nav.navbar.navbar-defualt.navbar-fixed-top {
+            body > div > div > nav {
                 margin-bottom: 30px;
             }
         }
