@@ -190,6 +190,9 @@ $font: 'Roboto';
                     	-moz-transition-timing-function: ease-out;
                     	-moz-transition-duration: 250ms;
                     	background-color: #eee;
+                        border-radius:2px;
+                        -moz-border-radius:2px;
+                        -webkit-border-radius: 2px;
                     }
 
                     @media (min-width:1824px) {
