@@ -18,7 +18,7 @@ From there, choose amongst curated font collections and icon sets.
 
 View a simulation of your project on a mobile device that is scalable to instantly toggle between multiple screen sizes and view types. 
 
-![](dist/images/ks-mobile-1-png)
+![](dist/images/ks-mobile-1.png)
 
 When you are satisfied with your chosen colors, fonts, and icons, export a CSS SASS file pre-loaded with your selections to jump start your project, or hand off to a developer!
 
