@@ -4,31 +4,29 @@ import React, {Component} from 'react'
 import FontTable from './fontTable'
 
 var Preview = React.createClass ({
-	_updateView: function(evt){
-		var phone = document.getElementById("phone_1")
-		var newView = evt.target.value
-		if (evt) {
-			phone.className = "phone view_" + newView
-		}
-	},
 
 	getInitialState: function() {
 	   return {width: 400,
-			   height: 650}
+			   height: 650,
+			   className: "phone view_1"}
+	},
+
+	_updateView: function(evt){
+		var newView = evt.target.value
+		console.log(newView)
+		if (evt) {
+			this.setState({className: "phone view_" + newView})
+		}
 	},
 
 	_updateWidth: function(evt) {
-		var iframe = document.getElementById("frame_1")
-		var phone = document.getElementById("phone_1")
-		this.setState({width: evt.target.value})
-		phone.style.width = document.getElementById("iframeWidth").value + "px"
+		var newWidth = evt.target.value
+		this.setState({width: newWidth})
 	},
 
 	_updateHeight: function(evt) {
-		var iframe = document.getElementById("frame_1")
-		var phone = document.getElementById("phone_1")
-		this.setState({height: evt.target.value})
-		phone.style.height = document.getElementById("iframeHeight").value + "px"
+		var newHeight = evt.target.value
+		this.setState({height: newHeight})
 	},
 
 	_snapBackToOriginal: function(evt) {
@@ -119,40 +117,6 @@ var Preview = React.createClass ({
 		link.style.fontSize = '0.8em'
 	},
 
-	// _showDropboxLink: function() {
-	// 	var options = {
-	// 	    files: [
-	// 	        // You can specify up to 100 files.
-	// 	        {'url': `http://localhost:3000/blob?url=${this._makeTextFile()}`, 'filename': 'style.scss'}
-	// 	    ],
-
-	// 	    // Success is called once all files have been successfully added to the user's
-	// 	    // Dropbox, although they may not have synced to the user's devices yet.
-	// 	    success: function () {
-	// 	        // Indicate to the user that the files have been saved.
-	// 	        alert("Success! Files saved to your Dropbox.");
-	// 	    },
-
-	// 	    // Progress is called periodically to update the application on the progress
-	// 	    // of the user's downloads. The value passed to this callback is a float
-	// 	    // between 0 and 1. The progress callback is guaranteed to be called at least
-	// 	    // once with the value 1.
-	// 	    progress: function (progress) {},
-
-	// 	    // Cancel is called if the user presses the Cancel button or closes the Saver.
-	// 	    cancel: function () {},
-
-	// 	    // Error is called in the event of an unexpected response from the server
-	// 	    // hosting the files, such as not being able to find a file. This callback is
-	// 	    // also called if there is an error on Dropbox or if the user is over quota.
-	// 	    error: function (errorMessage) {
-	// 	    	console.log(errorMessage)
-	// 	    }
-	// 	};
-	// 	var button = Dropbox.createSaveButton(options);
-	// 	document.getElementById("controls").appendChild(button);
-	// },
-
 	render: function() {
 		var paletteObj = this.props.data.get('palette')
 		var bgColorsArray = []
@@ -174,7 +138,9 @@ var Preview = React.createClass ({
 		var mutedSwatch = bgColorsArray[4]
 		var vibrantSwatch = bgColorsArray[5]
 
-		var styleObj = {backgroundColor: lightMutedSwatch}
+		var styleObj = {backgroundColor: lightMutedSwatch,
+						width: this.state.width + "px",
+						height: this.state.height + "px"}
 
 		var fontIndex = this.props.fontIndex
 		var mainFonts = Object.keys(FontTable)
@@ -189,7 +155,7 @@ var Preview = React.createClass ({
 		return (
 			<div className="previewContainer">
 				<div id="wrapper">
-				  <div className="phone view_1" id="phone_1" style={styleObj}>
+				  <div className="phone view_1" id="phone_1" style={styleObj} view={this._updateView}>
 				    <div id="frame_1">
 				    	<h1 style={styleFont}>Header Font</h1>
 				    	<h2 style={styleFont2}>Subheader Font</h2>
