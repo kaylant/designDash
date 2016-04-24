@@ -13,7 +13,6 @@ var Preview = React.createClass ({
 
 	_updateView: function(evt){
 		var newView = evt.target.value
-		console.log(newView)
 		if (evt) {
 			this.setState({className: "phone view_" + newView})
 		}
@@ -30,12 +29,8 @@ var Preview = React.createClass ({
 	},
 
 	_snapBackToOriginal: function(evt) {
-		var iframe = document.getElementById("frame_1")
-		var phone = document.getElementById("phone_1")
-		phone.style.width = "400px"
-		phone.style.height = "650px"
-		document.getElementById("iframeWidth").value = 400
-		document.getElementById("iframeHeight").value = 650
+		this.setState({width: 400,
+					   height: 650})
 	},
 
 	_makeTextFile: function() {
@@ -107,10 +102,10 @@ var Preview = React.createClass ({
 	}, 
 
 	_showDownloadLink: function() {
-		var link = document.getElementById('downloadlink')
+		var link = document.querySelector('#downloadLink')
 		link.rel = 'stylesheet'
 		link.href = this._makeTextFile()
-		link.style.display = 'block'
+		link.style.display= "block"
 		link.style.textDecoration = 'underline'
 		link.style.color = '#7f8c8d'
 		link.style.textAlign= 'center'
@@ -155,7 +150,7 @@ var Preview = React.createClass ({
 		return (
 			<div className="previewContainer">
 				<div id="wrapper">
-				  <div className="phone view_1" id="phone_1" style={styleObj} view={this._updateView}>
+				  <div className={this.state.className} style={styleObj}>
 				    <div id="frame_1">
 				    	<h1 style={styleFont}>Header Font</h1>
 				    	<h2 style={styleFont2}>Subheader Font</h2>
@@ -174,16 +169,16 @@ var Preview = React.createClass ({
 				<div id="controls">
 				  <div>
 				    <label for="iframeWidth">Width:</label>
-				    <input onChange={this._updateWidth} type="number" id="iframeWidth" placeholder="400" value={this.state.width} />
+				    <input onChange={this._updateWidth} type="number" placeholder="400" value={this.state.width} />
 				  </div>
 				  <div>
 				    <label for="iframeHeight">Height:</label>
-				    <input onChange={this._updateHeight} type="number" id="iframeHeight" placeholder="650" value={this.state.height} />
+				    <input onChange={this._updateHeight} type="number" placeholder="650" value={this.state.height} />
 				  </div>
 				  	<button id="original" onClick={this._snapBackToOriginal}>Original</button>
 				  	<div className="saveLink">
 					  	<button id="createProj" onClick={this._showDownloadLink}>Save</button>
-					  	<a download="style.sass" id="downloadlink" style={{display: "none"}}>Download SASS!</a>
+					  	<a id="downloadLink" download="style.sass" style={{display: "none"}}>Download SASS!</a>
 					</div>
 				</div>
 				<div id="views">
