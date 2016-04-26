@@ -43,11 +43,9 @@ var SuperDash = React.createClass({
 	componentDidMount: function() {
 
 		Events.scrollEvent.register('begin', function() {
-			console.log("begin", arguments)
 		})
 
 		Events.scrollEvent.register('end', function() {
-			console.log("end", arguments)
 		})
 
 	},

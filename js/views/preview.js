@@ -1,6 +1,5 @@
 import DOM from 'react-dom'
 import React, {Component} from 'react'
-// import Dropbox from 'dropbox'
 import FontTable from './fontTable'
 
 var Preview = React.createClass ({
@@ -155,13 +154,6 @@ var Preview = React.createClass ({
 				    	<h1 style={styleFont}>Header Font</h1>
 				    	<h2 style={styleFont2}>Subheader Font</h2>
 				    	<p style={styleFont3}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				    	<div className="iconsPhone">
-				    		<i class="material-icons">reply</i>
-				    		<i class="material-icons">attach_file</i>
-				    		<i class="material-icons">home</i>
-				    		<i class="material-icons">done</i>
-							<i class="material-icons">clear</i>
-				    	</div>
 				    </div>
 				  </div>
 				</div>
