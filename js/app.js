@@ -79,11 +79,12 @@ function app() {
     var ImgModel = Backbone.Model.extend ({
     	url: "https://www.googleapis.com/customsearch/v1",
 
-    	// key: "AIzaSyCJ8zb1jEVLaSvUnfalB2Nri5yCes1EKvw",
-    	key: "AIzaSyDr6T8gkhLh6ZhsEX9MjtW9fMYk5ehPaKw",
+    	// first are mine, second Justin's
+    	key: "AIzaSyAvVkuuK5AgUDMOmA_vvMlfl_mhD9xXQME",
+    	// key: "AIzaSyDr6T8gkhLh6ZhsEX9MjtW9fMYk5ehPaKw",
 
-    	//cx: "004196397515287344825:ve6rrdva0mi",
-    	cx: "008940921588152958013:h64uer7a344",
+    	cx: "004196397515287344825:dl5qnjpmjzo",
+    	// cx: "008940921588152958013:h64uer7a344",
 
     	defaults: {
     		image: {
