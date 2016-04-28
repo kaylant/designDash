@@ -5,9 +5,13 @@ import FontTable from './fontTable'
 var Preview = React.createClass ({
 
 	getInitialState: function() {
-	   return {width: 400,
-			   height: 650,
-			   className: "phone view_1"}
+	    return {width: 400,
+			    height: 650,
+			    className: "phone view_1"}
+	},
+
+	_updateBgColor: function() {
+		this.setState({vibrantSwatch: bgColorsArray[5]})
 	},
 
 	_updateView: function(evt){
@@ -33,6 +37,7 @@ var Preview = React.createClass ({
 	},
 
 	_makeTextFile: function() {
+
 		var paletteObj = this.props.data.get('palette')
 		var bgColorsArray = []
 		var timeout = 1
@@ -52,6 +57,7 @@ var Preview = React.createClass ({
 		var ligthVibrantSwatch = bgColorsArray[3]
 		var mutedSwatch = bgColorsArray[4]
 		var vibrantSwatch = bgColorsArray[5]
+
 		var fontIndex = this.props.fontIndex
 		var mainFonts = Object.keys(FontTable)
 		var font1 = mainFonts[fontIndex] 
@@ -127,7 +133,7 @@ var Preview = React.createClass ({
 		var mutedSwatch = bgColorsArray[4]
 		var vibrantSwatch = bgColorsArray[5]
 
-		var styleObj = {backgroundColor: vibrantSwatch,
+		var styleObj = {backgroundColor: lightMutedSwatch,
 						width: this.state.width + "px",
 						height: this.state.height + "px"}
 
