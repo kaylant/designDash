@@ -127,7 +127,7 @@ var Preview = React.createClass ({
 		var mutedSwatch = bgColorsArray[4]
 		var vibrantSwatch = bgColorsArray[5]
 
-		var styleObj = {backgroundColor: lightMutedSwatch,
+		var styleObj = {backgroundColor: vibrantSwatch,
 						width: this.state.width + "px",
 						height: this.state.height + "px"}
 
