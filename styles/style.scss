@@ -498,7 +498,7 @@ $font: 'Roboto';
         
         #controls {
             position: absolute;
-            top: 0px;
+            top: 20px;
             left: 20px;
             font-size: 0.8em;
             color: $primaryColor;
@@ -573,7 +573,7 @@ $font: 'Roboto';
         
         #views {
             position: absolute;
-            top: 5px;
+            top: 20px;
             right: 20px;
         }
         
@@ -633,7 +633,7 @@ $font: 'Roboto';
 		height: 30px;
 		margin-left: 20px;
 		margin-bottom: 10px;
-		opacity: .5;
+		opacity: .7;
 	}
 
 	#toTop:hover {
@@ -644,6 +644,26 @@ $font: 'Roboto';
         #toTop {
             height: 60px;
         }
+    }
+
+    #toKS {
+        @extend #toTop;
+    }
+
+    #toKS:hover {
+        opacity: 1;
+        background-color: #eee;
+        border-radius:2px;
+        -moz-border-radius:2px;
+        -webkit-border-radius: 2px; 
+    }
+
+    .copyRight {
+        color: $primaryColor;
+        font-family: $font;
+        margin-left: 15px;
+        font-size: 0.7em;
+        display: inline-block
     }
     
 }

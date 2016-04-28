@@ -78,7 +78,6 @@ var SuperDash = React.createClass({
 					<SearchView data={this.props.paletteData} name="test1" className="element"/>
 				</Element>
 
-
 				<Element name="test2" className="element">
 					<DashView data={this.props.paletteData} updateFont={this._updateMasterFontIndex} fontIndex={this.state.masterFontIndex}/>
 				</Element>
@@ -86,7 +85,8 @@ var SuperDash = React.createClass({
 				<Element name="test3" className="element">
 					<Preview data={this.props.paletteData} updateFont={this._updateMasterFontIndex} fontIndex={this.state.masterFontIndex}/>
 				</Element>
-				<a onClick={this.scrollToTop}><img id="toTop" src="../images/toTop.svg"/></a>			
+				<a onClick={this.scrollToTop}><img id="toTop" src="../images/toTop.svg"/></a>
+				<a target="_blank" href="http://kaylansmith.com"><img id="toKS" src="../images/pizzaIcon.svg"/></a>
 			</div>
 		)
 	}

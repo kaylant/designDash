@@ -63,7 +63,6 @@ var Preview = React.createClass ({
 		var	cssString = `// Thanks for using Design Dash.\n` 
 			cssString += `// Don't forget to uncomment and paste the following links into the <head> of your index.html file.\n`
 			cssString += `// ${fontLink}\n`
-			cssString += `// <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">\n`
 			cssString += `\n`
 			cssString += `// COLORS\n`
 			cssString += `$darkMuted:       ${darkMutedSwatch};\n`
@@ -87,12 +86,8 @@ var Preview = React.createClass ({
 			cssString += `\tfont-family: "${font3}";\n`
 			cssString += `}\n`
 			cssString += `\n`
-			cssString += `i {\n`
-			cssString += `\tfont-family: 'Material Icons';\n`
-			cssString += `}\n`
-			cssString += `\n`
 			cssString += `// Delete the lines below or your code will break!\n`
-			cssString += `© 2016, Kaylan Smith 🍕\n`
+			cssString += `© Kaylan Smith 🍕\n`
 			cssString += `kaylansmith.com`
 			cssArr.push(cssString) 
 		var blob = new Blob([cssString], {type: 'text/css'})
