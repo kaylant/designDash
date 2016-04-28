@@ -648,6 +648,7 @@ $font: 'Roboto';
 
     #toKS {
         @extend #toTop;
+        margin-left: 15px;
     }
 
     #toKS:hover {
@@ -658,12 +659,10 @@ $font: 'Roboto';
         -webkit-border-radius: 2px; 
     }
 
-    .copyRight {
-        color: $primaryColor;
-        font-family: $font;
-        margin-left: 15px;
-        font-size: 0.7em;
-        display: inline-block
+    @media (min-width:1824px) {
+        #toKS {
+            height: 60px;
+        }
     }
     
 }
