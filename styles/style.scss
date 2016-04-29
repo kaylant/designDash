@@ -537,6 +537,10 @@ $font: 'Roboto';
                 -moz-transition-duration: 250ms;
             }
 
+            #bgColor {
+                @extend #original;
+            }
+
             .saveLink {
                 border-top: 1px solid #bbb;
                 margin-top: 10px;

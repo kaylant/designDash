@@ -169,6 +169,7 @@ var Preview = React.createClass ({
 				    <input onChange={this._updateHeight} type="number" placeholder="650" value={this.state.height} />
 				  </div>
 				  	<button id="original" onClick={this._snapBackToOriginal}>Original</button>
+				  	<button id="bgColor">Background</button>
 				  	<div className="saveLink">
 					  	<button id="createProj" onClick={this._showDownloadLink}>Save</button>
 					  	<a id="downloadLink" download="style.sass" style={{display: "none"}}>Download SASS!</a>
