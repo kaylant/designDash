@@ -5,13 +5,56 @@ import FontTable from './fontTable'
 var Preview = React.createClass ({
 
 	getInitialState: function() {
+
+		var paletteObj = this.props.data.get('palette')
+		var bgColorsArray = []
+		var timeout = 1
+		for (var prop in paletteObj) {
+			var swatchObj = paletteObj[prop]
+			if (swatchObj) {
+				var rgbArr = swatchObj.rgb
+				var bgColor = `rgb(${Math.floor(rgbArr[0])},${Math.floor(rgbArr[1])},${Math.floor(rgbArr[2])})`
+				bgColorsArray.push(bgColor)
+				timeout += 1
+			}
+		}
+
+		var darkMutedSwatch = bgColorsArray[0]
+		var darkVibrantSwatch = bgColorsArray[1]
+		var lightMutedSwatch = bgColorsArray[2]
+		var ligthVibrantSwatch = bgColorsArray[3]
+		var mutedSwatch = bgColorsArray[4]
+		var vibrantSwatch = bgColorsArray[5]
+
 	    return {width: 400,
 			    height: 650,
-			    className: "phone view_1"}
+			    className: "phone view_1",
+				backgroundColor: lightMutedSwatch}
 	},
 
 	_updateBgColor: function() {
-		this.setState({vibrantSwatch: bgColorsArray[5]})
+
+		var paletteObj = this.props.data.get('palette')
+		var bgColorsArray = []
+		var timeout = 1
+		for (var prop in paletteObj) {
+			var swatchObj = paletteObj[prop]
+			if (swatchObj) {
+				var rgbArr = swatchObj.rgb
+				var bgColor = `rgb(${Math.floor(rgbArr[0])},${Math.floor(rgbArr[1])},${Math.floor(rgbArr[2])})`
+				bgColorsArray.push(bgColor)
+				timeout += 1
+			}
+		}
+
+		var darkMutedSwatch = bgColorsArray[0]
+		var darkVibrantSwatch = bgColorsArray[1]
+		var lightMutedSwatch = bgColorsArray[2]
+		var ligthVibrantSwatch = bgColorsArray[3]
+		var mutedSwatch = bgColorsArray[4]
+		var vibrantSwatch = bgColorsArray[5]
+
+		this.setState({backgroundColor: mutedSwatch})
 	},
 
 	_updateView: function(evt){
@@ -133,7 +176,7 @@ var Preview = React.createClass ({
 		var mutedSwatch = bgColorsArray[4]
 		var vibrantSwatch = bgColorsArray[5]
 
-		var styleObj = {backgroundColor: lightMutedSwatch,
+		var styleObj = {backgroundColor: this.state.backgroundColor,
 						width: this.state.width + "px",
 						height: this.state.height + "px"}
 
@@ -169,7 +212,7 @@ var Preview = React.createClass ({
 				    <input onChange={this._updateHeight} type="number" placeholder="650" value={this.state.height} />
 				  </div>
 				  	<button id="original" onClick={this._snapBackToOriginal}>Original</button>
-				  	<button id="bgColor">Background</button>
+				  	<button id="bgColor" onClick={this._updateBgColor}>Background</button>
 				  	<div className="saveLink">
 					  	<button id="createProj" onClick={this._showDownloadLink}>Save</button>
 					  	<a id="downloadLink" download="style.sass" style={{display: "none"}}>Download SASS!</a>
