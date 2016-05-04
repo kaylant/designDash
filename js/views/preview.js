@@ -4,7 +4,7 @@ import FontTable from './fontTable'
 
 var Preview = React.createClass ({
 
-	getInitialState: function() {
+	_makeColors: function() {
 
 		var paletteObj = this.props.data.get('palette')
 		var bgColorsArray = []
@@ -25,11 +25,24 @@ var Preview = React.createClass ({
 		var ligthVibrantSwatch = bgColorsArray[3]
 		var mutedSwatch = bgColorsArray[4]
 		var vibrantSwatch = bgColorsArray[5]
+		console.log(darkMutedSwatch)
+
+		// is consoling and working when invoked in render 'onClick' for update background button
+	},
+
+	getInitialState: function() {
+		this._makeColors
+		// var darkMutedSwatch = bgColorsArray[0]
+		// var darkVibrantSwatch = bgColorsArray[1]
+		// var lightMutedSwatch = bgColorsArray[2]
+		// var ligthVibrantSwatch = bgColorsArray[3]
+		// var mutedSwatch = bgColorsArray[4]
+		// var vibrantSwatch = bgColorsArray[5]
 
 	    return {width: 400,
 			    height: 650,
-			    className: "phone view_1",
-				backgroundColor: lightMutedSwatch}
+			    className: "phone view_1"}
+				// backgroundColor: lightMutedSwatch}
 	},
 
 	_updateBgColor: function() {
