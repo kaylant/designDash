@@ -44,6 +44,10 @@ var FontTable = {"Roboto":
 	"Vollkorn":
 	{"subhead":"Crimson Text",
     "content":"Karla"
+	},
+	"Pacifico":
+	{"subhead":"ABeeZee",
+    "content":"Pontano Sans"
 	}
 }
 
