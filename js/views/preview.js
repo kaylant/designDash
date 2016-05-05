@@ -5,31 +5,10 @@ import FontTable from './fontTable'
 var Preview = React.createClass ({
 
 	getInitialState: function() {
-
-		var paletteObj = this.props.data.get('palette')
-		var bgColorsArray = []
-		var timeout = 1
-		for (var prop in paletteObj) {
-			var swatchObj = paletteObj[prop]
-			if (swatchObj) {
-				var rgbArr = swatchObj.rgb
-				var bgColor = `rgb(${Math.floor(rgbArr[0])},${Math.floor(rgbArr[1])},${Math.floor(rgbArr[2])})`
-				bgColorsArray.push(bgColor)
-				timeout += 1
-			}
-		}
-
-		var darkMutedSwatch = bgColorsArray[0]
-		var darkVibrantSwatch = bgColorsArray[1]
-		var lightMutedSwatch = bgColorsArray[2]
-		var ligthVibrantSwatch = bgColorsArray[3]
-		var mutedSwatch = bgColorsArray[4]
-		var vibrantSwatch = bgColorsArray[5]
-
 	    return {width: 400,
 			    height: 650,
 			    className: "phone view_1",
-				backgroundColor: lightMutedSwatch}
+				backgroundColor: "lightMutedSwatch"}
 	},
 
 	_updateBgColor: function() {
@@ -54,7 +33,9 @@ var Preview = React.createClass ({
 		var mutedSwatch = bgColorsArray[4]
 		var vibrantSwatch = bgColorsArray[5]
 
-		this.setState({backgroundColor: mutedSwatch})
+
+		this.setState({backgroundColor: darkMutedSwatch})
+		
 	},
 
 	_updateView: function(evt){

@@ -36,6 +36,14 @@ var FontTable = {"Roboto":
 	"Viga":
 	{"subhead":"Khula",
     "content":"Hind Siliguri"
+	},
+	"Lato":
+	{"subhead":"Arimo",
+    "content":"Catamaran"
+	},
+	"Vollkorn":
+	{"subhead":"Crimson Text",
+    "content":"Karla"
 	}
 }
 
