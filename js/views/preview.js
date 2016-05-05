@@ -33,7 +33,6 @@ var Preview = React.createClass ({
 		var mutedSwatch = bgColorsArray[4]
 		var vibrantSwatch = bgColorsArray[5]
 
-
 		this.setState({backgroundColor: darkMutedSwatch})
 		
 	},
@@ -167,9 +166,9 @@ var Preview = React.createClass ({
 		var font2 = FontTable[font1].subhead
 		var font3 = FontTable[font1].content
 
-		var styleFont = {color:ligthVibrantSwatch, fontFamily:font1}
+		var styleFont = {color:ligthVibrantSwatch, fontFamily:font1, marginTop: "15px"}
 		var styleFont2 = {color:darkVibrantSwatch, fontFamily:font2}
-		var styleFont3 = {color:mutedSwatch, background:"white", fontFamily:font3, textAlign: "left", paddingLeft: "5px"}
+		var styleFont3 = {color:mutedSwatch, background:"white", fontFamily:font3, textAlign: "left", marginLeft: "15px"}
 
 		return (
 			<div className="previewContainer">
