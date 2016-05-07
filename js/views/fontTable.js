@@ -48,6 +48,14 @@ var FontTable = {"Roboto":
 	"Pacifico":
 	{"subhead":"ABeeZee",
     "content":"Pontano Sans"
+	},
+	"Bevan":
+	{"subhead":"Antic Slab",
+    "content":"Chivo"
+	},
+	"Paytone One":
+	{"subhead":"Rambla",
+    "content":"Signika Negative"
 	}
 }
 
