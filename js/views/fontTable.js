@@ -56,6 +56,10 @@ var FontTable = {"Roboto":
 	"Paytone One":
 	{"subhead":"Rambla",
     "content":"Signika Negative"
+	},
+	"Hammersmith One":
+	{"subhead":"Work Sans",
+	"content":"Actor"
 	}
 }
 
