@@ -60,6 +60,10 @@ var FontTable = {"Roboto":
 	"Hammersmith One":
 	{"subhead":"Work Sans",
 	"content":"Actor"
+	},
+	"Nunito":
+	{"subhead":"Biryani",
+	"content":"Palanquin"
 	}
 }
 
