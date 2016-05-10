@@ -64,6 +64,10 @@ var FontTable = {"Roboto":
 	"Nunito":
 	{"subhead":"Biryani",
 	"content":"Palanquin"
+	},
+	"Quicksand":
+	{"subhead":"Josefin Slab",
+	"content":"Yantramanav"
 	}
 }
 
