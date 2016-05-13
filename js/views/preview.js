@@ -8,7 +8,7 @@ var Preview = React.createClass ({
 	    return {width: 400,
 			    height: 650,
 			    className: "phone view_1",
-				backgroundColor: "lightMutedSwatch"}
+				backgroundColor: "lightVibrantSwatch"}
 	},
 
 	_updateBgColor: function() {
@@ -168,7 +168,7 @@ var Preview = React.createClass ({
 
 		var styleFont = {color:ligthVibrantSwatch, fontFamily:font1, marginTop: "15px"}
 		var styleFont2 = {color:darkVibrantSwatch, fontFamily:font2}
-		var styleFont3 = {color:mutedSwatch, background:"white", fontFamily:font3, textAlign: "left", marginLeft: "15px"}
+		var styleFont3 = {color:mutedSwatch, background:"white", fontFamily:font3, textAlign: "left", paddingLeft: "15px"}
 
 		return (
 			<div className="previewContainer">
@@ -192,7 +192,7 @@ var Preview = React.createClass ({
 				    <input onChange={this._updateHeight} type="number" placeholder="650" value={this.state.height} />
 				  </div>
 				  	<button id="original" onClick={this._snapBackToOriginal}>Original</button>
-				  	<button id="bgColor" onClick={this._updateBgColor}>Background</button>
+				  	<button id="bgColor" onClick={this._updateBgColor}>Color BG</button>
 				  	<div className="saveLink">
 					  	<button id="createProj" onClick={this._showDownloadLink}>Save</button>
 					  	<a id="downloadLink" download="style.sass" style={{display: "none"}}>Download SASS!</a>
