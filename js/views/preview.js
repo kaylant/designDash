@@ -8,7 +8,7 @@ var Preview = React.createClass ({
 	    return {width: 400,
 			    height: 650,
 			    className: "phone view_1",
-				backgroundColor: "lightVibrantSwatch"}
+				backgroundColor: null}
 	},
 
 	_updateBgColor: function() {
@@ -33,7 +33,15 @@ var Preview = React.createClass ({
 		var mutedSwatch = bgColorsArray[4]
 		var vibrantSwatch = bgColorsArray[5]
 
-		this.setState({backgroundColor: darkMutedSwatch})
+		if(this.state.backgroundColor === null) {
+			this.setState({backgroundColor: darkMutedSwatch})
+		} else if (this.state.backgroundColor === darkMutedSwatch) {
+			this.setState({backgroundColor: vibrantSwatch})
+		} else if (this.state.backgroundColor === vibrantSwatch) {
+			this.setState({backgroundColor: lightMutedSwatch})
+		} else {
+			this.setState({backgroundColor: null})
+		}
 		
 	},
 
@@ -192,7 +200,7 @@ var Preview = React.createClass ({
 				    <input onChange={this._updateHeight} type="number" placeholder="650" value={this.state.height} />
 				  </div>
 				  	<button id="original" onClick={this._snapBackToOriginal}>Original</button>
-				  	<button id="bgColor" onClick={this._updateBgColor}>Color BG</button>
+				  	<button id="bgColor" onClick={this._updateBgColor}>Color</button>
 				  	<div className="saveLink">
 					  	<button id="createProj" onClick={this._showDownloadLink}>Save</button>
 					  	<a id="downloadLink" download="style.sass" style={{display: "none"}}>Download SASS!</a>
