@@ -68,6 +68,10 @@ var FontTable = {"Roboto":
 	"Quicksand":
 	{"subhead":"Josefin Slab",
 	"content":"Yantramanav"
+	},
+	"Pathway Gothic One":
+	{"subhead":"Cuprum",
+	"content":"Open Sans"
 	}
 }
 
