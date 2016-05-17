@@ -70,8 +70,12 @@ var FontTable = {"Roboto":
 	"content":"Yantramanav"
 	},
 	"Pathway Gothic One":
-	{"subhead":"Cuprum",
+	{"subhead":"Kreon",
 	"content":"Open Sans"
+	},
+	"Bangers":
+	{"subhead":"Ropa Sans",
+	"content":"Work Sans"
 	}
 }
 
