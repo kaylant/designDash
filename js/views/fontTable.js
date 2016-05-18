@@ -76,7 +76,11 @@ var FontTable = {"Roboto":
 	"Bangers":
 	{"subhead":"Ropa Sans",
 	"content":"Work Sans"
-	}
+	},
+	"Radley":
+	{"subhead":"Vollkorn",
+	"content":"Oxygen"
+	},
 }
 
 export default FontTable
