@@ -81,6 +81,10 @@ var FontTable = {"Roboto":
 	{"subhead":"Vollkorn",
 	"content":"Oxygen"
 	},
+	"Patua One":
+	{"subhead":"Noticia Text",
+	"content":"Pontano Sans"
+	}
 }
 
 export default FontTable
