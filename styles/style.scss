@@ -334,14 +334,14 @@ $font: 'Roboto';
                 width: 200px;
                 display: inline-block;
                 position: absolute;
-                top: 50%;
+                top: 40%;
                 height: 60px;
                 width: 90px;
                 border-radius: 90px 90px 0 0;
                 -moz-border-radius: 90px 90px 0 0;
                 -webkit-border-radius: 90px 90px 0 0;
                 background: $primaryColor;
-                opacity: 0;
+                opacity: .4;
                 z-index: 2;
             }
 
