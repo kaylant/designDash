@@ -34,24 +34,24 @@ ul, ol {
  * GRIDS
  */
 
-.grid {
-    display: block;
-    text-align: justify;
-    font-size: 0;
-    position: relative;
+// .grid {
+//     display: block;
+//     text-align: justify;
+//     font-size: 0;
+//     position: relative;
 
-    > * {
-        display: inline-block;
-        width: 100%;
-        font-size: 1rem;
-        text-align: left;
-    }
+//     > * {
+//         display: inline-block;
+//         width: 100%;
+//         font-size: 1rem;
+//         text-align: left;
+//     }
 
-    &:after {
-        display: table;
-        width: 100%;
-    }
-}
+//     &:after {
+//         display: table;
+//         width: 100%;
+//     }
+// }
 
 // @mixin grid_r($col, $width, $padding: 0) {
 //     @media screen and (min-width: #{$width}px) {

@@ -84,6 +84,10 @@ var FontTable = {"Roboto":
 	"Patua One":
 	{"subhead":"Noticia Text",
 	"content":"Pontano Sans"
+	},
+	"Sintony":
+	{"subhead":"Sintony",
+	"content":"Chivo"
 	}
 }
 
